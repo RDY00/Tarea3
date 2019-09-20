@@ -1,3 +1,4 @@
+FORMATO DE IMAGENES
 
 Las imágenes deben de ser .png y su nombre será el número del ejercicio al que correspondan: letra-número.
 
