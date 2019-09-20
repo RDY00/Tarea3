@@ -1,4 +1,4 @@
 
-Imagen debe de ser tipo png y su nombre será el número del ejercicio al que corresponda (letra-numero).
+Las imágenes deben de ser .png y su nombre será el número del ejercicio al que correspondan: letra-número.
 
-En caso de haber más de una imagen en el ejericiico el formato del nombre será letra-numero-numero.
+En caso de haber más de una imagen en el ejercicio el formato del nombre será: letra-número-número.
