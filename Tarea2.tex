@@ -16,6 +16,7 @@
 \usepackage{graphicx}
 \graphicspath{{img/}}
 \newtheorem*{thm}{Teorema}
+\setlength{\parindent}{0cm}
 
 \title{Tarea 1}
 \author{Fernando Márquez Pérez \\ Juan Antonio Jasso Oviedo \\ Emiliano Dom\'inguez Cruz}
@@ -27,66 +28,83 @@
     \maketitle
 \end{titlepage}
 
-%EJERCIO 8
-8.Calcular f'(x) para cada una de las siguientes funciones (sin importar los dominios de f(x) y de f'(x ))
-%EJERCIO A
-\item $\mathbf{f(x)=sin(x²+x)}$
-%EJERCIO B
-\item $\mathbf{f(x)=sin(x)+sin(x²)}$
-%EJERCIO C
-\item $\mathbf{f(X)=sin(cos(x))}$
-    \begin{align*}
+1. Determine si las siguientes funciones son continuas en \(x_0\).
 
+\begin{enumerate}[\hspace{12px} a)]
+    \item
+    \( f(x)=
+    \begin{cases}
+        \sqrt{x^2-1}\text{, si} \ x \geq 1\\
+        x^2-2x+1\text{, si} \ x \in [0,1]
+    \end{cases}
+    \)
+    en $x_0 = 1$\\
+    \item
+    \( h(x)=
+    \begin{cases}
+        \frac{|x|}{x}\text{, si} \ x \neq 0\\
+        1\text{, si} \ x=0\\
+    \end{cases}
+    \)
+    en $x_0=0$
+    \item
+    \( g(x)=
+    \begin{cases}
+        \sqrt{1-x^2}\text{, si} \ x \in [0,1]\\
+        -\sqrt{1-(x-2)^2}\text{, si} \ x \in [1,2]
+    \end{cases}
+    \)
+    en $x_0=1$
+\end{enumerate}
+
+\vfill
+
+%EJERCIO 8
+8.Calcular $f'(x)$ para cada una de las siguientes funciones (sin importar los dominios de $f(x)$ y de $f'(x)$).
+%EJERCIO A
+%    \begin{align*}
         Recordamos por la regla de la cadena primero derivamos sin() y posterormente lo multiplicamos por la derivada de cos(x)\\
         Tenemos\\
         g(x)=sin(cos(x))\\
-        g'(x)=cos(cos(x)) \ \ \  &&\text{Por el teorema que probamos en clase de f(x)=sin(x) entonces f'(x)=cos(x)}\\
+        g'(x)=cos(cos(x)) \ \ \  %&&\text{Por el teorema que probamos en clase de f(x)=sin(x) entonces f'(x)=cos(x)}\\
         Observamos\\
-        h(x)=cos(x)  \ \ \ &&\text{Por el teorema que probramos en clase de f(x)=cos(x) entonces f'(x)=-sin(x}\\
+        h(x)=cos(x)  \ \ \ %&&\text{Por el teorema que probramos en clase de f(x)=cos(x) entonces f'(x)=-sin(x}\\
         h'(x)=-sin(x)\\
         es decir\\
-        f'(x)=(cos(cos(x)))(-sin(x)) \ \ \ &&\text{Por la regla de la cadena se multiplican}\\
+        f'(x)=(cos(cos(x)))(-sin(x)) \ \ \ %&&\text{Por la regla de la cadena se multiplican}\\
 
-    \end{align*}
+%    \end{align*}
 
-%EJERCIO D
-\item $\mathbf{f(x)=sin(sin(x))}$
-%EJERCIO E
-\item $\mathbf{f(x)=sin(x+sin(x))}$
+
 %EJERCIO F
-\item $\mathbf{f(x)=sin(cos(sin(x)))}$
-    \begin{align*}
+%    \begin{align*}
         Recordamos por la regla de la cadena primero derivamos sin(cos(sin(x))) y posteriormente multiplicamos por la derivada de cos(sin(x)) y posteriormente por sin(x) \\
         Tenemos,\\
         g(x)=sin(cos(sin(x)))\\
-        g'(x)=cos(cos(sin(x))) \ \ \ &&\text{Por el teorema que probamos en clase}\\
+        g'(x)=cos(cos(sin(x))) \ \ \ %&&\text{Por el teorema que probamos en clase}\\
         Además, tambíen tenemos,\\
         h(x)=cos(sin(x))\\
-        h'(x)=-sin(sin(x)) \ \ \ &&\text{Por el teorema que probamos en clase}\\
+        h'(x)=-sin(sin(x)) \ \ \ %&&\text{Por el teorema que probamos en clase}\\
         Posteriormente\\
         t(x)=sin(x)\\
-        t'(x)=cos(x) \ \ \ &&\text{Por el teorema que probamos en clase}\\
+        t'(x)=cos(x) \ \ \ %&&\text{Por el teorema que probamos en clase}\\
         es decir\\
-        f'(x)=cos(cos(sin(x)))*-sin(sin(x))*cos(x) \ \ \ &&\text{Por la regla de la cadena se multiplican}\\
-    \end{align*}
+        f'(x)=cos(cos(sin(x)))*-sin(sin(x))*cos(x) \ \ \ %&&\text{Por la regla de la cadena se multiplican}\\
+%    \end{align*}
 
-%EJERCIO G
-\item $\mathbf{f(x)=sin(cos(x)/x)}$
-%EJERCIO H
-\item $\mathbf{f(x)=(sin(cos(x)))/x}$
 %EJERCIO I
-\item $\mathbf{f(x)=cos(cos(x))/x}$
-    \begin{align*}
+
+%    \begin{align*}
         Observamos\\
-        f(x)=g(x)/h(x)  \ \ \ &&\text{con g(x)=cos(cos(x)) y h(x)=x}\\
+        f(x)=g(x)/h(x)  \ \ \ %&&\text{con g(x)=cos(cos(x)) y h(x)=x}\\
         Recordamos\\
-        f'(x)=((h(x)*g'(x))-(g(x)*h'(x)))/g(x)² \ \ \ &&\text{por el teorema que probamos en clase}\\
+        $f'(x)=((h(x)*g'(x))-(g(x)*h'(x)))/g(x)^2$ \ \ \ %&&\text{por el teorema que probamos en clase}\\
         Observamos\\
-        h'(x)=1 \ \ \ &&\text{}\\
+        h'(x)=1 \ \ \ %&&\text{}\\
         y\\
-        g'(x)=sin(cos(x))(-sin(x)) \ \ \ &&\text{por la regla de la cadena como en ejercicios pasados derivamos de afuera hacia adentro y luego lo multiplicamos}\\
+        $g'(x)=sin(cos(x))(-sin(x))$ \ \ \ %&&\text{por la regla de la cadena como en ejercicios pasados derivamos de afuera hacia adentro y luego lo multiplicamos}\\
         es decir\\
-        f'(x)= (((x)*(sin(cos(x))*(-sin(x))))-(cos(cos(x)))(1))/x² \ \ \ &&\text{Por regla de la cadena y el teorema de la derivada de el producto de dos funciones.}\\
-    \end{align*}
+        $f'(x)= (((x)*(sin(cos(x))*(-sin(x))))-(cos(cos(x)))(1))/x^2$ \ \ \ %&&\text{Por regla de la cadena y el teorema de la derivada de el producto de dos funciones.}\\
+%    \end{align*}
 
 \end{document}
