@@ -79,10 +79,82 @@
 3. Mostrar que existe algún número $x$, tal que:
 
 \begin{enumerate}[\hspace{9px} a)]
-    \item \(\sin x = x-1\)
-    \item \(x^{179}+\displaystyle\frac{163}{1+x^2+\sin^2 x}=119\)
-    \item \(\cos x - \displaystyle\frac{1}{2}=x-1\)
-    \item \((2x^2-2)^2=-x+1\)
+    %EJERCICIO A
+    \item \(\sin x = x-1\)\\
+
+        Reescribimos la igualdad como \(\sin(x)-(x-1)=0 \Longrightarrow \sin(x)-x+1=0\)\\
+
+        Como $\sin(x)$ es continua y $x-1$ es un polinomio y todos los polimonios son continuos. Su suma es una función continua. Entonces \(f(x)=\sin(x)-x+1\) es continua en todos los $\mathbbm{R}$.\\
+
+        Para utilizar el TVI, buscamos $f(a)$ y $f(b)$ tal que $f(a)<0<f(b)$.\\
+
+        Proponemos $a=0$ y $b=\pi$
+        \[f(0)=\sin(0)-0+1=0-0+1=1\]
+        \[f(\pi)=\sin(\pi)-\pi+1=0-\pi+1 \approx -2.1416\]
+
+        Como $f$ es continua en el intervalo $[0,\pi]$ y \(f(0)>0>f(\pi)\), podemos utilizar un derivado del TVI (Parte de un corolario) para decir que: \[\exists \ x_0 \in (0,\pi) : \ f(x_0)=0\]
+
+    %EJERCICIO B
+    \item \(x^{179}+\displaystyle\frac{163}{1+x^2+\sin^2 x}=119\)\\
+
+        Reescribimos la igualdad como \(x^{179}+\displaystyle\frac{163}{1+x^2+\sin^2 x}-119=0\)\\
+
+        Como $\sin(x)$ es continua, $\sin^2(x)$ es continua. De igual manera, $x^2$ es continua, por lo que $1+x^2+\sin^2(x)$ es continua.
+
+        \[0<1<1+x^2+\sin^2(x) \quad \text{Porque, por el cuadrado, ambos son positivos $\forall \ x \in \mathbbm{R}$}\]
+
+        Como $1+x^2+\sin^2(x)$ nunca es 0, $\displaystyle\frac{163}{1+x^2+\sin^2(x)}$ es continua en todos los $\mathbbm{R}$. $x^{179}$ también es continua, por lo que \(f(x)=x^{179}+\displaystyle\frac{163}{1+x^2+\sin^2(x)}-119\) \ es continua en todos los $\mathbbm{R}$.\\
+
+        Para utilizar el TVI, buscamos $f(a)$ y $f(b)$ tal que $f(a)<0<f(b)$.\\
+
+        Proponemos $a=-1$ y $b=0$
+        \[f(0)=0^{179}+\displaystyle\frac{163}{1+0^2+\sin^2(0)}-119 = 0+\displaystyle\frac{163}{1+0+0}-119 = 163-119 = 44\]
+        \begin{multline*}
+            f(-1)=(-1)^{179}+\displaystyle\frac{163}{1+(-1)^2+\sin^2(-1)}-119 \approx -1+\displaystyle\frac{163}{1+1+1}-119 \\ \approx -1+\displaystyle\frac{163}{3}-119 \approx -1+54.3-119 \approx -65.7
+        \end{multline*}
+
+        Nota: La respuesta correcta es $f(-1)=-59.8$, y difiere de lo obtenido por que $\sin(-1)=-0.84$ y nosotros consideramos $\sin(-1) \approx -1$\\
+
+        Como $f$ es continua en el intervalo $[-1,0]$ y \(f(-1)<0<f(0)\), podemos utilizar el TVI para decir que: \[\exists \ x_0 \in (-1,0) : \ f(x_0)=0\]
+
+    %EJERCICIO C
+    \item \(\cos x - \displaystyle\frac{1}{2}=x-1\)\\
+
+        Reescribimos la igualdad como \(\cos(x)-\displaystyle\frac{1}{2}-(x-1)=0 \Longrightarrow \cos(x)+\displaystyle\frac{1}{2}-x=0\).\\
+
+        Como $\cos(x)$ y $x$ son continuos, y la suma de continuos es continua, $f(x)=\cos(x)-x+\displaystyle\frac{1}{2}$ es continua en todos los $\mathbbm{R}$.\\
+
+        Para utilizar el TVI, buscamos $f(a)$ y $f(b)$ tal que $f(a)<0<f(b)$.\\
+
+        Proponemos $a=0$ y $b=\pi$
+        \[f(0)=\cos(0)-0+\frac{1}{2} = 1-0+\frac{1}{2} = \frac{3}{2}\]
+        \[f(\pi)=\cos(x)-x+\frac{1}{2} = 0-\pi+\frac{1}{2} \approx -2.6\]
+
+        Como $f$ es continua en el intervalo $[0,\pi]$ y \(f(0)>0>f(\pi)\), podemos utilizar un derivado del TVI (Parte de un corolario) para decir que: \[\exists \ x_0 \in (0,\pi) : \ f(x_0)=0\]
+
+    %EJERCICIO D
+    \item \((2x^2-2)^2=-x+1\)\\
+
+    Reescribimos la igualdad como \((2x^2-2)^2-(-x+1)=0 \Longrightarrow (2x^2-2)^2+x-1=0\).\\
+
+    Como $2x^2-2$ y $-x+1$ son polinomios, son continuos. Como la multiplicación de dos continuos es continua, $(2x^2-2)^2$ es continua. Y dado que la suma de dos continuos es continua $f(x)=(2x^2-2)^2+x-1$ es continua en todos los $\mathbbm{R}$.\\
+
+    Para que $f$ cumpla el TVI tiene que existir un $f(x_0)<0$, pero $f$ nunca es menor a 0:
+
+    Observación: Sabemos que $(2x^2-2)^2 \geq 0 \ \forall \ x \in \mathbbm{R}$\\
+
+    Para $x \leq 1$:
+    \[x \leq 1 \Rightarrow x-1 \leq 0 \leq (2x^2-2)^2 \Rightarrow x-1 \leq (2x^2-2)^2 \Rightarrow 0 \leq (2x^2-2)^2-(x-1)\]
+
+    Para $x>1$:
+    \[x>1 \Rightarrow x-1>0 \Rightarrow x-1+(2x^2-2)^2>0\]
+
+    Pero si proponemos $x_0=1$:
+
+    \[f(1)=(2(1)^2-2)^2+1-1=(2-2)^2+0=0^2+0=0\]
+
+    Obtenemos el $x_0$ que cumple la igualdad.\\
+
 \end{enumerate}
 
 %EJERCICIO 4 ----------------------------------------------------------------------------------
@@ -140,10 +212,9 @@
         \textbf{$h(x)$ NO cumple el Teorema del Valor Intermedio en el intervalo dado.}\\
 
         Lo que tiene sentido porque si buscamos las raices de $f(x)$ obtendremos:
-
         \begin{equation*}
             h(x_0) \Rightarrow x_0^2+4x_0+4=0 \Rightarrow (x_0+2)^2=0 \Rightarrow x_0+2=0 \Rightarrow x_0=-2
-        \end{equation*}\\
+        \end{equation*}
 
     %EJERCICIO D
     \item \(k(x)=3x^2-x-1\) en $[-1,1]$\\
@@ -198,19 +269,107 @@
 5. Pruebe que las ecuaciones dadas, tienen una raíz en el intervalo que se señala.
 
 \begin{enumerate}[\hspace{9px} a)]
-    \item \(x^3+7x^2-3x-5=0\) en $[-3.2,0.1]$
+    %EJERCICIO A
+    \item \(x^3+7x^2-3x-5=0\) en $[-3.2,0.1]$\\
+
+        Consideramos en intervalo $[-3,0] \in [-3.2,0.1]$. Como $[-3,0] \in [-3.2,0.1]$, si hay un raíz en $[-3,0]$, hay una raíz en $[-3.2,0.1]$.\\
+
+        Obtenemos $f(-3)$ y $f(0)$:
+        \[f(-3)=(-3)^3+7(-3)^2-3(-3)-5=-27+7(9)+9-5=-27+63+9-5=40\]
+        \[f(0)=0^3+7(0)^2-3(0)-5=0+0-0-5=-5\]
+
+        Como $f$ es un polinomio, es continua en $[-3,0]$. Además tenemos que $f(-3)>0>f(0)$. Por lo que podemos usar un derivado del TVI para decir que: \(\exists \ x_0 \in (-3,0) : \ f(x_0)=0\)\\
+
+        \textbf{ $\therefore \ f$ tiene una raíz en $[-3.2,0.1]$}\\
+    %EJERCICIO B
     \item \(x^5-4x^3+x^2-1=0\) en $[-2.1,1.5]$
-    \item \(x\sin x-\displaystyle\frac{1}{2}=0\) en $[-1,2]$
-    \item \(x\cos x+\displaystyle\frac{1}{2}=0\) en $[-1,3.5]$
+
+        Consideramos en intervalo $[-1,0] \in [-2.1,1.5]$. Como $[-1,0] \in [-2.1,1.5]$, si hay un raíz en $[-1,0]$, hay una raíz en $[-2.1,1.5]$.\\
+
+        Obtenemos $f(-1)$ y $f(0)$:
+        \[f(-1)=(-1)^5-4(-1)^3+(-1)^2-1=-1+4+1-1=3\]
+        \[f(0)=0^5-4(0)^3+0^2-1=0-0+0-1=-1\]
+
+        Como $f$ es un polinomio, es continua en $[-1,0]$. Además tenemos que $f(-1)>0>f(0)$. Por lo que podemos usar un derivado del TVI para decir que: \(\exists \ x_0 \in (-1,0) : \ f(x_0)=0\)\\
+
+        \textbf{ $\therefore \ f$ tiene una raíz en $[-2.1,1.5]$}\\
+    %EJERCICIO C
+    \item \(x\sin x-\displaystyle\frac{1}{2}=0\) en $[-1,2]$\\
+
+        Consideramos en intervalo $[0,\frac{\pi}{2}] \in [-1,2]$. Como $[0,\frac{\pi}{2}] \in [-1,2]$, si hay un raíz en $[0,\frac{\pi}{2}]$, hay una raíz en $[-1,2]$.\\
+
+        Obtenemos $f(0)$ y $f(\frac{\pi}{2})$:
+        \[f(0)=0\sin(0)-\displaystyle\frac{1}{2}=-\frac{1}{2}\]
+        \[f\left(\frac{\pi}{2}\right)=\frac{\pi}{2}\sin\left(\frac{\pi}{2}\right)-\frac{1}{2}=\frac{\pi}{2}(1)-\frac{1}{2}=\frac{\pi-1}{2} \approx 1.07\]
+
+        Como $x$ es continua y $\sin(x)$ es continua, $x\sin(x)$ es continua, por lo tanto $x\sin(x)-\displaystyle\frac{1}{2}$ es continua en todos los $\mathbbm{R}$.\\
+
+        También tenemos que \(f(0)<0<f(\frac{\pi}{2})\), por lo que podemos usar el TVI para decir que: \(\exists \ x_0 \in (0,\frac{\pi}{2}) : \ f(x_0)=0\)\\
+
+        \textbf{ $\therefore \ f$ tiene una raíz en $[-1,2]$}\\
+    %EJERCICIO D
+    \item \(x\cos x+\displaystyle\frac{1}{2}=0\) en $[-1,3.5]$\\
+
+        Consideramos el intervalo $[0,\pi] \in [-1,3.5]$. Como $[0,\pi] \in [-1,3.5]$, si hay un raíz en $[0,\pi]$, hay una raíz en $[-1,3.5]$.\\
+
+        Obtenemos $f(0)$ y $f(\pi)$:
+        \[f(0)=0\cos(0)+\frac{1}{2}=0+\frac{1}{2}=\frac{1}{2}\]
+        \[f(\pi)=\pi\cos(\pi)+\frac{1}{2}=\pi(-1)+\frac{1}{2}=-\pi+\frac{1}{2} \approx -2.64\]
+
+        Como $x$ es continua y $\cos(x)$ es continua, $x\cos(x)$ es continua, por lo tanto $x\cos(x)+\displaystyle\frac{1}{2}$ es continua en todos los $\mathbbm{R}$.\\
+
+        También tenemos que \(f(0)>0>f(\pi)\), por lo que podemos usar un derivado del TVI para decir que: \(\exists \ x_0 \in (0,\pi) : \ f(x_0)=0\)\\
+
+        \textbf{ $\therefore \ f$ tiene una raíz en $[-1,3.5]$}\\
 \end{enumerate}
 
 %EJERCICIO 6 ----------------------------------------------------------------------------------
 6. Partiendo de la definición de derivada, mostrar que:
 
 \begin{enumerate}[\hspace{9px} a)]
-    \item si \(f(x)=\displaystyle\frac{1}{x}\), entonces \(f'(a)=-\displaystyle\frac{1}{a^2}\) para \(a \neq 0\)
-    \item si \(f(x)=\displaystyle\frac{1}{x^2}\), entonces \(f'(a)=-\displaystyle\frac{2}{a^3}\) para \(a \neq 0\)
-    \item si \(f(x)=\sqrt{x}\), entonces \(f'(a)=-\displaystyle\frac{1}{2\sqrt{a}}\) para \(a > 0\)
+    %EJERCICIO A
+    \item si \(f(x)=\displaystyle\frac{1}{x}\), entonces \(f'(a)=-\displaystyle\frac{1}{a^2}\) para \(a \neq 0\)\\
+
+        Por la definición de la derivada, tenemos que:
+        \begin{align*}
+            f'(a)&=\displaystyle\lim_{h \to 0}\frac{f(a+h)-f(a)}{h}=\displaystyle\lim_{h \to 0}\frac{\displaystyle\frac{1}{a+h}-\frac{1}{a}}{h} = \displaystyle\lim_{h \to 0}\frac{\displaystyle\frac{a-a-h}{a(a+h)}}{h}\\ \\
+            &=\displaystyle\lim_{h \to 0}\frac{\displaystyle\frac{-h}{a^2+ah}}{h}=\displaystyle\lim_{h \to 0}\frac{-h}{h(a^2+ah)}=\displaystyle\lim_{h \to 0}\frac{-1}{a^2+ah}\\
+        \end{align*}
+        \(\displaystyle\lim_{h \to 0}\frac{-1}{a^2+ah} = \frac{\displaystyle\lim_{h \to 0}-1}{\displaystyle\lim_{h \to 0}a^2+(\displaystyle\lim_{h \to 0}a \cdot \displaystyle\lim_{h \to 0}h)}\) \qquad
+        \(\displaystyle\lim_{h \to 0}b=b\) existe y \(\displaystyle\lim_{h \to 0}h=0\) existe.\\ \\
+
+        Entonces tenemos: \quad \(\displaystyle\frac{-1}{a^2+(a \cdot 0)}=\frac{-1}{a^2} \Longrightarrow f'(a)=-\frac{1}{a^2}\)\\
+
+    %EJERCICIO B
+    \item si \(f(x)=\displaystyle\frac{1}{x^2}\), entonces \(f'(a)=-\displaystyle\frac{2}{a^3}\) para \(a \neq 0\)\\
+
+        Por la definición de la derivada, tenemos que:
+        \begin{align*}
+            f'(a)&=\displaystyle\lim_{h \to 0}\frac{f(a+h)-f(a)}{h}=\displaystyle\lim_{h \to 0}\frac{\displaystyle\frac{1}{(a+h)^2}-\frac{1}{a^2}}{h}=\displaystyle\lim_{h \to 0}\frac{\displaystyle\frac{a^2-(a+h)^2}{a^2(a+h)^2}}{h}\\ \\
+            &=\displaystyle\lim_{h \to 0}\frac{\displaystyle\frac{a^2-a^2-2ah-h^2}{a^2(a^2+2ah+h^2)}}{h}=\displaystyle\lim_{h \to 0}\frac{\displaystyle\frac{-2ah-h^2}{a^2(a^2+2ah+h^2)}}{h}=\displaystyle\lim_{h \to 0}\frac{\displaystyle\frac{h(-2a-h)}{a^2(a^2+2ah+h^2)}}{h}\\ \\
+            &=\displaystyle\lim_{h \to 0}\frac{h(-2a-h)}{h(a^2(a^2+2ah+h^2))}=\displaystyle\lim_{h \to 0}\frac{-2a-h}{a^2(a^2+2ah+h^2)}
+        \end{align*}
+        \(\displaystyle\lim_{h \to 0}\frac{-2a-h}{a^2(a^2+2ah+h^2)}=\displaystyle\frac{-\displaystyle\lim_{h \to 0}2a-\displaystyle\lim_{h \to 0}h}{\displaystyle\lim_{h \to 0}a^2(\displaystyle\lim_{h \to 0}a^2+(\displaystyle\lim_{h \to 0}2a \cdot \displaystyle\lim_{h \to 0}h)+\displaystyle\lim_{h \to 0}h^2)}\)\\ \\
+
+        \(\displaystyle\lim_{h \to 0}b=b\), \(\displaystyle\lim_{h \to 0}h=0\) y \(\displaystyle\lim_{h \to 0}h^2=0\) existen.\\
+
+        Entonces tenemos: \quad \(\displaystyle\frac{-2a-0}{a^2(a^2+0+0)}=\frac{-2a}{a^4}=\frac{-2}{a^3} \Longrightarrow f'(x)=-\frac{2}{a^3}\)\\
+
+    %EJERCICIO C
+    \item si \(f(x)=\sqrt{x}\), entonces \(f'(a)=\displaystyle\frac{1}{2\sqrt{a}}\) para \(a > 0\)\\
+
+        Por la definición de la derivada, tenemos que:
+        \begin{align*}
+            f'(a)&=\displaystyle\lim_{h \to 0}\frac{f(a+h)-f(a)}{h}=\displaystyle\lim_{h \to 0}\frac{\sqrt{a+h}-\sqrt{a}}{h}=\displaystyle\lim_{h \to 0}\frac{\sqrt{a+h}-\sqrt{a}}{h} \cdot \frac{\sqrt{a+h}+\sqrt{a}}{\sqrt{a+h}+\sqrt{a}}\\ \\
+            &=\displaystyle\lim_{h \to 0}\frac{\big(\sqrt{a+h}-\sqrt{a}\big)\big(\sqrt{a+h}+\sqrt{a}\big)}{h\big(\sqrt{a+h}+\sqrt{a}\big)}=\displaystyle\lim_{h \to 0}\frac{\big(\sqrt{a+h}\big)^2-(\sqrt{a}\big)^2}{h\big(\sqrt{a+h}+\sqrt{a}\big)}\\ \\
+            &=\displaystyle\lim_{h \to 0}\frac{a+h-a}{h\big(\sqrt{a+h}+\sqrt{a}\big)}=\displaystyle\lim_{h \to 0}\frac{h}{h\big(\sqrt{a+h}+\sqrt{a}\big)}=\displaystyle\lim_{h \to 0}\frac{1}{\sqrt{a+h}+\sqrt{a}}
+        \end{align*}
+        \(\displaystyle\lim_{h \to 0}\frac{1}{\sqrt{a+h}+\sqrt{a}}=\displaystyle\frac{\displaystyle\lim_{h \to 0}1}{\displaystyle\lim_{h \to 0}\sqrt{a+h}+\displaystyle\lim_{h \to 0}\sqrt{a}}\)\\ \\
+
+        \(\displaystyle\lim_{h \to 0}b=b\) y \(\displaystyle\lim_{h \to 0}\sqrt{a+h}=\sqrt{a}\)  existen.\\
+
+        Entonces tenemos: \quad \(\displaystyle\frac{1}{\sqrt{a}+\sqrt{a}}=\frac{1}{2\sqrt{a}} \Longrightarrow f'(a)=\frac{1}{2\sqrt{a}}\)
+
 \end{enumerate}
 
 %EJERCICIO 7 ----------------------------------------------------------------------------------
