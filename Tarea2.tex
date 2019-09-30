@@ -376,34 +376,266 @@
 7. Encontrar la ecuación de la recta tangente en el punto \((a,f(a))\) para las siguiente funciones.
 
 \begin{enumerate}[\hspace{9px} a)]
-    \item \(f(x)=\displaystyle\frac{1}{x}\) para \(a \neq 0\)
-    \item \(f(x)=\displaystyle\frac{1}{x^2}\) para \(a \neq 0\)
-    \item \(f(x)=\sqrt{x}\) para \(a > 0\)
+    %EJERCICIO A
+    \item \(f(x)=\displaystyle\frac{1}{x}\) para \(a \neq 0\)\\
+
+        Sabemos, por el ejercicio anterior, que \(f'(a)=-\displaystyle\frac{1}{a^2}\). Tambien sabemos que \(f(a)=\displaystyle\frac{1}{a}\)\\
+
+        Conocemos también la fómula de la recta tangente de un punto a:
+
+        \[g(a)=f'(a)(x-a)+f(a)\]
+
+        Sustituyendo tenemos que:
+        \begin{align*}
+            g(a)&=-\frac{1}{a^2}(x-a)+\frac{1}{a} \Rightarrow -\frac{x-a}{a^2}+\frac{1}{a} \Rightarrow \frac{a-x}{a^2}+\frac{1}{a} \Rightarrow -\frac{x}{a^2}+\frac{a}{a^2}+\frac{1}{a}\\
+            &=-\frac{x}{a^2}+\frac{1}{a}+\frac{1}{a} \Rightarrow -\frac{x}{a^2}+\frac{2}{a}\\
+            g(a)&=-\frac{1}{a^2}x+\frac{2}{a}
+        \end{align*}
+
+    %EJERCICIO B
+    \item \(f(x)=\displaystyle\frac{1}{x^2}\) para \(a \neq 0\)\\
+
+        Sabemos, por el ejercicio anterior, que \(f'(a)=-\displaystyle\frac{2}{a^3}\). Tambien sabemos que \(f(a)=\displaystyle\frac{1}{a^2}\)\\
+
+        Conocemos también la fómula de la recta tangente de un punto a:
+
+        \[g(a)=f'(a)(x-a)+f(a)\]
+
+        Sustituyendo tenemos que:
+        \begin{align*}
+            g(a)&=-\frac{2}{a^3}(x-a)+\frac{1}{a^2} \Rightarrow \frac{-2(x-a)}{a^3}+\frac{1}{a^2} \Rightarrow \frac{-2x+2a}{a^3}+\frac{1}{a^2}\\
+            &=-\frac{2x}{a^3}+\frac{2a}{a^3}+\frac{1}{a^2} \Rightarrow -\frac{2x}{a^3}+\frac{2}{a^2}+\frac{1}{a^2} \Rightarrow -\frac{2x}{a^3}+\frac{3}{a^2}\\
+            g(a)&=-\frac{2}{a^3}x+\frac{3}{a^2}
+        \end{align*}
+
+    %EJERCICIO C
+    \item \(f(x)=\sqrt{x}\) para \(a > 0\)\\
+
+        Sabemos, por el ejercicio anterior, que \(f'(a)=\displaystyle\frac{1}{2\sqrt{a}}\). Tambien sabemos que \(f(a)=\sqrt{a}\)\\
+
+        Conocemos también la fómula de la recta tangente de un punto a:
+
+        \[g(a)=f'(a)(x-a)+f(a)\]
+
+        Sustituyendo tenemos que:
+        \begin{align*}
+            g(a)&=\frac{1}{2\sqrt{a}}(x-a)+\sqrt{a} \Rightarrow \frac{x-a}{2\sqrt{a}}+\sqrt{a} \Rightarrow \frac{x}{2\sqrt{a}}-\frac{a}{2\sqrt{a}}+\sqrt{a} \Rightarrow \frac{x}{2\sqrt{a}}-\frac{a}{2a^{1/2}}+\sqrt{a}\\
+            &=\frac{x}{2\sqrt{a}}-\frac{a^{1/2}}{2}+\sqrt{a} \Rightarrow \frac{x}{2\sqrt{a}}-\frac{\sqrt{a}}{2}+\sqrt{a} \Rightarrow \frac{x}{2\sqrt{a}}+\frac{\sqrt{a}}{2}\\
+            g(a)&=\frac{1}{2\sqrt{a}}x+\frac{\sqrt{a}}{2}
+        \end{align*}
+
 \end{enumerate}
 
 %EJERCICIO 8 ----------------------------------------------------------------------------------
 8. Calcular \(f'(x)\) para cada una de las siguientes funciones (sin importar los dominios de \(f\) y \(f'\)).
 
 \begin{enumerate}[\hspace{9px} a)]
-    \item \(f(x) = \sin(x+x^2)\)
-    \item \(f(x) = \sin(x) + \sin(x^2)\)
-    \item \(f(x) = \sin(\cos(x))\)
-    \item \(f(x) = \sin(\sin(x))\)
-    \item \(f(x) = \sin(x+\sin(x))\)
-    \item \(f(x) = \sin(\cos(\sin(x)))\)
-    \item \(f(x) = \sin\left(\displaystyle\frac{\cos(x)}{x}\right)\)
-    \item \(f(x) = \displaystyle\frac{\sin(\cos(x))}{x}\)
-    \item \(f(x) = \displaystyle\frac{\cos(\cos(x))}{x}\)
+    %EJERCICIO A
+    \item \(f(x) = \sin(x+x^2)\)\\
+
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+
+        Entonces: \quad \(\displaystyle\frac{d}{dx}\sin(x+x^2)=\displaystyle\frac{d}{dx}\sin(x+x^2)\cdot\displaystyle\frac{d}{dx}(x+x^2)\)\\
+
+        Sabemos que:
+        \begin{itemize}
+            \item \(\displaystyle\frac{d}{dx}\sin(x+x^2)=\cos(x+x^2)\)
+            \item \(\displaystyle\frac{d}{dx}(x+x^2)=\frac{d}{dx}x + \frac{d}{dx}x^2=1+2x\)
+        \end{itemize}
+
+        \[\displaystyle\frac{d}{dx}\sin(x+x^2)=\displaystyle\frac{d}{dx}\sin(x+x^2)\cdot\displaystyle\frac{d}{dx}(x+x^2)=\cos(x+x^2)(2x+1)\]
+    %EJERCICIO B
+    \item \(f(x) = \sin(x) + \sin(x^2)\)\\
+
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+
+        Entonces: \quad \(\displaystyle\frac{d}{dx}(\sin(x)+\sin(x^2))=\displaystyle\frac{d}{dx}\sin(x)+\frac{d}{dx}\sin(x^2)\cdot\frac{d}{dx}(x^2)\)\\
+
+        Sabemos que:
+        \begin{itemize}
+            \item \(\displaystyle\frac{d}{dx}\sin(x)=\cos(x)\)
+            \item \(\displaystyle\frac{d}{dx}x^2=2x\)
+        \end{itemize}
+
+        \begin{equation*}
+            \displaystyle\frac{d}{dx}(\sin(x)+\sin(x^2))=\displaystyle\frac{d}{dx}\sin(x)+\frac{d}{dx}\sin(x^2)\cdot\frac{d}{dx}(x^2)=\cos(x)+2x\cos(x^2)
+        \end{equation*}
+    %EJERCICIO C
+    \item \(f(x) = \sin(\cos(x))\)\\
+
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+
+        Entonces: \quad \(\displaystyle\frac{d}{dx}\sin(\cos(x))=\displaystyle\frac{d}{dx}\sin(\cos(x))\cdot\frac{d}{dx}\cos(x)\)\\
+
+        Sabemos que:
+        \begin{itemize}
+            \item \(\displaystyle\frac{d}{dx}\sin(\cos(x))=\cos(\cos(x))\)
+            \item \(\displaystyle\frac{d}{dx}\cos(x)=-\sin(x)\)
+        \end{itemize}
+
+        \begin{align*}
+            \displaystyle\frac{d}{dx}\sin(\cos(x))&=\frac{d}{dx}\sin(\cos(x))\cdot\frac{d}{dx}\cos(x)=\cos(\cos(x))(-\sin(x))\\ \\
+            &=-\cos(\cos(x))(\sin(x))
+        \end{align*}
+    %EJERCICIO D
+    \item \(f(x) = \sin(\sin(x))\)\\
+
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+
+        Entonces: \quad \(\displaystyle\frac{d}{dx}\sin(\sin(x))=\displaystyle\frac{d}{dx}\sin(\sin(x))\cdot\displaystyle\frac{d}{dx}\sin(x\)\\
+
+        Sabemos que:
+        \begin{itemize}
+            \item \(\displaystyle\frac{d}{dx}\sin(x)=\cos(x)\)
+        \end{itemize}
+
+        \[\displaystyle\frac{d}{dx}\sin(\sin(x))=\displaystyle\frac{d}{dx}\sin(\sin(x))\cdot\displaystyle\frac{d}{dx}\sin(x)=\cos(\sin(x))(\cos(x))\]
+    %EJERCICIO E
+    \item \(f(x) = \sin(x+\sin(x))\)\\
+
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+
+        Entonces: \quad \(\displaystyle\frac{d}{dx}\sin(x+\sin(x))=\frac{d}{dx}\sin(x+\sin(x))\cdot\frac{d}{dx}(x+\sin(x))\)\\
+
+        Sabemos que:
+        \begin{itemize}
+            \item \(\displaystyle\frac{d}{dx}\sin(x+\sin(x))=\cos(x+\sin(x))\)
+            \item \(\displaystyle\frac{d}{dx}(x+\sin(x))=\frac{d}{dx}x+\frac{d}{dx}\sin(x)=1+\cos(x)\)
+        \end{itemize}
+
+        \begin{equation*}
+            \frac{d}{dx}\sin(x+\sin(x))=\frac{d}{dx}\sin(x+\sin(x))\cdot\frac{d}{dx}(x+\sin(x))=\cos(x+\sin(x))(\cos(x)+1)
+        \end{equation*}
+    %EJERCICIO F
+    \item \(f(x) = \sin(\cos(\sin(x)))\)\\
+
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+
+        Entonces: \quad \(\displaystyle\frac{d}{dx}\sin(\cos(\sin(x)))=\frac{d}{dx}\sin(\cos(\sin(x)))\cdot\frac{d}{dx}\cos(\sin(x))\cdot\frac{d}{dx}\sin(x)\)\\
+
+        Sabemos que:
+        \begin{itemize}
+            \item \(\displaystyle\frac{d}{dx}\sin(\cos(\sin(x)))=\cos(\cos(\sin(x)))\)
+            \item \(\displaystyle\frac{d}{dx}\cos(\sin(x))=-\sin(\sin(x))\)
+            \item \(\displaystyle\frac{d}{dx}\sin(x)=\cos(x)\)
+        \end{itemize}
+
+        \begin{align*}
+            \displaystyle\frac{d}{dx}\sin(\cos(\sin(x)))&=\frac{d}{dx}\sin(\cos(\sin(x)))\cdot\frac{d}{dx}\cos(\sin(x))\cdot\frac{d}{dx}\sin(x)\\ \\
+            &=\cos(\cos(\sin(x)))\cdot\big(-\sin(\sin(x))\big)\cdot\cos(x)\\ \\
+            &=-\cos(\cos(\sin(x)))\cdot\sin(\sin(x))\cdot\cos(x)
+        \end{align*}
+    %EJERCICIO G
+    \item \(f(x) = \sin\left(\displaystyle\frac{\cos(x)}{x}\right)\)\\
+
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+
+        Entonces: \quad \(\displaystyle\frac{d}{dx}\sin\left(\frac{\cos(x)}{x}\right)=\displaystyle\frac{d}{dx}\sin\left(\frac{\cos(x)}{x}\right)\cdot\frac{d}{dx}\left(\frac{\cos(x)}{x}\right)\)\\
+
+        Sabemos que:
+        \begin{itemize}
+            \item \(\displaystyle\frac{d}{dx}\sin\left(\frac{\cos(x)}{x}\right)=\cos\left(\frac{\cos(x)}{x}\right)\)
+            \item \(\displaystyle\frac{d}{dx}\cos(x)=-\sin(x)\)
+            \item \(\displaystyle\frac{d}{dx}\left(\frac{\cos(x)}{x}\right)=\frac{-\sin(x)(x)-\cos(x)(1)}{x^2}=-\frac{x\sin(x)+\cos(x)}{x^2}\)
+        \end{itemize}
+
+        \begin{align*}
+            \displaystyle\frac{d}{dx}\sin\left(\frac{\cos(x)}{x}\right)&=\frac{d}{dx}\sin\left(\frac{\cos(x)}{x}\right)\cdot\frac{d}{dx}\left(\frac{\cos(x)}{x}\right)\\  \\
+            &=\cos\left(\frac{\cos(x)}{x}\right)\cdot\left(-\frac{x\sin(x)+\cos(x)}{x^2}\right)\\ \\
+            &=-\left(\cos\left(\frac{\cos(x)}{x}\right)\right)\left(\frac{x\sin(x)+\cos(x)}{x^2}\right)
+        \end{align*}
+    %EJERCICIO H
+    \item \(f(x) = \displaystyle\frac{\sin(\cos(x))}{x}\)\\
+
+        \begin{equation*}
+            \displaystyle\frac{d}{dx}\left(\frac{\sin(\cos(x))}{x}\right)=\frac{\displaystyle\frac{d}{dx}\big(\sin(\cos(x))\big)(x)-\sin(\cos(x))\cdot\frac{d}{dx}x}{x^2}
+        \end{equation*}
+
+        Sabemos que:
+        \begin{itemize}
+            \item \(\displaystyle\frac{d}{dx}\big(\sin(\cos(x))\big)=-\cos(\cos(x))(\sin(x))\) \quad Por el ejercicio c
+        \end{itemize}
+        \begin{align*}
+            \displaystyle\frac{d}{dx}\left(\frac{\sin(\cos(x))}{x}\right)&=\frac{\displaystyle\frac{d}{dx}\big(\sin(\cos(x))\big)(x)-\sin(\cos(x))\cdot\frac{d}{dx}x}{x^2}\\ \\
+            &=\frac{-x\cos(\cos(x))(\sin(x))-\sin(\cos(x))}{x^2}
+        \end{align*}
+    %EJERCICIO I
+    \item \(f(x) = \displaystyle\frac{\cos(\cos(x))}{x}\)\\
+
+        \begin{equation*}
+            \displaystyle\frac{d}{dx}\left(\frac{\cos(\cos(x))}{x}\right)=\frac{\displaystyle\frac{d}{dx}\big(\cos(\cos(x))\big)(x)-\cos(\cos(x))\cdot\frac{d}{dx}x}{x^2}
+        \end{equation*}
+
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+
+        Entonces: \quad \(\displaystyle\frac{d}{dx}\cos(\cos(x))=\frac{d}{dx}\cos(\cos(x))\cdot\frac{d}{dx}\cos(x)\)\\
+
+        Sabemos que:
+        \begin{itemize}
+            \item \(\displaystyle\frac{d}{dx}\cos(\cos(x))=-\sin(\cos(x))\)
+            \item \(\displaystyle\frac{d}{dx}\cos(x)=-\sin(x)\)
+        \end{itemize}
+
+        \begin{equation*}
+            \displaystyle\frac{d}{dx}\cos(\cos(x))=\frac{d}{dx}\cos(\cos(x))\cdot\frac{d}{dx}\cos(x)=\sin(\cos(x))\cdot\sin(x)
+        \end{equation*}
+
+        Entonces:
+        \begin{align*}
+            \displaystyle\frac{d}{dx}\left(\frac{\cos(\cos(x))}{x}\right)&=\frac{\displaystyle\frac{d}{dx}\big(\cos(\cos(x))\big)(x)-\cos(\cos(x))\cdot\frac{d}{dx}x}{x^2}\\ \\
+            &=\frac{x\sin(\cos(x))\cdot\sin(x)-\cos(\cos(x))}{x^2}
+        \end{align*}
+
 \end{enumerate}
 
 %EJERCICIO 9 ----------------------------------------------------------------------------------
 9. Dadas las siguiente funciones, encontrar un punto que satisfada el teorema de Rolle.
 
 \begin{enumerate}[\hspace{9px} a)]
-    \item \(f: [-2,0] \rightarrow \mathbbm{R} \ \text{tal que} \ f(x)=x^2+2x+1\)
-    \item \(f: [0,2] \rightarrow \mathbbm{R} \ \text{tal que} \ f(x)=x^2-2x+1\)
-    \item \(f: [-2,0] \rightarrow \mathbbm{R} \ \text{tal que} \ f(x)=\displaystyle\frac{1}{x^2+2x+1}\)
-    \item \(f: [0,2] \rightarrow \mathbbm{R} \ \text{tal que} \ f(x)=\displaystyle\frac{1}{x^2-2x+1}\)
+    \item \(f: [-2,0] \rightarrow \mathbbm{R} \ \text{tal que} \ f(x)=x^2+2x+1\)\\
+
+        \[f'(x)=\frac{d}{dx}x^2+\frac{d}{dx}2x+\frac{d}{dx}1=2x+2\]
+
+        Obtenemos $f(-2)$ y $f(0)$:
+
+        \(f(-2)=(-2)^2+2(-2)+1=4-4+1=1\)
+
+        \(f(0)=(0)^2+2(0)+1=0+0+1=1\)\\
+
+        Como $f$ es un polinomio, $f$ es continua y derivable en todos los $\mathbbm{R}$. También sabemos que $f(-2)=f(0)$, por lo que podemos usar el teorema de Rolle para decir que: \(\exists \ x_0 \in (-2,0) : f'(x_0)=0\)\\
+
+        Buscamos $x_0$: \ \(2x+2=0 \Rightarrow x=-\displaystyle\frac{2}{2}=-1 \Longrightarrow x_0=-1\)\\
+
+    \item \(f: [0,2] \rightarrow \mathbbm{R} \ \text{tal que} \ f(x)=x^2-2x+1\)\\
+
+        \[f'(x)=\frac{d}{dx}x^2-\frac{d}{dx}2x+\frac{d}{dx}1=2x-2\]
+
+        Obtenemos $f(0)$ y $f(2)$:
+
+        \(f(0)=(0)^2-2(0)+1=0+0+1=1\)
+
+        \(f(2)=(2)^2-2(2)+1=4-4+1=1\)\\
+
+        Como $f$ es un polinomio, $f$ es continua y derivable en todos los $\mathbbm{R}$. También sabemos que $f(0)=f(2)$, por lo que podemos usar el teorema de Rolle para decir que: \(\exists \ x_0 \in (0,2) : f'(x_0)=0\)\\
+
+        Buscamos $x_0$: \ \(2x-2=0 \Rightarrow x=\displaystyle\frac{2}{2}=1 \Longrightarrow x_0=1\)\\
+
+    \item \(f: [-2,0] \rightarrow \mathbbm{R} \ \text{tal que} \ f(x)=\displaystyle\frac{1}{x^2+2x+1}\)\\
+
+        Comprobamos la continuidad de $f$:
+
+        Como $f$ es una fracción, \(x^2+2x+1 \neq 0 \Rightarrow (x+1)^2 \neq 0 \Rightarrow x+1\neq0 \Rightarrow x\neq-1\)\\
+
+        Como $f$ no es continua en $[-2,0]$, no podemos utilizar el teorema de Rolle en dicho intervalo.\\
+
+    \item \(f: [0,2] \rightarrow \mathbbm{R} \ \text{tal que} \ f(x)=\displaystyle\frac{1}{x^2-2x+1}\)\\
+
+        Comprobamos la continuidad de $f$:
+
+        Como $f$ es una fracción, \(x^2-2x+1 \neq 0 \Rightarrow (x-1)^2 \neq 0 \Rightarrow x-1\neq0 \Rightarrow x\neq1\)\\
+
+        Como $f$ no es continua en $[0,2]$, no podemos utilizar el teorema de Rolle en dicho intervalo.\\
+
 \end{enumerate}
 
 %EJERCICIO 10 ----------------------------------------------------------------------------------
@@ -503,56 +735,6 @@
 \end{enumerate}
 
 \vfill
-
-%EJERCIO 8
-8.Calcular $f'(x)$ para cada una de las siguientes funciones (sin importar los dominios de $f(x)$ y de $f'(x)$).
-%EJERCIO A
-%    \begin{align*}
-        Recordamos por la regla de la cadena primero derivamos sin() y posterormente lo multiplicamos por la derivada de cos(x)\\
-        Tenemos\\
-        g(x)=sin(cos(x))\\
-        g'(x)=cos(cos(x)) \ \ \  %&&\text{Por el teorema que probamos en clase de f(x)=sin(x) entonces f'(x)=cos(x)}\\
-        Observamos\\
-        h(x)=cos(x)  \ \ \ %&&\text{Por el teorema que probramos en clase de f(x)=cos(x) entonces f'(x)=-sin(x}\\
-        h'(x)=-sin(x)\\
-        es decir\\
-        f'(x)=(cos(cos(x)))(-sin(x)) \ \ \ %&&\text{Por la regla de la cadena se multiplican}\\
-
-%    \end{align*}
-
-
-%EJERCIO F
-%    \begin{align*}
-        Recordamos por la regla de la cadena primero derivamos sin(cos(sin(x))) y posteriormente multiplicamos por la derivada de cos(sin(x)) y posteriormente por sin(x) \\
-        Tenemos,\\
-        g(x)=sin(cos(sin(x)))\\
-        g'(x)=cos(cos(sin(x))) \ \ \ %&&\text{Por el teorema que probamos en clase}\\
-        Además, tambíen tenemos,\\
-        h(x)=cos(sin(x))\\
-        h'(x)=-sin(sin(x)) \ \ \ %&&\text{Por el teorema que probamos en clase}\\
-        Posteriormente\\
-        t(x)=sin(x)\\
-        t'(x)=cos(x) \ \ \ %&&\text{Por el teorema que probamos en clase}\\
-        es decir\\
-        f'(x)=cos(cos(sin(x)))*-sin(sin(x))*cos(x) \ \ \ %&&\text{Por la regla de la cadena se multiplican}\\
-%    \end{align*}
-
-%EJERCIO I
-
-%    \begin{align*}
-        Observamos\\
-        f(x)=g(x)/h(x)  \ \ \ %&&\text{con g(x)=cos(cos(x)) y h(x)=x}\\
-        Recordamos\\
-        $f'(x)=((h(x)*g'(x))-(g(x)*h'(x)))/g(x)^2$ \ \ \ %&&\text{por el teorema que probamos en clase}\\
-        Observamos\\
-        h'(x)=1 \ \ \ %&&\text{}\\
-        y\\
-        $g'(x)=sin(cos(x))(-sin(x))$ \ \ \ %&&\text{por la regla de la cadena como en ejercicios pasados derivamos de afuera hacia adentro y luego lo multiplicamos}\\
-        es decir\\
-        $f'(x)= (((x)*(sin(cos(x))*(-sin(x))))-(cos(cos(x)))(1))/x^2$ \ \ \ %&&\text{Por regla de la cadena y el teorema de la derivada de el producto de dos funciones.}\\
-%    \end{align*}
-
-\hfill
 
 \textbf{F\'ormula cuadratica:}
 \begin{proof}
