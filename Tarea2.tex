@@ -35,6 +35,7 @@
 1. Determine si las siguientes funciones son continuas en \(x_0\).
 
 \begin{enumerate}[\hspace{9px} a)]
+    %EJERCICIO A    
     \item
     \( f(x)=
     \begin{cases}
@@ -43,6 +44,18 @@
     \end{cases}
     \)
     en $x_0 = 1$\\
+
+        Primero obtenemos $f(x_0)$: \quad \(f(1) = (1)^2-2(1)+1 = 1-2+1 = 0\)
+
+        Luego buscamos el l\'imite por la izquiera y por la derecha:\\
+
+        \(\displaystyle\lim_{x \to 1^+}f(x)=\lim_{x \to 1^+}\sqrt{x^2-1} = \sqrt{1^2-1} = \sqrt{0} = 0\)
+
+        \(\displaystyle\lim_{x \to 1^-}f(x)=\lim_{x \to 1^-}x^2-2x+1 = \lim_{x \to 1^-}x^2 -\lim_{x \to 1^-}2x + \lim_{x \to 1}1 = 1^1-2(1)+1=0\)\\
+
+        Como \(\displaystyle\lim_{x \to 1^+}f(x)=\lim_{x \to 1^-}f(x)=f(1)\), \textbf{la funci\'on es continua en $x_0=1$.}\\
+
+    %EJERCICIO B        
     \item
     \( h(x)=
     \begin{cases}
@@ -50,7 +63,29 @@
         1\text{, si} \ x=0\\
     \end{cases}
     \)
-    en $x_0=0$
+    en $x_0=0$\\
+
+        Primero obtenemos $h(x_0)$: \quad \(h(0) = 1)\)
+
+        Luego buscamos el l\'imite por la izquierda y por la derecha:\\
+
+        \(\displaystyle\lim_{x \to 0^+}h(x)=\lim_{x \to 0^+}\frac{|x|}{x}\)
+
+        Como es el l\'imite por la derecha, consideramos a todos los $x : x>0$. Como $x>0$, $|x|=x$ (Por la definición de valor absoluto), entonces podemos reescribir el l\'imite como:
+
+        \(\displaystyle\lim_{x \to 0^+}h(x)=\lim_{x \to 0^+}\frac{x}{x}=\lim_{x \to 0^+}1=1\)\\
+
+        \(\displaystyle\lim_{x \to 0^-}h(x)=\lim_{x \to 0^-}\frac{|x|}{x}\)
+
+        Como es el l\'imite por la izquierda, consideramos a todos los $x : x<0$. Como $x<0$, $|x|=-x$ (Por la definición de valor absoluto), entonces podemos reescribir el l\'imite como:
+
+        \(\displaystyle\lim_{x \to 0^+}h(x)=\lim_{x \to 0^+}\frac{-x}{x}=\lim_{x \to 0^+}-1=-1\)\\
+
+        Entonces tenemos que: \quad \(\displaystyle\lim_{x \to 0^+}h(x)\neq\lim_{x \to 0^-}h(x)\)\\
+
+        Por lo tanto, \textbf{la funci\'on no es continua en $x_0=0$}\\
+
+    %EJERCICIO C
     \item
     \( g(x)=
     \begin{cases}
@@ -58,7 +93,22 @@
         -\sqrt{1-(x-2)^2}\text{, si} \ x \in [1,2]
     \end{cases}
     \)
-    en $x_0=1$
+    en $x_0=1$\\
+
+        Primero obtenemos $f(x_0)$:\\
+        
+        \(g(1) = \sqrt{1-(1)^2} =  \sqrt{0} = 0\)
+        
+        \(g(1) = -\sqrt{1-((1)-2)^2} = -\sqrt{1-(-1)^2} = -\sqrt{1-1} = -\sqrt{0} = 0\)\\
+
+        Luego buscamos el l\'imite por la izquierda y por la derecha:\\
+
+        \(\displaystyle\lim_{x \to 1^+}g(x)=\lim_{x \to 1^+}-\sqrt{1-(x-2)^2} = -\sqrt{1-(-1)^2} = -\sqrt{1-1} = -\sqrt{0} = 0\)
+
+        \( \displaystyle\lim_{x \to 1^-}g(x)=\lim_{x \to 1^-}\sqrt{1-(1)^2} = \sqrt{0} = 0\)\\
+
+        Como \(\displaystyle\lim_{x \to 1^+}g(x)=\lim_{x \to 1^-}g(x)=g(1)\), \textbf{la funci\'on es continua en $x_0=1$.}\\
+
 \end{enumerate}
 
 %EJERCICIO 2 ----------------------------------------------------------------------------------
@@ -67,13 +117,19 @@
     \centering
     \includegraphics[width=0.5\textwidth]{fig1}
     \caption{Concentraci\'on de f\'armaco}
-    %Para referenciarla usar \ref{fig1}
-    \label{fig1}
 \end{figure}
 \begin{enumerate}[\hspace{9px} a)]
     \item ¿Para qué valores de $t$, $c(t)$ tiene discontinuidades?
+    
+        Para 12, 24, 36 y 48
+
     \item ¿Qué tipo de discontinuidades tiene?
+    
+        Como para todos los puntos $x_i$ enunciados en el inciso pasado, \(\displaystyle\lim_{x \to x_i^+}f(x) \neq \lim_{x \to x_i^-}f(x)\), el l\'imite no existe, por lo que la discontinuidad es irremovible.\\\vspace{\fill}
+
 \end{enumerate}
+
+\bigskip
 
 %EJERCICIO 3 ----------------------------------------------------------------------------------
 3. Mostrar que existe algún número $x$, tal que:
@@ -132,6 +188,8 @@
 
         Como $f$ es continua en el intervalo $[0,\pi]$ y \(f(0)>0>f(\pi)\), podemos utilizar un derivado del TVI (Parte de un corolario) para decir que: \[\exists \ x_0 \in (0,\pi) : \ f(x_0)=0\]
 
+
+    \smallskip
     %EJERCICIO D
     \item \((2x^2-2)^2=-x+1\)\\
 
@@ -340,6 +398,8 @@
 
         Entonces tenemos: \quad \(\displaystyle\frac{-1}{a^2+(a \cdot 0)}=\frac{-1}{a^2} \Longrightarrow f'(a)=-\frac{1}{a^2}\)\\
 
+    \vfill
+    \medskip
     %EJERCICIO B
     \item si \(f(x)=\displaystyle\frac{1}{x^2}\), entonces \(f'(a)=-\displaystyle\frac{2}{a^3}\) para \(a \neq 0\)\\
 
@@ -363,10 +423,10 @@
             f'(a)&=\displaystyle\lim_{h \to 0}\frac{f(a+h)-f(a)}{h}=\displaystyle\lim_{h \to 0}\frac{\sqrt{a+h}-\sqrt{a}}{h}=\displaystyle\lim_{h \to 0}\frac{\sqrt{a+h}-\sqrt{a}}{h} \cdot \frac{\sqrt{a+h}+\sqrt{a}}{\sqrt{a+h}+\sqrt{a}}\\ \\
             &=\displaystyle\lim_{h \to 0}\frac{\big(\sqrt{a+h}-\sqrt{a}\big)\big(\sqrt{a+h}+\sqrt{a}\big)}{h\big(\sqrt{a+h}+\sqrt{a}\big)}=\displaystyle\lim_{h \to 0}\frac{\big(\sqrt{a+h}\big)^2-(\sqrt{a}\big)^2}{h\big(\sqrt{a+h}+\sqrt{a}\big)}\\ \\
             &=\displaystyle\lim_{h \to 0}\frac{a+h-a}{h\big(\sqrt{a+h}+\sqrt{a}\big)}=\displaystyle\lim_{h \to 0}\frac{h}{h\big(\sqrt{a+h}+\sqrt{a}\big)}=\displaystyle\lim_{h \to 0}\frac{1}{\sqrt{a+h}+\sqrt{a}}
-        \end{align*}
-        \(\displaystyle\lim_{h \to 0}\frac{1}{\sqrt{a+h}+\sqrt{a}}=\displaystyle\frac{\displaystyle\lim_{h \to 0}1}{\displaystyle\lim_{h \to 0}\sqrt{a+h}+\displaystyle\lim_{h \to 0}\sqrt{a}}\)\\ \\
+        \end{align*}\medskip
+        \(\displaystyle\lim_{h \to 0}\frac{1}{\sqrt{a+h}+\sqrt{a}}=\displaystyle\frac{\displaystyle\lim_{h \to 0}1}{\displaystyle\lim_{h \to 0}\sqrt{a+h}+\displaystyle\lim_{h \to 0}\sqrt{a}}\)\medskip
 
-        \(\displaystyle\lim_{h \to 0}b=b\) y \(\displaystyle\lim_{h \to 0}\sqrt{a+h}=\sqrt{a}\)  existen.\\
+        \(\displaystyle\lim_{h \to 0}b=b\) y \(\displaystyle\lim_{h \to 0}\sqrt{a+h}=\sqrt{a}\)  existen.\medskip
 
         Entonces tenemos: \quad \(\displaystyle\frac{1}{\sqrt{a}+\sqrt{a}}=\frac{1}{2\sqrt{a}} \Longrightarrow f'(a)=\frac{1}{2\sqrt{a}}\)
 
@@ -377,9 +437,9 @@
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item \(f(x)=\displaystyle\frac{1}{x}\) para \(a \neq 0\)\\
+    \item \(f(x)=\displaystyle\frac{1}{x}\) para \(a \neq 0\)\medskip
 
-        Sabemos, por el ejercicio anterior, que \(f'(a)=-\displaystyle\frac{1}{a^2}\). Tambien sabemos que \(f(a)=\displaystyle\frac{1}{a}\)\\
+        Sabemos, por el ejercicio anterior, que \(f'(a)=-\displaystyle\frac{1}{a^2}\). Tambien sabemos que \(f(a)=\displaystyle\frac{1}{a}\)\medskip
 
         Conocemos también la fómula de la recta tangente de un punto a:
 
@@ -637,7 +697,7 @@
         Como $f$ no es continua en $[0,2]$, no podemos utilizar el teorema de Rolle en dicho intervalo.\\
 
 \end{enumerate}
-
+\medskip
 %EJERCICIO 10 ----------------------------------------------------------------------------------
 10. Dada las siguien funciones, encontrar un punto que satisfaga el teorema del Valor Medio.
 
@@ -718,7 +778,7 @@
 
          \qquad \(3x_0^2-2=2 \Rightarrow 3x_0^2=2+2 \Rightarrow x_0^2=\displaystyle\frac{4}{3} \Rightarrow x_0=\pm\sqrt{\frac{4}{3}}=\pm\frac{\sqrt{4}}{\sqrt{3}} \Rightarrow x_0=\pm\frac{2}{\sqrt{3}}\)
 
-          Como \(\displaystyle\frac{2}{\sqrt{3}} \notin [-2,0]\)  y  \(-\displaystyle\frac{2}{\sqrt{3}} \in [-2,0] \quad \Longrightarrow \quad x_0=-\displaystyle\frac{2}{\sqrt{3}}\)
+          Como \(\displaystyle\frac{2}{\sqrt{3}} \notin [-2,0]\)  y  \(-\displaystyle\frac{2}{\sqrt{3}} \in [-2,0] \quad \Longrightarrow \quad x_0=-\displaystyle\frac{2}{\sqrt{3}}\)\\
 
 \end{enumerate}
 
@@ -726,12 +786,145 @@
 11. Calcular los siguientes l\'imites. Analice si se puede aplicar la regla de L'H\^opital.
 
 \begin{enumerate}[\hspace{9px} a)]
-    \item \(\displaystyle\lim_{x \to 0}\frac{x}{\tan(x)}\)
-    \item \(\displaystyle\lim_{x \to 0}\frac{\cos^2(x)-1}{x^2}\)
-    \item \(\displaystyle\lim_{x \to 0}\frac{b^2\cos(ax)}{x}\)
-    \item \(\displaystyle\lim_{x \to 0}\frac{\sqrt{x+1}-1}{x}\)
-    \item \(\displaystyle\lim_{x \to 1}\frac{2x^2-4x+2}{5x^2-10x+5}\)
-    \item \(\displaystyle\lim_{x \to 0}\frac{x-\sin(x)}{x^2}\)
+    %EJERICICIO A
+    \item \(\displaystyle\lim_{x \to 0}\frac{x}{\tan(x)}\)\\
+
+        Primero obtenemos el l\'imite:
+
+        \[\displaystyle\lim_{x \to 0}\frac{x}{\tan(x)} = \frac{\displaystyle\lim_{x \to 0}x}{\displaystyle\lim_{x \to 0}\tan(x)}=\frac{0}{0}\]\\
+
+        Ahora obtenemos las derivadas de $x$ y de $\tan(x)$:
+
+        \(\displaystyle\frac{d}{dx}x=1 \qquad \quad \frac{d}{dx}\tan(x)=\frac{1}{\cos^2(x)}\) \quad Demostraci\'on al final\\
+        
+        Entonces tenemos:
+
+        \[\displaystyle\lim_{x \to 0}\frac{1}{\displaystyle\frac{1}{\cos^2(x)}}=\lim_{x \to 0}\frac{\cos^2(x)}{1}=\lim_{x \to 0}\cos(x) \cdot \lim_{x \to 0}\cos(x)=1 \cdot 1=1\]\\
+
+        Como \(\displaystyle\lim_{x \to 0}\frac{f'(x)}{g'(x)}\) existe y \(\displaystyle\lim_{x \to 0}\frac{f(x)}{g(x)}=\frac{0}{0}\), podemos aplicar la ley de L'H\^opital para decir que:
+
+        \[\displaystyle\lim_{x \to 0}\frac{x}{\tan(x)}=\lim_{x \to 0}\frac{1}{\displaystyle\frac{1}{\cos^2(x)}}=1\]
+    %EJERCICIO B
+    \item \(\displaystyle\lim_{x \to 0}\frac{\cos^2(x)-1}{x^2}\)\\
+    
+        Primero obtenemos el l\'imite:
+
+        \[\displaystyle\lim_{x \to 0}\frac{\cos^2(x)-1}{x^2} = \frac{\displaystyle\lim_{x \to 0}\cos^2(x)-\lim_{x \to 0}1}{\displaystyle\lim_{x \to 0}x^2}=\frac{1-1}{0}=\frac{0}{0}\]
+
+        Ahora obtenemos las derivadas de $\cos^2(x)-1$ y $x^2$:
+
+        \(\displaystyle\frac{d}{dx}x^2=2x\)
+
+        \(\displaystyle\frac{d}{dx}(\cos^2-1)=\frac{d}{dx}\cos^2(x) \cdot \frac{d}{dx}\cos(x) - \frac{d}{dx}1=2\cos(x)\cdot \big(-\sin(x)\big)=-2\cos(x)\sin(x)\)\\ \\
+
+        Entonces tenemos:
+
+        \[\displaystyle\lim_{x \to 0}\frac{-2\cos(x)\sin(x)}{2x}=\frac{\displaystyle\lim_{x \to 0}-2 \cdot \displaystyle\lim_{x \to 0}\cos(x) \cdot \displaystyle\lim_{x \to 0}\sin(x)}{\displaystyle\lim_{x \to 0}2 \cdot \displaystyle\lim_{x \to 0}x} = \frac{-2 \cdot 1 \cdot 0}{2 \cdot 0}=\frac{0}{0}\]\\
+
+        Como el l\'imite vuelve a ser $\displaystyle\frac{0}{0}$, comprobamos si podemos utilizar la ley de L'H\^opital.\\
+
+        Obtenemos las derivadas de $-2\cos(x)\sin(x)$ y $2x$:
+
+        \(\displaystyle\frac{d}{dx}2x=2\)\\
+        
+        Observaci\'on: 
+        
+        \(-2\cos(x)\sin(x)=-(\cos(x)\sin(x)+\cos(x)\sin(x))=-\sin(x+x)=-\sin(2x)\)\\
+
+        Asi:
+
+        \(\displaystyle\frac{d}{dx}-\sin(2x)=\frac{d}{dx}-\sin(2x) \cdot \frac{d}{dx}2x = -\cos(2x) \cdot 2\)\\
+
+        Entonces tenemos:
+
+        \[\displaystyle\lim_{x \to 0}\frac{-2\cos(x)}{2}=\displaystyle\lim_{x \to 0}-\cos(x)=-1\]\\
+
+        Como \(\displaystyle\lim_{x \to 0}\frac{f''(x)}{g''(x)}\) existe, \(\displaystyle\lim_{x \to 0}\frac{f'(x)}{g'(x)}=\frac{0}{0}\) y \(\displaystyle\lim_{x \to 0}\frac{f(x)}{g(x)}=\frac{0}{0}\), podemos aplicar la ley de L'H\^opital para decir que:
+
+        \[\displaystyle\lim_{x \to 0}\frac{-2\cos(x)}{2}=\displaystyle\lim_{x \to 0}\frac{-2\cos(x)\sin(x)}{2x}=\displaystyle\lim_{x \to 0}\frac{\cos^2(x)-1}{x^2}=-1\]\\
+    \vfill
+    \bigskip
+    %EJERCICIO C
+    \item \(\displaystyle\lim_{x \to 0}\frac{b^2\cos(ax)}{x}\)\\
+    
+
+    %EJERCICIO D    
+    \item \(\displaystyle\lim_{x \to 0}\frac{\sqrt{x+1}-1}{x}\)\\
+    
+        Primero obtenemos el l\'imite:
+
+        \[\displaystyle\lim_{x \to 0}\frac{\sqrt{x+1}-1}{x} = \frac{\displaystyle\lim_{x \to 0}\sqrt{x+1}-\displaystyle\lim_{x \to 0}1}{\displaystyle\lim_{x \to 0}x}=\frac{\sqrt{1}-1}{0}=\frac{1-1}{0}=\frac{0}{0}\]
+
+        Ahora obtenemos la derivada de $\sqrt{x+1}-1$ y de $x$:
+
+        \(\displaystyle\frac{d}{dx}x=1\)
+
+        \(\displaystyle\frac{d}{dx}(\sqrt{x+1}-1)=\frac{d}{dx}\sqrt{x+1}-\frac{d}{dx}1=\frac{1}{2\sqrt{x+1}}\)\\
+
+        Entonces tenemos:
+
+        \[\displaystyle\lim_{x \to 0}\frac{\displaystyle\frac{1}{2\sqrt{x+1}}}{1}=\displaystyle\lim_{x \to 0}\frac{1}{2\sqrt{x+1}} = \frac{\displaystyle\lim_{x \to 0}1}{\displaystyle\lim_{x \to 0}2 \cdot \displaystyle\lim_{x \to 0}\sqrt{x+1}}=\frac{1}{2   \cdot \sqrt{1}}=\frac{1}{2 \cdot 1}=\frac{1}{2}\]\\
+
+        Como \(\displaystyle\lim_{x \to 0}\frac{f'(x)}{g'(x)}\) existe y \(\displaystyle\lim_{x \to 0}\frac{f(x)}{g(x)}=\frac{0}{0}\), podemos aplicar la ley de L'H\^opital para decir que:
+
+        \[\displaystyle\lim_{x \to 0}\frac{\displaystyle\frac{1}{2\sqrt{x+1}}}{1}=\displaystyle\lim_{x \to 0}\frac{\sqrt{x+1}-1}{x}=\frac{1}{2}\]
+
+    %EJERCICIO E
+    \item \(\displaystyle\lim_{x \to 1}\frac{2x^2-4x+2}{5x^2-10x+5}\)\\
+    
+        Primero obtenemos el l\'imite:
+        \begin{align*}     
+            \displaystyle\lim_{x \to 1}\frac{2x^2-4x+2}{5x^2-10x+5}&=\frac{\displaystyle\lim_{x \to 1}2 \cdot \lim_{x \to 1}x^2 -\lim_{x \to 1}4 \cdot \lim_{x \to 1}x + \lim_{x \to 1}2}{\displaystyle\lim_{x \to 1}5 \cdot \lim_{x \to 1}x^2 - \lim_{x \to 1}10 \cdot \lim_{x \to 1}x + \lim_{x \to 1}5}=\frac{2(1)-4(1)+2}{5(1)-10(1)+5}\\ \\ 
+            &= \frac{2-4+2}{5-10+5}=\frac{0}{0}
+        \end{align*}
+
+        Ahora obtenemos la derivada de $2x^2-4x+2$ y de $5x^2-10x+5$:\\
+
+        \(\displaystyle\frac{d}{dx}(2x^2-4x+2)=\frac{d}{dx}2x^2-\frac{d}{dx}4x+\frac{d}{dx}2=4x-4\)
+
+        \(\displaystyle\frac{d}{dx}(5x^2-10x+5)=\frac{d}{dx}5x^2-\frac{d}{dx}10x+\frac{d}{dx}5=10x-10\)\\ \\
+
+        Entonces tenemos:
+
+        \[\displaystyle\lim_{x \to 1}\frac{4x-4}{10x-10}=\lim_{x \to 1}\frac{4(x-1)}{10(x-1)} = \lim_{x \to 1}\frac{4}{10} = \frac{4}{10} =\frac{2}{5}\]\\
+
+        Como \(\displaystyle\lim_{x \to 0}\frac{f'(x)}{g'(x)}\) existe y \(\displaystyle\lim_{x \to 0}\frac{f(x)}{g(x)}=\frac{0}{0}\), podemos aplicar la ley de L'H\^opital para decir que:
+        
+        \[\displaystyle\lim_{x \to 1}\frac{4x-4}{10x-10}=\lim_{x \to 1}\frac{2x^2-4x+2}{5x^2-10x+5}=\frac{2}{5}\]
+
+    %EJERCICIO F 
+    \item \(\displaystyle\lim_{x \to 0}\frac{x-\sin(x)}{x^2}\)\\
+    
+        Primero obtenemos el l\'imite:
+
+        \[\displaystyle\lim_{x \to 0}\frac{x-\sin(x)}{x^2} = \frac{\displaystyle\lim_{x \to 0}x - \lim_{x \to 0}\sin(x)}{\displaystyle\lim_{x \to 0}x^2}=\frac{0-0}{0}=\frac{0}{0}\]
+
+        Ahora la derivada de $x-\sin(x)$ y de $x^2$:
+
+        \(\displaystyle\frac{d}{dx}(x-\sin(x))=\frac{d}{dx}x-\frac{d}{dx}\sin(x)=1-cos(x)\)
+
+        \(\displaystyle\frac{d}{dx}x^2=2x\)\\
+
+        Entonces tenemos:
+
+        \[\displaystyle\lim_{x \to 0}\frac{1-\cos(x)}{2x}=\frac{\displaystyle\lim_{x \to 0}1 - \lim_{x \to 0}\cos(x)}{\lim_{x \to 0}2 \cdot \lim_{x \to 0}x} = \frac{1-1}{2(0)}=\frac{0}{0}\]
+
+        Como el l\'imite vuelve a ser $\displaystyle\frac{0}{0}$, comprobamos si podemos utilizar la ley de L'H\^opital.\\
+
+        Obtenemos la derivada de $1-\cos(x)$ y de $2x$:
+
+        \(\displaystyle\frac{d}{dx}(1-\cos(x)) = \frac{d}{dx}1 - \frac{d}{dx}\cos(x) = -(-\sin(x)) = \sin(x)\)
+
+        \(\displaystyle\frac{d}{dx}2x = 2\)\\
+
+        Entonces tenemos:
+
+        \[\displaystyle\lim_{x \to 0}\frac{\sin(x)}{2} = \frac{\displaystyle\lim_{x \to 0}\sin(x)}{\displaystyle\lim_{x \to 0}2} = \frac{0}{2} = 0\]\\
+
+        Como \(\displaystyle\lim_{x \to 0}\frac{f''(x)}{g''(x)}\) existe, \(\displaystyle\lim_{x \to 0}\frac{f'(x)}{g'(x)}=\frac{0}{0}\) y \(\displaystyle\lim_{x \to 0}\frac{f(x)}{g(x)}=\frac{0}{0}\), podemos aplicar la ley de L'H\^opital para decir que:
+
+        \[\displaystyle\lim_{x \to 0}\frac{\sin(x)}{2} = \lim_{x \to 0}\frac{1-\cos(x)}{2x} = \lim_{x \to 0}\frac{x-\sin(x)}{x^2}= 0\]\\
+
 \end{enumerate}
 
 %EJERCICIO 12 ----------------------------------------------------------------------------------
