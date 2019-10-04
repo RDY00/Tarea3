@@ -1104,20 +1104,93 @@
 17. Mostrar que:
 
 \begin{enumerate}[\hspace{9px} a)]
-    \item La suma de un n\'umero real positvio y su rec\'iproco es por lo menos 2.
-    \item Entre todos los rect\'angulos de igual per\'imetro, el de mayor \'area es el cuadrado.
-    \item Entre todos los rect\'angulos con la misma \'area, el cuadrado es el de per\'imetro m\'inimo.
-    \item Entre todos los rect\'angulos que pueden inscribirse en una circunferencia, el cuadrado es el de \'area m\'axima.
-    \item La raz\'on de variac\'on del volumen de una esfera rexpecto a su radio, es igual a su \'area.
+    \item La suma de un n\'umero real positivo y su rec\'iproco es por lo menos 2.\\ \\
+      Podemos representar el enunciado con la siguiente funcion:
+      \[f(x) = x+\displaystyle\frac{1}{x}\] 
+      Y si podemos mostrar que el minimo de dicha funcion es 2, podemos afirmar que no existe numero para el cual la suma con su rec\'iproco es mayor o igual a 2, y podemos encontrar puntos criticos de una funcion usando su derivada.\\*
+      Sabemos que \[\displaystyle\frac{d}{dx}(f(x)+g(x)) = \displaystyle\frac{d}{dx}f(x)+\displaystyle\frac{d}{dx}g(x)\]
+      Por lo tanto la derivada es: 
+      \[f'(x): \ = 1-\displaystyle\frac{1}{x^2}\]
+      Y tendra uno o mas puntos criticos cuando sea igual a 0, asi que \[1-\displaystyle\frac{1}{x^2}=0\Rightarrow\displaystyle\frac{1}{x^2}=1\Rightarrow x^2 = 1 \Rightarrow x=1\]   
+      Es necesario revisar si es un maximo o un minimo, para lo cual usaremos la segunda derivada, siendo esta: \[f''(x)=\displaystyle\frac{2}{x^3}\]
+      Evaluamos el punto critico que encontramos \(f''(1)=\displaystyle\frac{2}{1^3}\Rightarrow f''(1)=2\Rightarrow 2>0\)\quad Por lo que es un minimo.
+      Sabiendo que el punto critico es un minimo, evaluamos en la funcion para obtener el valor critico
+      \[f(1)=1+\displaystyle\frac{1}{1}\Rightarrow f(1)=2\]
+      El minimo valor que puede tener la suma de un numero y su reciproco es 2
+    \item Entre todos los rect\'angulos de igual per\'imetro, el de mayor \'area es el cuadrado.\\ \\
+    Sabiendo que el perimetro de un rectangulo es \(p=2b+2h\) y su area \(bh\)
+    Podemos usar el perimetro tal que: \[p=2b+2h\Rightarrow p-2h=2b\Rightarrow \displaystyle\frac{p}{2}-h=b\]
+    Y sustituyendo en la operacion de area tenemos que \(f(h)=(\displaystyle\frac{p}{2}-h)h\Rightarrow f(h)=\displaystyle\frac{ph}{2}-h^2\).
+    Tenemos ahora el area en funcion de la altura de un rectangulo, usando la derivada podemos encontrar con que altura tiene area maxima el rectangulo. \\*Si observamos que \(\displaystyle\frac{p}{2}\)es una constante entonces la derivada de esa funcion es: 
+    \[f'(h)=\displaystyle\frac{p}{2}-2h\]
+    Igualamos la derivada a 0 para encontrar puntos criticos.
+    \[f'(h)=\displaystyle\frac{p}{2}-2h=0\Rightarrow \displaystyle\frac{p}{2}=2h\Rightarrow \displaystyle\frac{p}{4}=h\]
+    Esto implica que el area tiene un maximo o un minimo cuando todos los lados son iguales, solo resta determinar si es max o min con la segunda derivada.
+    \[f''(h)=-2\]
+    Y como \(-2<0\) el punto critico es un maximo. 
+    \item Entre todos los rect\'angulos con la misma \'area, el cuadrado es el de per\'imetro m\'inimo.\\ \\
+    Sabiendo que el perimetro de un rectangulo es \(p=2b+2h\) y su area \(bh\)
+    Podemos usar el area tal que: \[a=bh\Rightarrow \displaystyle\frac{a}{h}=b\]
+    Y sustituyendo en la operacion del perimetro tenemos que \[f(h)=2\displaystyle\frac{a}{h}+2h\Rightarrow f(h)=\displaystyle\frac{2a}{h}+2h\]
+    Tenemos ahora el perimetro en funcion de la altura de un rectangulo, usando la derivada podemos encontrar con que altura tiene perimetro minimo el rectangulo. Si observamos que \(2a\)es una constante entonces la derivada de esa funcion es: 
+    \[f'(h)=-\displaystyle\frac{2a}{h^2}+2\]
+    Igualamos la derivada a 0 para encontrar puntos criticos.
+    \[f'(h)=-\displaystyle\frac{2a}{h^2}+2=0\Rightarrow \displaystyle\frac{2a}{h^2}=2\Rightarrow 2a=2h^2\Rightarrow a=h^2\]
+    Podemos observar que esa es la formula del area que solo es cierta si \(h=b\), asi que el rectangulo tiene un perimetro maximo o minimo cuando es un cuadrado, usamos la segunda derivada para determinar cual de los dos es.
+    \[f''(h)=\displaystyle\frac{4a}{h^3}\]
+    Como \(a\) y \(h\) no pueden ser negativos entonces \(\displaystyle\frac{4a}{h^3}>0\), por lo que es un valor minimo.
+    \item Entre todos los rect\'angulos que pueden inscribirse en una circunferencia, el cuadrado es el de \'area m\'axima. \\ \\
+    Tomemos un rect\'angulos cuya base sea \(2x\) y su altura \(2y\), inscrito en un circulo de radio \(r\)\\
+    Obervemos que, se forma un triangulo rectangulo con catetos \(x\) , \(y\) e hipotenusa \(r\) de lo cual podemos concluir por el teorema de Pitagoras 
+    \[r^2=x^2+y^2\Rightarrow r^2-x^2=y^2\Rightarrow \sqrt{r^2-x^2}=y\]
+    Sabemos que el area de el rect\'angulo es \(4xy\).\quad Podemos sustitur con la observacion anterior
+    \[f(r)=4x\sqrt{r^2-x^2}\]
+    Esta es una funcion de area respecto a radio, asi que usaremos la derivada para saber cuando alcanza un maximo.\\
+    La regla de la cadena dice que la derivada de \(g(f(x))\) es \(g'(f(x))f'(x)\).
+    \[f'(x)=4\sqrt{r^2-x^2}+\displaystyle\frac{-2x}{2\sqrt{r^2-x^2}}4x\Rightarrow 4\sqrt{r^2-x^2}-\displaystyle\frac{4x^2}{\sqrt{r^2-x^2}}\]
+    Igualamos a 0 para encontrar puntos criticos
+    \[4\sqrt{r^2-x^2}-\displaystyle\frac{4x^2}{\sqrt{r^2-x^2}}=0\Rightarrow 4(r^2-x^2)=4x^2\Rightarrow r^2-x^2=x^2\Rightarrow r^2=2x^2\Rightarrow \displaystyle\frac{r^2}{2}=x^2\Rightarrow \displaystyle\frac{r}{\sqrt{2}}=x\] 
+    Tenemos el valor de \(x\) para un punto critico, resta encontrar el valor de \(y\) para dicho valor
+    \[y=\sqrt{r^2-x^2}\Rightarrow y=\sqrt{r^2-(\displaystyle\frac{r}{\sqrt{2}})^2}\Rightarrow y=\sqrt{r^2-\displaystyle\frac{r^2}{2}}\Rightarrow y=\sqrt{\displaystyle\frac{r^2}{2}}\Rightarrow y=\displaystyle\frac{r}{\sqrt{2}}\] 
+    Podemos observar que \(x\) y \(y\) tienen el mismo valor, lo cual prueba que el rectangulo de mayor area inscrita en un circulo es un cuadrado.
+    \item La raz\'on de variac\'on del volumen de una esfera respecto a su radio, es igual a su \'area.\\ \\
+    La razon de variacion de una funcion es su derivada, por lo que: 
+    \[f(r)=volumen \qquad \qquad f'(r)=area\]
+    Y sabiendo que:
+    \[Volumen Esfera=\displaystyle\frac{4\pi}{3}r^3\qquad \qquad Area Esfera=4\pi r^2\]
+    Observemos que \(\displaystyle\frac{4\pi}{3}\)es una constante, por lo que sea la funcion
+    \[f(r)=\displaystyle\frac{4\pi}{3}r^3\]
+    Su derivada sera
+    \[f'(r)=3\displaystyle\frac{4\pi}{3}r^2\Rightarrow 4\pi r^2\]
 \end{enumerate}
 
 %EJERCICIO 18 ----------------------------------------------------------------------------------
 18. Encuentre el punto para el cual:
 
 \begin{enumerate}[\hspace{9px} a)]
-    \item La recta tangente a la par\'abola \(f(x)=x^2-7x+3\), es paralela a la recta \(5x+3y-3=0\)
-    \item La recta tangente a la par\'abola \(f(x)=x^2-7x+3\), es paralela a la recta \(3x-y-4=0\)
-    \item La recta tangente a la pa\'rabola \(f(x)=x^2-7x+3\), es paralela a la recta \(2x+3y-3=0\)
+    \item La recta tangente a la par\'abola \(f(x)=x^2-7x+3\), es paralela a la recta \(5x+3y-3=0\) \\ \\
+    Dos rectas son paralelas si y solo si sus pendientes son iguales. Para la pendiente de la recta la representamos de la forma \(g(a) = f'(a)(x-a)+f(a)\)
+    \[5x+3y-3\Rightarrow 5x-3=-3y\Rightarrow -\displaystyle\frac{5}{3}-1=y\]
+    En la cual \(-\displaystyle\frac{5}{3}\) es la pendiente\\ \\
+    La derivada de una funcion es la pendiente de la recta tangente en un punto de la funcion por lo que si obtenemos la derivada y la igualamos a la pendiente encontrada podremos encontrar el punto en el cual es paralela a la recta dada.
+    \[f(x)=x^2-7x+3\Rightarrow f'(x)=2x-7\Rightarrow 2x-7=-\displaystyle\frac{5}{3}\Rightarrow 3(2x-7)=-5\]
+    \[\Rightarrow 6x-21=-5\Rightarrow 6x=16\Rightarrow x=\displaystyle\frac{8}{3}\]
+     Ese es el punto en el cual la tangente y la recta son paralelas.
+    \item La recta tangente a la par\'abola \(f(x)=x^2-7x+3\), es paralela a la recta \(3x-y-4=0\) \\ \\
+    Dos rectas son paralelas si y solo si sus pendientes son iguales. Para la pendiente de la recta la representamos de la forma \(g(a) = f'(a)(x-a)+f(a)\)
+    \[3x-y-4\Rightarrow 3x-4=y\]
+    En la cual \(3\) es la pendiente\\ \\
+    La derivada de una funcion es la pendiente de la recta tangente en un punto de la funcion por lo que si obtenemos la derivada y la igualamos a la pendiente encontrada podremos encontrar el punto en el cual es paralela a la recta dada.
+    \[f(x)=x^2-7x+3\Rightarrow f'(x)=2x-7\Rightarrow 2x-7=3\Rightarrow 2x=10\Rightarrow x=5\]
+     Ese es el punto en el cual la tangente y la recta son paralelas.
+    \item La recta tangente a la pa\'rabola \(f(x)=x^2-7x+3\), es paralela a la recta \(2x+3y-3=0\) \\ \\
+    Dos rectas son paralelas si y solo si sus pendientes son iguales. Para la pendiente de la recta la representamos de la forma \(g(a) = f'(a)(x-a)+f(a)\)
+    \[2x+3y-3\Rightarrow 2x-3=-3y\Rightarrow -\displaystyle\frac{2}{3}-1=y\]
+    En la cual \(-\displaystyle\frac{2}{3}\) es la pendiente\\ \\
+    La derivada de una funcion es la pendiente de la recta tangente en un punto de la funcion por lo que si obtenemos la derivada y la igualamos a la pendiente encontrada podremos encontrar el punto en el cual es paralela a la recta dada.
+    \[f(x)=x^2-7x+3\Rightarrow f'(x)=2x-7\Rightarrow 2x-7=-\displaystyle\frac{2}{3}\Rightarrow 3(2x-7)=-2\]
+    \[\Rightarrow 6x-21=-2\Rightarrow 6x=19\Rightarrow x=\displaystyle\frac{19}{6}\]
+     Ese es el punto en el cual la tangente y la recta son paralelas.
 \end{enumerate}
 
 \vfill
