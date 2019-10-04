@@ -184,34 +184,26 @@
 
         Proponemos $a=0$ y $b=\pi$
         \[f(0)=\cos(0)-0+\frac{1}{2} = 1-0+\frac{1}{2} = \frac{3}{2}\]
-        \[f(\pi)=\cos(x)-x+\frac{1}{2} = 0-\pi+\frac{1}{2} \approx -2.6\]
+        \[f(\pi)=\cos(\pi)-\pi+\frac{1}{2} = 0-\pi+\frac{1}{2} \approx -2.6\]
 
         Como $f$ es continua en el intervalo $[0,\pi]$ y \(f(0)>0>f(\pi)\), podemos utilizar un derivado del TVI (Parte de un corolario) para decir que: \[\exists \ x_0 \in (0,\pi) : \ f(x_0)=0\]
 
 
     \smallskip
     %EJERCICIO D
-    \item \((2x^2-2)^2=-x+1\)\\
+    \item \((2x^2-2)^2=-x+1\)\medskip
 
-    Reescribimos la igualdad como \((2x^2-2)^2-(-x+1)=0 \Longrightarrow (2x^2-2)^2+x-1=0\).\\
+    Reescribimos la igualdad como \((2x^2-2)^2-(-x+1)=0 \Longrightarrow (2x^2-2)^2+x-1=0\).\medskip
 
-    Como $2x^2-2$ y $-x+1$ son polinomios, son continuos. Como la multiplicación de dos continuos es continua, $(2x^2-2)^2$ es continua. Y dado que la suma de dos continuos es continua $f(x)=(2x^2-2)^2+x-1$ es continua en todos los $\mathbbm{R}$.\\
+    Como $2x^2-2$ y $-x+1$ son polinomios, son continuos. Como la multiplicación de dos continuos es continua, $(2x^2-2)^2$ es continua. Y dado que la suma de dos continuos es continua $f(x)=(2x^2-2)^2+x-1$ es continua en todos los $\mathbbm{R}$.\medskip
 
-    Para que $f$ cumpla el TVI tiene que existir un $f(x_0)<0$, pero $f$ nunca es menor a 0:
-
-    Observación: Sabemos que $(2x^2-2)^2 \geq 0 \ \forall \ x \in \mathbbm{R}$\\
-
-    Para $x \leq 1$:
-    \[x \leq 1 \Rightarrow x-1 \leq 0 \leq (2x^2-2)^2 \Rightarrow x-1 \leq (2x^2-2)^2 \Rightarrow 0 \leq (2x^2-2)^2-(x-1)\]
-
-    Para $x>1$:
-    \[x>1 \Rightarrow x-1>0 \Rightarrow x-1+(2x^2-2)^2>0\]
+    Para que $f$ cumpla el TVI tiene que existir un $f(x_0)<0$, pero $f$ nunca es menor a 0.
 
     Pero si proponemos $x_0=1$:
 
     \[f(1)=(2(1)^2-2)^2+1-1=(2-2)^2+0=0^2+0=0\]
 
-    Obtenemos el $x_0$ que cumple la igualdad.\\
+    Obtenemos el $x_0$ que cumple la igualdad.\medskip
 
 \end{enumerate}
 
@@ -350,7 +342,11 @@
 
         Como $f$ es un polinomio, es continua en $[-1,0]$. Además tenemos que $f(-1)>0>f(0)$. Por lo que podemos usar un derivado del TVI para decir que: \(\exists \ x_0 \in (-1,0) : \ f(x_0)=0\)\\
 
-        \textbf{ $\therefore \ f$ tiene una raíz en $[-2.1,1.5]$}\\
+        \textbf{ $\therefore \ f$ tiene una raíz en $[-2.1,1.5]$}\medskip
+
+        \vfill
+        \bigskip
+
     %EJERCICIO C
     \item \(x\sin x-\displaystyle\frac{1}{2}=0\) en $[-1,2]$\\
 
@@ -396,10 +392,8 @@
         \(\displaystyle\lim_{h \to 0}\frac{-1}{a^2+ah} = \frac{\displaystyle\lim_{h \to 0}-1}{\displaystyle\lim_{h \to 0}a^2+(\displaystyle\lim_{h \to 0}a \cdot \displaystyle\lim_{h \to 0}h)}\) \qquad
         \(\displaystyle\lim_{h \to 0}b=b\) existe y \(\displaystyle\lim_{h \to 0}h=0\) existe.\\ \\
 
-        Entonces tenemos: \quad \(\displaystyle\frac{-1}{a^2+(a \cdot 0)}=\frac{-1}{a^2} \Longrightarrow f'(a)=-\frac{1}{a^2}\)\\
+        Entonces tenemos: \quad \(\displaystyle\frac{-1}{a^2+(a \cdot 0)}=\frac{-1}{a^2} \Longrightarrow f'(a)=-\frac{1}{a^2}\)\medskip
 
-    \vfill
-    \medskip
     %EJERCICIO B
     \item si \(f(x)=\displaystyle\frac{1}{x^2}\), entonces \(f'(a)=-\displaystyle\frac{2}{a^3}\) para \(a \neq 0\)\\
 
@@ -493,7 +487,7 @@
     %EJERCICIO A
     \item \(f(x) = \sin(x+x^2)\)\\
 
-        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g'(x)\)\medskip
 
         Entonces: \quad \(\displaystyle\frac{d}{dx}\sin(x+x^2)=\displaystyle\frac{d}{dx}\sin(x+x^2)\cdot\displaystyle\frac{d}{dx}(x+x^2)\)\\
 
@@ -507,7 +501,7 @@
     %EJERCICIO B
     \item \(f(x) = \sin(x) + \sin(x^2)\)\\
 
-        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g'(x)\)\medskip
 
         Entonces: \quad \(\displaystyle\frac{d}{dx}(\sin(x)+\sin(x^2))=\displaystyle\frac{d}{dx}\sin(x)+\frac{d}{dx}\sin(x^2)\cdot\frac{d}{dx}(x^2)\)\\
 
@@ -523,7 +517,7 @@
     %EJERCICIO C
     \item \(f(x) = \sin(\cos(x))\)\\
 
-        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g'(x)\)\medskip
 
         Entonces: \quad \(\displaystyle\frac{d}{dx}\sin(\cos(x))=\displaystyle\frac{d}{dx}\sin(\cos(x))\cdot\frac{d}{dx}\cos(x)\)\\
 
@@ -540,9 +534,9 @@
     %EJERCICIO D
     \item \(f(x) = \sin(\sin(x))\)\\
 
-        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g'(x)\)\medskip
 
-        Entonces: \quad \(\displaystyle\frac{d}{dx}\sin(\sin(x))=\displaystyle\frac{d}{dx}\sin(\sin(x))\cdot\displaystyle\frac{d}{dx}\sin(x\)\\
+        Entonces: \quad \(\displaystyle\frac{d}{dx}\sin(\sin(x))=\displaystyle\frac{d}{dx}\sin(\sin(x))\cdot\displaystyle\frac{d}{dx}\sin(x)\)\medskip
 
         Sabemos que:
         \begin{itemize}
@@ -553,7 +547,7 @@
     %EJERCICIO E
     \item \(f(x) = \sin(x+\sin(x))\)\\
 
-        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g'(x)\)\medskip
 
         Entonces: \quad \(\displaystyle\frac{d}{dx}\sin(x+\sin(x))=\frac{d}{dx}\sin(x+\sin(x))\cdot\frac{d}{dx}(x+\sin(x))\)\\
 
@@ -569,7 +563,7 @@
     %EJERCICIO F
     \item \(f(x) = \sin(\cos(\sin(x)))\)\\
 
-        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g'(x)\)\medskip
 
         Entonces: \quad \(\displaystyle\frac{d}{dx}\sin(\cos(\sin(x)))=\frac{d}{dx}\sin(\cos(\sin(x)))\cdot\frac{d}{dx}\cos(\sin(x))\cdot\frac{d}{dx}\sin(x)\)\\
 
@@ -588,7 +582,7 @@
     %EJERCICIO G
     \item \(f(x) = \sin\left(\displaystyle\frac{\cos(x)}{x}\right)\)\\
 
-        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g'(x)\)\medskip
 
         Entonces: \quad \(\displaystyle\frac{d}{dx}\sin\left(\frac{\cos(x)}{x}\right)=\displaystyle\frac{d}{dx}\sin\left(\frac{\cos(x)}{x}\right)\cdot\frac{d}{dx}\left(\frac{\cos(x)}{x}\right)\)\\
 
@@ -626,9 +620,9 @@
             \displaystyle\frac{d}{dx}\left(\frac{\cos(\cos(x))}{x}\right)=\frac{\displaystyle\frac{d}{dx}\big(\cos(\cos(x))\big)(x)-\cos(\cos(x))\cdot\frac{d}{dx}x}{x^2}
         \end{equation*}
 
-        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g(x)\)\\
+        Por la ley de la cadena tenemos que: \(f'(g(x))=f'(g(x))g'(x)\)\medskip
 
-        Entonces: \quad \(\displaystyle\frac{d}{dx}\cos(\cos(x))=\frac{d}{dx}\cos(\cos(x))\cdot\frac{d}{dx}\cos(x)\)\\
+        Entonces: \quad \(\displaystyle\frac{d}{dx}\cos(\cos(x))=\frac{d}{dx}\cos(\cos(x))\cdot\frac{d}{dx}\cos(x)\)\medskip
 
         Sabemos que:
         \begin{itemize}
@@ -702,9 +696,9 @@
 10. Dada las siguien funciones, encontrar un punto que satisfaga el teorema del Valor Medio.
 
 \begin{enumerate}[\hspace{9px} a)]
-    \item \(f: [-1,1] \rightarrow \mathbbm{R} \ \text{tal que} \ f(x)=x^{4/3}\)\\
+    \item \(f: [-1,1] \rightarrow \mathbbm{R} \ \text{tal que} \ f(x)=x^{4/3}\)\medskip
 
-        Sabemos que \(\frac{d}{dx}x^n=n\cdot x^{n-1}\), Entonces:
+        Sabemos que \(\displaystyle\frac{d}{dx}x^n=n\cdot x^{n-1}\), Entonces:
 
         \[\displaystyle\frac{d}{dx}x^{4/3}=\frac{4}{3}x^{(4/3)-1}=\frac{4}{3}x^{1/3}\]
 
@@ -722,7 +716,7 @@
 
     \item \(f: [-1,2] \rightarrow \mathbbm{R} \ \text{tal que} \ f(x)=x^2-1\)\\
 
-        \[f'(x)=\displaystyle\frac{d}{dx}x^2+\frac{d}{dx}1=2x\]
+        \[f'(x)=\displaystyle\frac{d}{dx}x^2-\frac{d}{dx}1=2x\]
 
         Como $f$ es un polinomio, es continua en todos los $\mathbbm{R}$, en especial en $[-1,2]$. Por lo tanto, podemos usar el TVM para decir que: \(\exists \ x_0 \in (-1,2) : f'(x_0)=\displaystyle\frac{f(2)-f(-1)}{2-(-1)}\).
 
@@ -795,7 +789,7 @@
 
         Ahora obtenemos las derivadas de $x$ y de $\tan(x)$:
 
-        \(\displaystyle\frac{d}{dx}x=1 \qquad \quad \frac{d}{dx}\tan(x)=\frac{1}{\cos^2(x)}\) \quad Demostraci\'on al final\\
+        \(\displaystyle\frac{d}{dx}x=1 \qquad \quad \frac{d}{dx}\tan(x)=\frac{1}{\cos^2(x)}\)\medskip
         
         Entonces tenemos:
 
@@ -841,15 +835,44 @@
 
         Como \(\displaystyle\lim_{x \to 0}\frac{f''(x)}{g''(x)}\) existe, \(\displaystyle\lim_{x \to 0}\frac{f'(x)}{g'(x)}=\frac{0}{0}\) y \(\displaystyle\lim_{x \to 0}\frac{f(x)}{g(x)}=\frac{0}{0}\), podemos aplicar la ley de L'H\^opital para decir que:
 
-        \[\displaystyle\lim_{x \to 0}\frac{-2\cos(x)}{2}=\displaystyle\lim_{x \to 0}\frac{-2\cos(x)\sin(x)}{2x}=\displaystyle\lim_{x \to 0}\frac{\cos^2(x)-1}{x^2}=-1\]\\
-    \vfill
-    \bigskip
+        \[\displaystyle\lim_{x \to 0}\frac{-2\cos(x)}{2}=\displaystyle\lim_{x \to 0}\frac{-2\cos(x)\sin(x)}{2x}=\displaystyle\lim_{x \to 0}\frac{\cos^2(x)-1}{x^2}=-1\]\medskip
+
     %EJERCICIO C
-    \item \(\displaystyle\lim_{x \to 0}\frac{b^2\cos(ax)}{x}\)\\
+    \item \(\displaystyle\lim_{x \to 0}\frac{b^2\cos(ax)}{x}\)\medskip
     
+        Prmiero obtenemos el l\'imite:
+
+        \[\displaystyle\lim_{x \to 0}\frac{b^2\cos(ax)}{x}= \frac{\displaystyle\lim_{x \to 0}b^2 \cdot \lim_{x \to 0}\cos(ax)}{\displaystyle\lim_{x \to 0}x} = \frac{b^2\cos(0)}{0}=\frac{b^2}{0}\]
+
+        Como nuestro l\'imite es dependiente de b, obtendremos dos casos:
+
+        \begin{itemize}
+            \item Si $b=0$, el l\'imite esta indeterminado.
+            \item Si $b \neq 0$, el l\'imite no existe. 
+        \end{itemize}
+
+        Si consideramos $b=0$, \(\displaystyle\lim_{x \to 0}\frac{b^2\cos(ax)}{x}=\frac{b^2}{0}=\frac{0}{0}\)\medskip
+
+        Ahora obtenemos la derivada de $x$ y de $b^2\cos(ax)$:
+
+        \(\displaystyle\frac{d}{dx}x = 1\)
+
+        \(\displaystyle\frac{d}{dx}b^2\cos(ax) = \frac{d}{dx}b^2 \cdot \cos(ax) + b^2 \cdot \frac{d}{dx}\cos(ax) \cdot \frac{d}{dx}ax= 2b\cos(ax)-ab^2\sin(ax)\)\medskip
+
+        Asi:
+        \begin{align*}
+            \displaystyle\lim_{x \to 0}\frac{2b\cos(ax)-ab^2\sin(ax)}{1}&=\lim_{x \to 0}2b\cos(ax)-ab^2\sin(ax)\\
+            &= \lim_{x \to 0}2b \cdot \lim_{x \to 0}\cos(ax)- \lim_{x \to 0}ab^2 \cdot \lim_{x \to 0}\sin(ax)\\
+            &= 2b(1)-ab^2(0)\\
+            &= 2b
+        \end{align*}
+
+        Entonces tenemos que si $b=0$, \(\displaystyle\lim_{x \to 0}\frac{f'(x)}{g'(x)}\) existe y \(\displaystyle\lim_{x \to 0}\frac{f(x)}{g(x)}=\frac{0}{0}\), por lo que podemos aplicar la ley de L'H\^opital para decir que:
+
+        \[\displaystyle\lim_{x \to 0}\frac{2b\cos(ax)-ab^2\sin(ax)}{1}=\lim_{x \to 0}\frac{b^2\cos(ax)}{x}=2b\]\medskip
 
     %EJERCICIO D    
-    \item \(\displaystyle\lim_{x \to 0}\frac{\sqrt{x+1}-1}{x}\)\\
+    \item \(\displaystyle\lim_{x \to 0}\frac{\sqrt{x+1}-1}{x}\)\medskip
     
         Primero obtenemos el l\'imite:
 
@@ -1034,7 +1057,45 @@
         
 
     %EJERCICIO B
-    \item \(f(x)=\displaystyle\frac{x+1}{x^2+1}\) sobre $\left[-1,\frac{1}{2}\right]$
+    \item \(f(x)=\displaystyle\frac{x+1}{x^2+1}\) sobre $\left[-1,\frac{1}{2}\right]$\bigskip
+    
+        Como $x^2+1$ y $x+1$ son polinomios, son continuos. adem\'as $x^2+1 \neq 0$. Por lo que \(\displaystyle\frac{x+1}{x^2+1}\) es continua en todos los $\mathbbm{R}$, en particular en $[-1,\frac{1}{2}]$.\medskip
+
+        Obtenemos $f'(x)$:
+        \begin{align*}
+            \displaystyle\frac{d}{dx}\frac{x+1}{x^2+1} &= \frac{\displaystyle \frac{d}{dx}(x+1) \cdot (x^2+1) - \frac{d}{dx}(x^2+1)\cdot(x+1)}{(x^2+1)^2} = \frac{(x^2+1)(1)-2x(x+1)}{(x^2+1)^2}\\
+            &= \frac{x^2+1-2x^2-2x}{(x^2+1)^2} = \frac{-x^2+1-2x}{(x^2+1)^2}
+        \end{align*}
+
+        Ahora buscamos los puntos cr\'ticos:\medskip
+
+        Observaci\'on: $(x^2+1)^2 \neq 0$
+
+        \[\frac{-x^2+1-2x}{(x^2+1)^2}=0 \Rightarrow -x^2+1-2x=0\]
+
+        Usando la f\'ormula cuadr\'atica tenemos:
+
+        \(x=\displaystyle\frac{-b\pm \sqrt{b^2-4ac}}{2a}\) \quad con $a=-1$, $b=-2$ y $c=1$
+
+        \begin{align*}
+            x&=\frac{-(-2)\pm \sqrt{(-2)^2-4(-1)(1)}}{2(-1)} = \frac{2\pm \sqrt{4+4}}{-2} = -\frac{2\pm \sqrt{8}}{2}
+        \end{align*}
+
+        Como \(-\displaystyle\frac{2+\sqrt{8}}{2} \notin [-1,\frac{1}{2}]\), solo consideraremos \(-\displaystyle\frac{2-\sqrt{8}}{2} \approx 0.4\)\medskip
+
+        Ahora obtenemos $f(x)$ para los puntos cr\'iticos y los extremos del intervalo:
+
+        \(f(-1)=\displaystyle\frac{(-1)+1}{(-1)^2+1} = \frac{0}{2}=0\)
+
+        \(f\left(\displaystyle\frac{1}{2}\right) = \displaystyle\frac{\left(\displaystyle\frac{1}{2}\right)+1}{\left(\displaystyle\frac{1}{2}\right)^2+1} = \frac{\displaystyle\frac{3}{2}}{\displaystyle\frac{5}{4}}= \frac{6}{5} = 1.2\)
+
+        \(f(0.4)=\displaystyle\frac{x+1}{x^2+1} = \frac{(0.4)+1}{(0.4)^2+1} = \frac{0.4+1}{0.16+1} = \frac{1.4}{1.16} = 1.206\)\medskip
+
+        Entonces: 
+        \begin{center}
+            \textbf{M\'aximo: } $\left(-\displaystyle\frac{2-\sqrt{8}}{2},1.206\right)$ \hspace{4em} \textbf{M\'inimo: } $(-1,0)$
+        \end{center}\medskip
+
     %EJERCICIO C
     \item \(f(x)=x^3+x+1\) sobre $[-1,1]$\bigskip
     
@@ -1080,24 +1141,487 @@
 15. Cada una de las figuras siguientes, representan la gr\'afica de la derivada de una funci\'on $f$. Hallar todos los m\'aximos y m\'inimos locales de la funci\'on $f$ correpondiente, adem\'as diga cuando $f$ es creciente o decreciente.
 
 \begin{enumerate}[\hspace{9px} a)]
-    \item Gr\'afica de la derivada de $f$.\\
-        \includegraphics[width=0.5\textwidth]{ejer-a}
-    \item Gr\'afica de la derivada de $f$.\\
-        \includegraphics[width=0.5\textwidth]{ejer-b}
-    \item Gr\'afica de la derivada de $f$.\\
-        \includegraphics[width=0.5\textwidth]{ejer-c}
-    \item Gr\'afica de la derivada de $f$.\\
-        \includegraphics[width=0.5\textwidth]{ejer-d}
+    \item Gr\'afica de la derivada de $f$.\medskip
+    
+        \includegraphics[width=0.5\textwidth]{ejer-a}\medskip
+
+        Observamos que los puntos en los que la derivada de $f$ es 0 (Puntos cr\'iticos) son: 1, 2, 3 y 4.
+
+        Observaci\'ones: 
+        \begin{itemize}
+            \item Si $f'(c)$ cambia de positiva a negativa. (c,f(c)) es un punto m\'aximo.
+            \item Si $f'(c)$ cambia de negativa a positiva. (c,f(c)) es un punto m\'inimo.
+            \item Si $f(c)$ va de positivo a positivo o negativo a negativo, no es ni m\'aximo ni m\'inimo.
+            \item $f$ es creciente si la derivada es postivia y decreciente si es negativa.
+        \end{itemize}\medskip
+
+        En base a la observaci\'on tenemos que:
+        \begin{itemize}
+            \item 1 es un punto m\'aximo.
+            \item 2 no es ni m\'inimo y m\'aximo.
+            \item 3 es un punto m\'inimo.
+            \item 4 no es ni un m\'inimo y m\'aximo.\bigskip
+            \item $f$ es creciente en los intevalos: \((-\infty,1),(3,\infty)\)
+            \item $f$ es decreciente en el intevalo: \((1,3)\)
+        \end{itemize}\medskip
+
+        NOTA: Asumimos infinito a los extremos de la funci\'on porque carecemos de m\'as informaci\'on.\medskip 
+
+    \item Gr\'afica de la derivada de $f$.\medskip
+    
+        \includegraphics[width=0.5\textwidth]{ejer-b}\medskip
+
+        Observamos que los puntos en los que la derivada de $f$ es 0 (Puntos cr\'iticos) son: -4,-3,-2,-1.
+
+        Observaci\'ones: 
+        \begin{itemize}
+            \item Si $f'(c)$ cambia de positiva a negativa. (c,f(c)) es un punto m\'aximo.
+            \item Si $f'(c)$ cambia de negativa a positiva. (c,f(c)) es un punto m\'inimo.
+            \item Si $f(c)$ va de positivo a positivo o negativo a negativo, no es ni m\'aximo ni m\'inimo.
+            \item $f$ es creciente si la derivada es postivia y decreciente si es negativa.
+        \end{itemize}\medskip
+
+        En base a la observaci\'on tenemos que:
+        \begin{itemize}
+            \item -4 no es ni m\'inimo y m\'aximo.
+            \item -3 es un punto m\'aximo.
+            \item -2 no es ni m\'inimo y m\'aximo.
+            \item -1 es un punto m\'inimo.\bigskip
+            \item $f$ es creciente en los intevalos: \((-\infty,-3),(-1,\infty)\)
+            \item $f$ es decreciente en el intevalo: \((-3,-1)\)
+        \end{itemize}\medskip
+
+        NOTA: Asumimos infinito a los extremos de la funci\'on porque carecemos de m\'as informaci\'on.\medskip 
+
+    \item Gr\'afica de la derivada de $f$.\medskip
+    
+        \includegraphics[width=0.5\textwidth]{ejer-c}\medskip
+
+        Observamos que los puntos en los que la derivada de $f$ es 0 (Puntos cr\'iticos) son: 1, 2, 3 y 4.
+
+        Observaci\'ones: 
+        \begin{itemize}
+            \item Si $f'(c)$ cambia de positiva a negativa. (c,f(c)) es un punto m\'aximo.
+            \item Si $f'(c)$ cambia de negativa a positiva. (c,f(c)) es un punto m\'inimo.
+            \item Si $f(c)$ va de positivo a positivo o negativo a negativo, no es ni m\'aximo ni m\'inimo.
+            \item $f$ es creciente si la derivada es postivia y decreciente si es negativa.
+        \end{itemize}\medskip
+
+        En base a la observaci\'on tenemos que:
+        \begin{itemize}
+            \item 1 es un punto m\'inimo.
+            \item 2 no es ni m\'inimo y m\'aximo.
+            \item 3 es un punto m\'aximo.
+            \item 4 no es ni un m\'inimo y m\'aximo.\bigskip
+            \item $f$ es creciente en el intevalo: \((1,3)\)
+            \item $f$ es decreciente en los intevalos: \((-\infty,1),(3,\infty)\)
+        \end{itemize}\medskip
+
+        NOTA: Asumimos infinito a los extremos de la funci\'on porque carecemos de m\'as informaci\'on.\medskip 
+
+    \item Gr\'afica de la derivada de $f$.\medskip
+    
+        \includegraphics[width=0.5\textwidth]{ejer-d}\medskip
+
+        Observamos que los puntos en los que la derivada de $f$ es 0 (Puntos cr\'iticos) son: -4,-3,-2,-1.
+
+        Observaci\'ones: 
+        \begin{itemize}
+            \item Si $f'(c)$ cambia de positiva a negativa. (c,f(c)) es un punto m\'aximo.
+            \item Si $f'(c)$ cambia de negativa a positiva. (c,f(c)) es un punto m\'inimo.
+            \item Si $f(c)$ va de positivo a positivo o negativo a negativo, no es ni m\'aximo ni m\'inimo.
+            \item $f$ es creciente si la derivada es postivia y decreciente si es negativa.
+        \end{itemize}\medskip
+
+        En base a la observaci\'on tenemos que:
+        \begin{itemize}
+            \item -4 no es ni m\'inimo y m\'aximo.
+            \item -3 es un punto m\'inimo.
+            \item -2 no es ni m\'inimo y m\'aximo.
+            \item -1 es un punto m\'aximo.\bigskip
+            \item $f$ es creciente en el intevalo: \((-3,-1)\)
+            \item $f$ es decreciente en los intevalos: \((-\infty,-3),(-1,\infty)\)
+        \end{itemize}\medskip
+
+        NOTA: Asumimos infinito a los extremos de la funci\'on porque carecemos de m\'as informaci\'on.\medskip 
+
 \end{enumerate}
 
 %EJERCICIO 16 ----------------------------------------------------------------------------------
 16. Utiliza los resultados sobre el significado de la derivada para esbozar la gr\'afica de las siguientes funciones (aplicar criterios de la primera y la segunda derivada).
 
 \begin{enumerate}[\hspace{9px} a)]
-    \item \(f(x)=x+\displaystyle\frac{1}{x}\)
-    \item \(f(x)=x+\displaystyle\frac{3}{x^2}\)
-    \item \(f(x)=\displaystyle\frac{x^2}{x^2-1}\)
-    \item \(f(x)=\displaystyle\frac{1}{x^2+1}\)
+    \item \(f(x)=x+\displaystyle\frac{1}{x}\)\medskip
+    
+        Obtenemos el dominio y la imagen de la función.\medskip
+
+        \textbf{Dom(f):} $\mathbbm{R}\setminus\{0\}$ porque \(\frac{1}{x} \Rightarrow x \neq 0 \)\medskip
+
+        $f$ tiene una as\'intota vertical en x=0. \medskip
+
+        \textbf{Im(f):}
+        \[x+\displaystyle\frac{1}{x}=b \Rightarrow x(b-x)-1=0 \Rightarrow -x^2+bx-1=0\]
+
+        Usando la f\'ormula cuadr\'atica tenemos:
+        \[x=\frac{-b\pm\sqrt{b^2-4(-1)(-1)}}{2(-1)}\]
+
+        Como no hay raices negativas: \(b^2-4 \geq 0 \Rightarrow b^2 \geq 4 \Rightarrow b \geq 2 \wedge b \leq -2\)\medskip
+
+        Im(f)= $\mathbbm{R}\setminus\{(-2,2)\}$
+
+        \textbf{Continuidad:}
+        \(x+\displaystyle\frac{1}{x}\) no es continua porque x no puede ser 0.\medskip
+
+        \textbf{Paridad:}
+        Para determinar si es par tenemos que evaluar $f(-x)$
+        \begin{align*}
+            f(-x)=-x+\displaystyle\frac{1}{-x}= -(x+\frac{1}{x}) = -(f(x))
+        \end{align*}
+        
+        $f(x)$ es impar.\medskip
+
+        \textbf{Ra\'ices de $f(x)$:}\medskip
+        
+        \[x+\displaystyle\frac{1}{x}=0 \Rightarrow \frac{1}{x}=-x \Rightarrow -x^2=1 \Rightarrow x^2=-1 \Rightarrow\!\Leftarrow\]
+
+        No hay ra\'ices en $f(x)$.
+
+        Obtenemos $f'(x)$ y $f''(x)$:
+
+        \[f'(x) = \displaystyle\frac{d}{dx}x+\frac{d}{dx}\frac{1}{x}=1-\frac{1}{x^2}\]
+
+        \(f''(x) = \displaystyle\frac{d}{dx}1-\frac{d}{dx}\left(\frac{1}{x^2}\right) = \frac{2}{x^3}\)\medskip
+
+        \textbf{Puntos cr\'iticos:}\medskip
+
+        \[1-\displaystyle\frac{1}{x^2} = 0 \Rightarrow 1 = \frac{1}{x^2} \Rightarrow x^2=1 \Rightarrow x=\pm1\]
+
+        \textbf{Valores cr\'ticos:}
+
+        \(f(1) = 1 + \displaystyle\frac{1}{1} = 1+1 = 2\)\medskip
+        
+        Valor: $(1,2)$\medskip
+
+        Como la funci\'on es impar el otro valor es $(-1,-2)$.\medskip
+
+        \textbf{Creciente y decreciente:}\medskip
+
+        Analizamos cuando $f'>0$ (Creciente):
+
+        \[1-\displaystyle\frac{1}{x^2}>0 \Rightarrow 1>\frac{1}{x^2} \Rightarrow x^2>1 \Rightarrow x>1 \vee x<-1\]
+
+        Analizamos cuando $f'<0$ (Decreciente):
+
+        \[1-\displaystyle\frac{1}{x^2}<0 \Rightarrow 1<\frac{1}{x^2} \Rightarrow x^2<1 \Rightarrow x<1 \vee x>-1\]
+
+        Entonces f es creciente en $(-\infty,-1)\cup(1,\infty)$ y decreciente en $(-1,1)$.\medskip
+
+        \textbf{M\'aximos y m\'inimos:}\medskip
+
+        Como en $f'(1)$ $f'$ va de negativo a positivo, $f$ tiene un punto m\'inimo en $(1,2)$ (En el intervalo $(1,\infty)$ porque recordemos que $f$ no es continua en 0).
+
+        Dado que la funci\'on es impar, $f(-1)$ tiene un punto m\'aximo en $(-1,-2)$ (En el intervalo $(-\infty,-1)$).\medskip
+
+        \textbf{Puntos de inflexi\'on:}
+
+        \[\displaystyle\frac{2}{x^3} = 0 \Rightarrow 2=0(x^3) \Rightarrow 2=0 \Rightarrow\!\Leftarrow\]
+
+        $f$ no tiene puntos de inflexi\'on.\medskip
+
+        \textbf{Convexidad y Concavidad:}\medskip
+
+        Observaci\'on: 
+        \begin{itemize}
+            \item $f(x)$ es convexa si $f''(x)$ es positiva.
+            \item $f(x)$ es c\'oncava si $f''(x)$ es negativa.
+        \end{itemize}
+
+        Analizamos $f''$ para saber cuando es positiva y cuando negativa:\medskip
+        
+        \(\displaystyle\frac{2}{x^3} > 0\) \quad Como $2>0$ es una constante, para que $f''$ sea positiva, \(x^3>0 \Rightarrow x>0\)\medskip
+
+        Entonces, $f$ es convexa en $x>0$, porque la funci\'on es impar, $f$ es c\'oncava en $x<0$.
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{16-a}
+            \caption{Bosquejo de la funci\'on a}
+        \end{figure}
+
+    \item \(f(x)=x+\displaystyle\frac{3}{x^2}\)\medskip
+    
+        Obtenemos el dominio y la imagen de la función.\medskip
+
+        \textbf{Dom(f):} $\mathbbm{R}\setminus\{0\}$ porque \(\frac{3}{x^2} \Rightarrow x \neq 0 \)\medskip
+
+        $f$ tiene una as\'intota vertical en x=0. \medskip
+
+        \textbf{Im(f):}
+        \[x+\displaystyle\frac{3}{x^2}=b \Rightarrow x^2(b-x)-3=0 \Rightarrow -x^3+bx^2-3=0\]
+
+        b no tiene restricciones.
+
+        Im(f)= $\mathbbm{R}$
+
+        \textbf{Continuidad:}
+        \(x+\displaystyle\frac{3}{x^2}\) no es continua porque x no puede ser 0.\medskip
+
+        \textbf{Paridad:}
+        Para determinar si es par tenemos que evaluar $f(-x)$:
+
+        \[f(-x)=-x+\displaystyle\frac{3}{(-x)^2}= -x+\frac{3}{x^2}\]
+        
+        $f(x)$ no es ni par, ni impar.\medskip
+
+        \textbf{Ra\'ices de $f(x)$:}\medskip
+        
+        \[x+\displaystyle\frac{3}{x^2}=0 \Rightarrow \frac{3}{x^2}=-x \Rightarrow -x^3=3 \Rightarrow x=[3]\sqrt{-3}\]
+
+        $f(x)$ tiene una ra\'iz en $x=\sqrt[3]{-3}$.
+
+        Obtenemos $f'(x)$ y $f''(x)$:
+
+        \[f'(x) = \displaystyle\frac{d}{dx}x+\frac{d}{dx}\frac{3}{x^2}=1-\frac{6}{x^3}\]
+
+        \(f''(x) = \displaystyle\frac{d}{dx}1-\frac{d}{dx}\left(\frac{6}{x^3}\right) = \frac{18}{x^4}\)\medskip
+
+        \textbf{Puntos cr\'iticos:}\medskip
+
+        \[1-\displaystyle\frac{6}{x^3} = 0 \Rightarrow 1 = \frac{6}{x^3} \Rightarrow x^3=6 \Rightarrow x=\sqrt[3]{6}\]
+
+        \textbf{Valores cr\'ticos:}
+
+        \(f(\sqrt[3]{6}) = 1 + \displaystyle\frac{3}{\big(\sqrt[3]{6}\big)^2}\approx 2.7\)\medskip
+        
+        Valor: $(\sqrt[3]{6},2.7)$\medskip
+
+        \textbf{Creciente y decreciente:}\medskip
+
+        Analizamos cuando $f'>0$ (Creciente):
+
+        \[1-\displaystyle\frac{6}{x^3}>0 \Rightarrow 1>\frac{6}{x^3} \Rightarrow x^3>6 \Rightarrow x>\sqrt[3]{6}\]
+
+        Analizamos cuando $f'<0$ (Decreciente):
+
+        \[1-\displaystyle\frac{6}{x^3}<0 \Rightarrow 1<\frac{6}{x^3} \Rightarrow x^3<6 \Rightarrow x<\sqrt[3]{6}\]
+
+        Entonces f es creciente en $(-\infty,0)\cup(\sqrt[3]{6},\infty)$ y decreciente en $(0,\sqrt[3]{6})$.\medskip
+
+        \textbf{M\'aximos y m\'inimos:}\medskip
+
+        Como en $f'(\sqrt[3]{6})$ $f'$ va de negativo a positivo, $f$ tiene un punto m\'inimo en $(\sqrt[3]{6},2.7)$ (En el intervalo $(1,\infty)$ porque recordemos que $f$ no es continua en 0).\medskip
+
+        \textbf{Puntos de inflexi\'on:}
+
+        \[\displaystyle\frac{18}{x^4} = 0 \Rightarrow 18=0(x^4) \Rightarrow 18=0 \Rightarrow\!\Leftarrow\]
+
+        $f$ no tiene puntos de inflexi\'on.\medskip
+
+        \textbf{Convexidad y Concavidad:}\medskip
+
+        Observaci\'on: 
+        \begin{itemize}
+            \item $f(x)$ es convexa si $f''(x)$ es positiva.
+            \item $f(x)$ es c\'oncava si $f''(x)$ es negativa.
+        \end{itemize}
+
+        Analizamos $f''$ para saber cuando es positiva y cuando negativa:\medskip
+        
+        \(\displaystyle\frac{18}{x^4} > 0\) \quad Como $18>0$ es una constante, para que $f''$ sea positiva, \(x^4>0 \Rightarrow x=\mathbbm{R}\)\medskip
+
+        Entonces, $f$ es convexa en $x>0$. Como $x<0$ no tiene puntos cr\'iticos, no puede ser ni convexa ni c\'oncava.
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{16-b}
+            \caption{Bosquejo de la funci\'on b}
+        \end{figure}
+
+    \item \(f(x)=\displaystyle\frac{x^2}{x^2-1}\)\medskip
+    
+        Obtenemos el dominio y la imagen de la función.\medskip
+
+        \textbf{Dom(f):} $\mathbbm{R}\setminus\{1,-1\}$ porque \(\frac{x^2}{x^2-1} \Rightarrow x^2-1 \neq 0 \Rightarrow x^2 \neq 1\)\medskip
+
+        $f$ tiene una as\'intota vertical en x=1 y otra en x=-1. \medskip
+
+        \textbf{Im(f):}
+        \begin{align*}
+            \displaystyle\frac{x^2}{x^2-1}=&b \Rightarrow b(x^2-1)-x^2=0 \Rightarrow bx^2-b-x^2=0\\
+            &x^2(b-1)-b=0 \Rightarrow x^2=\frac{b}{b-1} \Rightarrow b \neq 1
+        \end{align*}
+
+        $f$ tiene una as\'intota en y=1.
+
+        Im(f)= $\mathbbm{R}\setminus{1}$
+
+        \textbf{Continuidad:}
+        \(x+\displaystyle\frac{3}{x^2}\) no es continua porque x no puede ser 1 ni -1.\medskip
+
+        \textbf{Paridad:}
+        Para determinar si es par tenemos que evaluar $f(-x)$:
+
+        \[f(-x)=\displaystyle\frac{(-x)^2}{(-x)^2-1}= {x^2}{x^2-1} = f(x)\]
+        
+        $f(x)$ es par.\medskip
+
+        \textbf{Ra\'ices de $f(x)$:}\medskip
+        
+        \[\displaystyle\frac{x^2}{x^2-1}=0 \Rightarrow x^2=0 \Rightarrow x=0\]
+
+        $f(x)$ tiene una ra\'iz en $x=0$.
+
+        Obtenemos $f'(x)$ y $f''(x)$:
+
+        \[f'(x) = \displaystyle\frac{2x(x^2-1)-2x^3}{(x^2-1)^2}=\frac{2x^3-2x-2x^3}{(x^2-1)^2}=-\frac{2x}{(x^2-1)^2}\]
+
+        \(f''(x) = \displaystyle\frac{2+6x^2}{(x^2-1)^3}\)\medskip
+
+        \textbf{Puntos cr\'iticos:}\medskip
+
+        \[\displaystyle-\frac{2x}{(x^2-1)^2} = 0 \Rightarrow 2x=0 \Rightarrow x=0\]
+
+        \textbf{Valores cr\'ticos:}
+
+        \(f(0) = \displaystyle\frac{0^2}{0^2-1} = 0\)\medskip
+        
+        Valor: $(0,0)$\medskip
+
+        \textbf{Creciente y decreciente:}\medskip
+
+        Analizamos cuando $f'>0$ (Creciente):
+
+        \[\displaystyle-\frac{2x}{(x^2-1)^2}>0 \Rightarrow (x^2-1)^2>0 \Rightarrow -2x>0 \Rightarrow x<0\]
+
+        Como la funci\'on es par y creciente en $x<0$, la funci\'on es decreciente en $x>0$.
+
+        \textbf{M\'aximos y m\'inimos:}\medskip
+
+        Como en $f'(0)$ la $f''$ va de positivo a negativo, $f$ tiene un punto m\'aximo en $(0,0)$\medskip
+
+        \textbf{Puntos de inflexi\'on:}
+
+        \[\displaystyle\frac{2+6x^2}{(x^2-1)^3}=0 \Rightarrow 2+6x^2=0 \Rightarrow x^2=-\frac{2}{6}\]
+
+        $f$ no tiene puntos de inflexi\'on\medskip
+
+        \textbf{Convexidad y Concavidad:}\medskip
+
+        Observaci\'on: 
+        \begin{itemize}
+            \item $f(x)$ es convexa si $f''(x)$ es positiva.
+            \item $f(x)$ es c\'oncava si $f''(x)$ es negativa.
+        \end{itemize}
+
+        Analizamos $f''$ para saber cuando es positiva y cuando negativa:\medskip
+
+        \[\displaystyle\frac{2+6x^2}{(x^2-1)^3}>0
+        \begin{cases*}
+            2+6x^2>0 \wedge x^2-1>0 \Rightarrow x^2>-\frac{2}{6} \wedge x^2>1 \Rightarrow x\in\mathbbm{R} \wedge x>1 \vee x<-1\\
+            2+6x^2<0 \wedge x^2-1<0 \Rightarrow x^2<-\frac{2}{6} \wedge x^2>1 \Rightarrow\!\Leftarrow
+        \end{cases*}
+        \]
+
+        Para la negativa es an\'alogo: \(x>\frac{1}{3} \wedge x<-\frac{1}{3}\)
+
+        $f$ es c\'oncava en \(-1<x<1\) y convexa en \(x>1 \vee x<-1\)
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{16-c}
+            \caption{Bosquejo de la funci\'on c}
+        \end{figure}
+
+        NOTA: Lo lamento, se nos olvid\'o este bosquejo.
+
+    \item \(f(x)=\displaystyle\frac{1}{x^2+1}\)\medskip
+    
+        Obtenemos el dominio y la imagen de la función.\medskip
+
+        \textbf{Dom(f):} $\mathbbm{R}$ porque \(x^2+1\neq0\)\medskip
+
+        \textbf{Im(f):}
+        \[\displaystyle\frac{1}{x^2+1}=b \Rightarrow x^2+1=\frac{1}{b} \Rightarrow x=\sqrt{\frac{1}{b}-1}\]
+
+        \[\displaystyle\frac{1}{b}-1=\frac{1-b}{b} \geq 0
+        \begin{cases*}
+            1-b>0 \wedge b>0 \Rightarrow b<1 \wedge b>0\\
+            1-b<0 \wedge b<0 \Rightarrow b>1 \wedge b<0 \Rightarrow\!\Leftarrow
+        \end{cases*}
+        \]
+
+        Im(f)= $0<x<1$
+
+        \textbf{Continuidad:}
+        $f$ es continua porque \(x^2+1\neq0\)\medskip
+
+        \textbf{Paridad:}
+        Para determinar si es par tenemos que evaluar $f(-x)$:
+
+        \[f(-x)=\displaystyle\frac{1}{(-x)^2+1}= \frac{1}{x^2+1} = f(x)\]
+        
+        $f(x)$ es par.\medskip
+
+        \textbf{Ra\'ices de $f(x)$:}\medskip
+        
+        $f$ no puede tener raices porque la funci\'on nunca toca el 0 (Im(f)= $0<x<1$).\medskip
+
+        Obtenemos $f'(x)$ y $f''(x)$:
+
+        \[f'(x) = \displaystyle\frac{d}{dx}\left(\frac{1}{x^2+1}\right)\cdot \frac{d}{dx}x^2 = -\frac{2x}{(x^2+1)^2}\]
+
+        \(f''(x) = \displaystyle\frac{6x^2-2}{(x^2+1)^3}\)\medskip
+
+        \textbf{Puntos cr\'iticos:}\medskip
+
+        \[-\frac{2x}{(x^2+1)^2} = 0 \Rightarrow 2x=0 \Rightarrow x=0\]
+
+        \textbf{Valores cr\'ticos:}
+
+        \(f(0) = \displaystyle\frac{1}{(0)^2+1} = 1\)\medskip
+        
+        Valor: $(1,1)$\medskip
+
+        \textbf{Creciente y decreciente:}\medskip
+
+        Analizamos cuando $f'>0$ (Creciente):\medskip
+
+        \(-\frac{2x}{(x^2+1)^2}>0\) \quad Como \((x^2+1)^2>0\), $-2x>0 \Rightarrow x<0$ \medskip
+
+        Como la funci\'on es par y creciente en $x<0$, $f$ es decreciente en $x>0$.\medskip
+
+        \textbf{M\'aximos y m\'inimos:}\medskip
+
+        Como en $f'(0)$ $f'$ va de positivo a neativo, $f$ tiene un punto m\'aximo en $(0,1)$.\medskip
+
+        \textbf{Puntos de inflexi\'on:}
+
+        \[\displaystyle\frac{6x^2-2}{(x^2+1)^3}=0 \Rightarrow 6x^2-2=0 \Rightarrow x^2=\frac{1}{3}\]
+
+        $f$ tiene dos puntos de inflexi\'on: $x=\displaystyle\sqrt{\frac{1}{3}}$ y $x=\displaystyle-\sqrt{\frac{1}{3}}$ \medskip
+
+        \textbf{Convexidad y Concavidad:}\medskip
+
+        Observaci\'on: 
+        \begin{itemize}
+            \item $f(x)$ es convexa si $f''(x)$ es positiva.
+            \item $f(x)$ es c\'oncava si $f''(x)$ es negativa.
+        \end{itemize}
+
+        Analizamos $f''$ para saber cuando es positiva y cuando negativa:\medskip
+        
+        \(\displaystyle\frac{6x^2-2}{(x^2+1)^3} > 0\) \quad Como $(x^2+1)^3>0$, para que $f''$ sea positiva, \(6x^2-2>0 \Rightarrow x^2>\displaystyle\frac{1}{3} \Rightarrow x>\frac{1}{3} \wedge x<-\frac{1}{3}\)\medskip
+
+        La concavidad es an\'aloga: \(x<\frac{1}{3} \wedge x>-\frac{1}{3}\)
+
+        Entonces, $f$ es convexa en \(x>\frac{1}{3} \wedge x<-\frac{1}{3}\) y concava en \(x<\frac{1}{3} \wedge x>-\frac{1}{3}\)
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{16-d}
+            \caption{Bosquejo de la funci\'on d}
+        \end{figure}
+
 \end{enumerate}
 
 %EJERCICIO 17 ----------------------------------------------------------------------------------
