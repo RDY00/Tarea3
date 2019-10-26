@@ -53,7 +53,7 @@
 2. Explica por qu\'e la funci\'on 
 \(f(n)=
 \begin{cases}
-    \frac{1}{x} \quad \text{si} \ \ 0<x<1\\
+    \displaystyle\frac{1}{x} \quad \text{si} \ \ 0<x<1\\
     0 \quad \text{si} \ \ x=0
 \end{cases}
 \) no es integrable.
@@ -63,13 +63,13 @@
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item \(\sin(x) \ \text{, en} \ -\pi \leq \pi\)
+    \item \(\sin(x) \text{, en} \ -\pi \leq x \leq \pi\)
     
     %EJERCICIO B
     \item \(x^4 \ \text{en} \ -4 \leq x \leq 4\)
     
     %EJERCICIO C
-    \item \(\tan(x) \ \text{, en} \ -\frac{pi}{4} \leq x \leq \frac{pi}{4}\)
+    \item \(\tan(x) \ \text{, en} \ -\frac{\pi}{4} \leq x \leq \frac{\pi}{4}\)
     
 \end{enumerate}
 
@@ -104,7 +104,7 @@
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A 
-    \item Las gr\'aficas de \(f(x)=x^2\) y \(g(x)=\frac{x^2}{2}+2\).
+    \item Las gr\'aficas de \(f(x)=x^2\) y \(g(x)=\displaystyle\frac{x^2}{2}+2\).
     
     %EJERCICIO B
     \item Las gr\'aficas de \(f(x)=x^2\) y \(g(x)=1-x^2\).
@@ -154,7 +154,7 @@
 10. Muestre que la regi\'on \(A=\{(x,y) \ | \ x<1, \ 0 \leq y \leq \frac{1}{x}\}\) tiene \'area infinita.
 
 %EJERCICIO 11 ----------------------------------------------------------------------------------
-11. Encontrar la gr\;afica de las siguientes funciones.
+11. Encontrar la gr\'afica de las siguientes funciones.
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A 
@@ -215,10 +215,144 @@
     
 \end{enumerate}
 
+%EJERCICIO 15 ----------------------------------------------------------------------------------
+Hallar la gr\'afica de las siguientes funciones.
 
 \begin{enumerate}[\hspace{9px} a)]
+    %EJERCICIO A
+    \item \(f(x)=e^{1+x}\)
+    
+    %EJERCICIO B
+    \item \(f(x)=e^{\sin(x)}\)
+    
+    %EJERCICIO C
+    \item \(f(x)=e^x+e^{-x}\)
+    
+    %EJERCICIO D
+    \item \(f(x)=e^x-e^{-x}\)
+    
+    %EJERCICIO E
+    \item \(f(x)=\displaystyle\frac{e^x-e^{-x}}{e^x+e^{-x}}=\frac{2}{e^{2x}+1}\)
 
-    \item 
+\end{enumerate}
+
+%EJERCICIO 16 ----------------------------------------------------------------------------------
+16. Las siguientes funciones reciben el nombre de seno hiperb\'olico, coseno hiperb\'olico y tangente hiperb\'olica, respectivamente.
+
+\begin{equation*}
+    \sinh(x)=\frac{e^x-e^{-x}}{2}, \ \cosh(x)=\frac{e^x+e^{-x}}{2} \ y \ \tanh(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}
+\end{equation*}
+
+Mostrar que:
+
+\begin{enumerate}[\hspace{9px} a)]
+    %EJERCICIO A
+    \item \(\cosh^2(x)-\sinh^2(x)=1\)
+    
+    %EJERCICIO B
+    \item \(\sinh'(x)=\cosh(x)\)
+    
+    %EJERCICIO C
+    \item \(\cosh'(x)=\sinh(x)\)
+    
+    %EJERCICIO D
+    \item \(\tanh^2(x)+\displaystyle\frac{1}{\cosh^2(x)}=1\)
+    
+    %EJERCICIO E
+    \item \(\tanh'(x)=\displaystyle\frac{1}{\cosh^2(x)}\)
+    
+    %EJERCICIO F
+    \item \(\sinh(x+y)=\sinh(x)\cosh(y)+\sinh(y)\cosh(x)\)
+    
+    %EJERCICIO G
+    \item \(\cosh(x+y)=\cosh(x)\cosh(y)+\sinh(y)\sinh(x)\)
+
+\end{enumerate}
+
+%EJERCICIO 17 ----------------------------------------------------------------------------------
+17. Las funciones hiperb\'olicas inversas se pueden expresar por medio del logaritmo. Muestre que:
+
+\begin{enumerate}[\hspace{9px} a)]
+    %EJERCICIO A
+    \item \(f(x)=x+\displaystyle\frac{1}{x}\)
+    
+    %EJERCICIO B
+    \item \(f(x)=x+\displaystyle\frac{3}{x^2}\)
+    
+    %EJERCICIO C
+    \item \(f(x)=\displaystyle\frac{x^2}{x^2-1}\)
+    
+    %EJERCICIO D
+    \item \(f(x)=\displaystyle\frac{1}{x^2+1}\)
+
+\end{enumerate}
+
+%EJERCICIO 18 ----------------------------------------------------------------------------------
+18. Evalua los l\'imites usando la regla de L'H\^opital.
+
+\begin{enumerate}[\hspace{9px} a)]
+    %EJERCICIO A 
+    \item \(\displaystyle\lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}}{x^2}\)
+    
+    %EJERCICIO B
+    \item \(\displaystyle\lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}-\frac{x^3}{6}}{x^3}\)
+    
+    %EJERCICIO C
+    \item \(\displaystyle\lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}}{x^3}\)
+    
+    %EJERCICIO D
+    \item \(\displaystyle\lim_{x \to 0}\frac{\ln(1+x)-x-\frac{x^2}{2}}{x^2}\)
+    
+    %EJERCICIO E
+    \item \(\displaystyle\lim_{x \to 0}\frac{\ln(1+x)-x-\frac{x^2}{2}}{x^3}\)
+
+\end{enumerate}
+
+%EJERCICIO 19 ----------------------------------------------------------------------------------
+19. Sin usar la regla de L'H\^opital, hallar los siguientes l\'imites.
+
+\begin{enumerate}[\hspace{9px} a)]
+    %EJERCICIO A
+    \item \(\displaystyle\lim_{y \to 0}\frac{\ln(1+y)}{y}\)
+    
+    %EJERCICIO B
+    \item \(\displaystyle\lim_{x \to \infty}x\ln\left(1+\frac{1}{x}\right)\)
+    
+    %EJERCICIO C
+    \item \(e=\displaystyle\lim_{x \to \infty}\left(1+\frac{1}{x}\right)^x\)
+    
+    %EJERCICIO D
+    \item \(e^a=\displaystyle\lim_{x \to \infty}\left(1+\frac{a}{x}\right)^x\)
+    
+\end{enumerate}
+
+%EJERCICIO 20 ----------------------------------------------------------------------------------
+20. Use el hecho que la poblaci\'on mundial en 1950 era de 2560 millones y 3040 millones en 1960 y un modelo de crecimiento poblacional, para responder las siguientes preguntas.
+
+\begin{enumerate}[\hspace{9px} a)]
+    %EJERCICIO A
+    \item ¿Cuál es la tasa de crecimiento relativa?
+    
+    %EJERCICIO B
+    \item Use el modelo de crecimiento poblacional para estimar cuánta gente habrá en 2020.
+    
+    %EJERCICIO C
+    \item Indague y diga si ese número se acerca a la población actual. Cite la fuente.
+
+\end{enumerate}
+
+%EJERCICIO 21 ----------------------------------------------------------------------------------
+21. La vida media del radio-226 es de 1590 años.
+
+\begin{enumerate}[\hspace{9px} a)]
+    %EJERCICIO A
+    \item Una muestra e radio-226 tiene una masa de $100mg$. Encontrar una fórmula para la masa de la muestra que queda después de $t$ años.
+    
+    %EJERCICIO B
+    \item Diga cuál es la masa después de 1000 años, dé su resultado en $mg$.
+    
+    %EJERCICIO C
+    \item En qué tiempo la masa de la muestra se reducirá a $30mg$.
 
 \end{enumerate}
 
