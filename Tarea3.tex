@@ -36,16 +36,196 @@
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A 
-    \item \(\displaystyle\int_{0}^{b}\frac{x}{3}dx=\frac{b^2}{6}\)
+    \item \(\displaystyle\int_{0}^{b}\frac{x}{3}dx=\frac{b^2}{6}\)\medskip
+    
+    Por demostrar que \(\forall \ \varepsilon>0 \ \exists \ P \ : \ U(f,P)-L(f,P)<\varepsilon\)\medskip
+
+    \textbf{Observaciones:}
+    \[f(x)=\frac{x}{3} \Rightarrow f'(x)=\frac{1}{3}\]
+
+    Como \(f'(x)>0 \ \forall x \in \mathbbm{R}\), f es creciente en todos los reales, en particular en el intervalo $[0,b]$. Debido a esto, el \'infimo y el supremo de cada intervalo \([t_{i-1},t_i]\) est\'an determinados por \(f(t_{i-1})\) y \(f(t_i)\) respectivamente. (Porque, al ser creciente, si $a<b$, entonces \(f(a)<f(b)\)).\medskip
+
+    Consideraremos a la partici\'on P una partici\'on uniforme, por lo que cumple con las siguientes caracter\'isticas (Presentadas en clase).
+    \begin{itemize}
+        \item La distancia entre cada intervalo $[b,a]$ es siempre la misma: \(t_i-t_{i-1}=\displaystyle\frac{b-a}{n}\).
+        \item El valor $x$ de cada punto $t_i$ en dicho intervalo est\'a presentado como: \(t_i=\displaystyle\frac{(b-a)}{n}i\)
+    \end{itemize}
+
+    \[m_i=inf\{f(x) \ | \ t_{i-1} \leq x \leq t_i\} \qquad M_i=sup\{f(x) \ | \ t_{i-1} \leq x \leq t_i\}\]
+
+    \begin{proof}[Prueba:]
+        \begin{equation*}%UPPER SUM
+            U(f,P)=\sum_{i=1}^n M_i(t_i-t_{i-1}) = \sum_{i=1}^n \big(f(t_i)\big)\left(\displaystyle\frac{b}{n}\right)
+        \end{equation*}
+
+        Como \(t_i=\displaystyle\frac{(b-0)}{n}i\), entonces \(f(t_i)=f\left(\displaystyle\frac{(b-0)i}{n}\right) = \frac{\frac{(b)i}{n}}{3} = \frac{bi}{3n}\)
+
+        Sustituyendo tenemos que:
+        \begin{equation*}
+            \sum_{i=1}^n \big(f(t_i)\big)\left(\displaystyle\frac{b}{n}\right) = \sum_{i=1}^n \left(\frac{bi}{3n}\right)\left(\displaystyle\frac{b}{n}\right) = \sum_{i=1}^n \left(\frac{b^2i}{3n^2}\right) = \left(\frac{b^2}{3n^2}\right) \sum_{i=1}^n i
+        \end{equation*}
+
+        Sabemos que: \[\sum_{i=1}^n i = \frac{n(n+1)}{2}\]
+        
+        Asi que.
+
+        \begin{equation*}
+            \left(\frac{b^2}{3n^2}\right) \sum_{i=1}^n i = \left(\frac{b^2}{3n^2}\right)\left(\frac{n(n+1)}{2}\right) = \left(\frac{b^2}{3n}\right)\left(\frac{n+1}{2}\right) =\left(\frac{b^2}{6}\right)\left(\frac{n+1}{n}\right)
+        \end{equation*}
+
+        \[U(f,P)=\left(\frac{b^2}{6}\right)\left(\frac{n+1}{n}\right)\]
+
+        \begin{equation*}%LOWER SUM
+            L(f,P)=\sum_{i=1}^n m_i(t_i-t_{i-1}) = \sum_{i=1}^n \big(f(t_{i-1})\big)\left(\displaystyle\frac{b}{n}\right)
+        \end{equation*}
+
+        Analogo a \(f(t_i)\), sabemos que \(f(t_{i-1})=\displaystyle\frac{b(i-1)}{3n}\)
+
+        Entonces:
+        \begin{equation*}
+            \sum_{i=1}^n \left(\frac{b(i-1)}{3n}\right)\left(\displaystyle\frac{b}{n}\right) = \sum_{i=1}^n \left(\frac{b^2(i-1)}{3n^2}\right) = \left(\frac{b^2}{3n^2}\right)\sum_{i=1}^n (i-1)
+        \end{equation*}
+
+        Realizando un cambio de variable sobre \(\sum_{i=1}^n (i-1)\), tenemos \(\sum_{i=0}^{n-1} i\). Como la suma evaluada en $i=0$ es 0 y \(0+n=n\), podemos comenzar la suma desde \(i=1\): \(\sum_{i=1}^{n-1} i = \displaystyle\frac{(n-1)((n-1)+1)}{2}\).
+
+        Sustituendo:
+        \begin{align*}
+            \left(\frac{b^2}{3n^2}\right)\sum_{i=1}^n (i-1) &= \left(\frac{b^2}{3n^2}\right)\left(\frac{(n-1)((n-1)+1)}{2}\right) = \left(\frac{b^2}{3n^2}\right)\left(\frac{(n-1)n}{2}\right) \\ &= \left(\frac{b^2}{3n}\right)\left(\frac{n-1}{2}\right) = \left(\frac{b^2}{6}\right)\left(\frac{n-1}{n}\right)
+        \end{align*}
+
+        \[L(f,P)=\left(\frac{b^2}{6}\right)\left(\frac{n-1}{n}\right)\]
+        %PARTICION < E
+        Ahora buscamos la Partic\'on $P$ tal que \(U(f,P)-L(f,P)<\varepsilon\)
+
+        \begin{align*}
+            U(f,P)-L(f,P) &= \left(\frac{b^2}{6}\right)\left(\frac{n+1}{n}\right)-\left(\frac{b^2}{6}\right)\left(\frac{n-1}{n}\right) = \left(\frac{b^2}{6}\right)\left(\frac{n+1}{n}-\frac{n+1}{n}\right) \\
+            &= \left(\frac{b^2}{6}\right)\left(\frac{n+1-(n-1)}{n}\right) = \left(\frac{b^2}{6}\right)\left(\frac{n+1-n+1}{n}\right) \\
+            &= \left(\frac{b^2}{6}\right)\left(\frac{2}{n}\right) = \frac{b^2}{3n}
+        \end{align*}
+
+        \begin{equation*}
+            U(f,P)-L(f,P)<\varepsilon \Longrightarrow \frac{b^2}{3n}<\varepsilon \Longrightarrow \frac{b^2}{3\varepsilon}<n
+        \end{equation*}
+        %INFIMO Y SUPREMO
+        \begin{align*}
+            sup\{L(f,P)\} &= \lim_{n \to \infty}\left(\frac{b^2}{6}\right)\left(\frac{n+1}{n}\right) = \left(\frac{b^2}{6}\right)\lim_{n \to \infty}\frac{n+1}{n} \\
+            &= \left(\frac{b^2}{6}\right)\lim_{n \to \infty}\left(1+\frac{1}{n}\right) = \left(\frac{b^2}{6}\right)(1+0) = \frac{b^2}{6}
+        \end{align*}
+
+        \begin{align*}
+            inf\{U(f,P)\} &= \lim_{n \to \infty}\left(\frac{b^2}{6}\right)\left(\frac{n-1}{n}\right) = \left(\frac{b^2}{6}\right)\lim_{n \to \infty}\frac{n-1}{n} \\
+            &= \left(\frac{b^2}{6}\right)\lim_{n \to \infty}\left(1-\frac{1}{n}\right) = \left(\frac{b^2}{6}\right)(1-0) = \frac{b^2}{6}
+        \end{align*}
+
+        \[sup\{L(f,P)\}=inf\{U(f,P)\}=\frac{b^2}{6}\]
+
+        \textbf{$\therefore \ f$ es integrable en [0,b] y} \(\displaystyle\int_{0}^{b}\frac{x}{3}dx=\frac{b^2}{6}\)
+
+    \end{proof}
     
     %EJERCICIO B
-    \item \(\displaystyle\int_{0}^{b}\frac{x^2}{2}dx=\frac{b^3}{6}\)
+    \item \(\displaystyle\int_{0}^{b}\frac{x^2}{2}dx=\frac{b^3}{6}\)\medskip
+    
+    Por demostrar que \(\forall \ \varepsilon>0 \ \exists \ P \ : \ U(f,P)-L(f,P)<\varepsilon\)\medskip
+
+    \textbf{Observaciones:}
+    \[f(x)=\frac{x^2}{2} \Rightarrow f'(x)=\frac{1}{2}\cdot2x = x\]
+
+    Como \(f'(x)>0 \ \forall x>0\), f es creciente en todos los reales positivos, en particular en el intervalo $[0,b]$. Debido a esto, el \'infimo y el supremo de cada intervalo \([t_{i-1},t_i]\) est\'an determinados por \(f(t_{i-1})\) y \(f(t_i)\) respectivamente. (Porque, al ser creciente, si $a<b$, entonces \(f(a)<f(b)\)).\medskip
+
+    Consideraremos a la partici\'on P una partici\'on uniforme, por lo que cumple con las siguientes caracter\'isticas (Presentadas en clase).
+    \begin{itemize}
+        \item La distancia entre cada intervalo $[b,a]$ es siempre la misma: \(t_i-t_{i-1}=\displaystyle\frac{b-a}{n}\).
+        \item El valor $x$ de cada punto $t_i$ en dicho intervalo est\'a presentado como: \(t_i=\displaystyle\frac{(b-a)}{n}i\)
+    \end{itemize}
+
+    \[m_i=inf\{f(x) \ | \ t_{i-1} \leq x \leq t_i\} \qquad M_i=sup\{f(x) \ | \ t_{i-1} \leq x \leq t_i\}\]
+
+    \begin{proof}[Prueba:]
+        \begin{equation*}%UPPER SUM
+            U(f,P)=\sum_{i=1}^n M_i(t_i-t_{i-1}) = \sum_{i=1}^n \big(f(t_i)\big)\left(\displaystyle\frac{b}{n}\right)
+        \end{equation*}
+
+        Como \(t_i=\displaystyle\frac{(b-0)}{n}i\), entonces \(f(t_i)=f\left(\displaystyle\frac{(b-0)i}{n}\right) = \frac{\left(\frac{(b)i}{n}\right)^2}{2} = \frac{b^2i^2}{2n^2}\)
+
+        Sustituyendo tenemos que:
+        \begin{equation*}
+            \sum_{i=1}^n \big(f(t_i)\big)\left(\displaystyle\frac{b}{n}\right) = \sum_{i=1}^n \left(\frac{b^2i^2}{2n^2}\right)\left(\displaystyle\frac{b}{n}\right) = \sum_{i=1}^n \left(\frac{b^3i^2}{2n^3}\right) = \left(\frac{b^3}{2n^3}\right) \sum_{i=1}^n i^2
+        \end{equation*}
+
+        Sabemos que: \[\sum_{i=1}^n i^2 = \frac{n(n+1)(2n+1)}{6}\]
+        
+        Asi que.
+
+        \begin{align*}
+            \left(\frac{b^3}{2n^3}\right) \sum_{i=1}^n i^2 &= \left(\frac{b^3}{2n^3}\right)\left(\frac{n(n+1)(2n+1)}{6}\right) = \left(\frac{b^3}{2n^2}\right)\left(\frac{(n+1)(2n+1)}{6}\right) \\
+            &= \left(\frac{b^3}{6}\right)\left(\frac{2n^2+3n+1}{2n^2}\right)
+        \end{align*}
+
+        \[U(f,P)=\left(\frac{b^3}{6}\right)\left(\frac{2n^2+3n+1}{2n^2}\right)\]
+        %LOWER SUM
+        \begin{equation*}
+            L(f,P)=\sum_{i=1}^n m_i(t_i-t_{i-1}) = \sum_{i=1}^n \big(f(t_{i-1})\big)\left(\displaystyle\frac{b}{n}\right)
+        \end{equation*}
+
+        Analogo a \(f(t_i)\), sabemos que \(f(t_{i-1})=\displaystyle\frac{b^2(i-1)^2}{2n^2}\)
+
+        Entonces:
+        \begin{equation*}
+            \sum_{i=1}^n \big(f(t_i)\big)\left(\displaystyle\frac{b}{n}\right) = \sum_{i=1}^n \left(\frac{b^2(i-1)^2}{2n^2}\right)\left(\displaystyle\frac{b}{n}\right) = \sum_{i=1}^n \left(\frac{b^3(i-1)^2}{2n^3}\right) = \left(\frac{b^3}{2n^3}\right) \sum_{i=1}^n (i-1)^2
+        \end{equation*}
+
+        Realizando un cambio de variable sobre \(\sum_{i=1}^n (i-1)^2\), tenemos \(\sum_{i=0}^{n-1} i^2\). Como la suma evaluada en $i=0$ es 0 y \(0+n=n\), podemos comenzar la suma desde \(i=1\): \[\sum_{i=1}^{n-1} i^2 = \displaystyle\frac{(n-1)((n-1)+1)(2(n-1)+1)}{6} = \frac{n(n-1)(2n-1)}{6}\].
+
+        Sustituendo:
+        \begin{align*}
+            \left(\frac{b^3}{2n^3}\right)\sum_{i=1}^n (i-1)^2 &= \left(\frac{b^3}{2n^3}\right)\left(\frac{n(n-1)(2n-1)}{6}\right) = \left(\frac{b^3}{2n^2}\right)\left(\frac{(n-1)(2n-1)}{6}\right) \\ 
+            &= \left(\frac{b^3}{6}\right)\left(\frac{(n-1)(2n-1)}{2n^2}\right) = \left(\frac{b^3}{6}\right)\left(\frac{2n^2-3n+1}{2n^2}\right)
+        \end{align*}
+
+        \[L(f,P)=\left(\frac{b^3}{6}\right)\left(\frac{2n^2-3n+1}{2n^2}\right)\]
+        
+        Ahora buscamos la Partic\'on $P$ tal que \(U(f,P)-L(f,P)<\varepsilon\)
+        %PARTICION < E
+        \begin{align*}
+            U(f,P)-L(f,P) &= \left(\frac{b^3}{6}\right)\left(\frac{2n^2+3n+1}{2n^2}\right)-\left(\frac{b^3}{6}\right)\left(\frac{2n^2-3n+1}{2n^2}\right) \\
+            &= \left(\frac{b^3}{6}\right)\left(\frac{2n^2+3n+1}{2n^2}-\frac{2n^2-3n+1}{2n^2}\right) \\
+            &= \left(\frac{b^3}{6}\right)\left(\frac{2n^2+3n+1-(2n^2-3n+1)}{2n^2}\right) \\
+            &= \left(\frac{b^3}{6}\right)\left(\frac{2n^2+3n+1-2n^2+3n-1)}{2n^2}\right) = \left(\frac{b^3}{6}\right)\left(\frac{6n}{2n^2}\right) \\ 
+            &= \left(\frac{b^3}{6}\right)\left(\frac{3}{n}\right) = \frac{b^3}{2n}
+        \end{align*}
+
+        \begin{equation*}
+            U(f,P)-L(f,P)<\varepsilon \Longrightarrow \frac{b^3}{2n}<\varepsilon \Longrightarrow \frac{b^3}{2\varepsilon}<n
+        \end{equation*}
+        %INFIMO Y SUPREMO
+        \begin{align*}
+            sup\{L(f,P)\} &= \lim_{n \to \infty}\left(\frac{b^3}{6}\right)\left(\frac{2n^2+3n+1}{2n^2}\right) = \left(\frac{b^3}{6}\right)\lim_{n \to \infty}\frac{2n^2+3n+1}{2n^2}\\
+            &= \left(\frac{b^3}{6}\right)\lim_{n \to \infty}\left(1+\frac{3}{2n}+\frac{1}{2n^2}\right) = \left(\frac{b^3}{6}\right)\lim_{n \to \infty}\left(1+\frac{3}{2}\cdot\frac{1}{n}+\frac{1}{2}\cdot\frac{1}{n^2}\right)\\
+            &= \left(\frac{b^3}{6}\right)\left(1+\frac{3}{2}\cdot0+\frac{1}{2}\cdot0\right) = \frac{b^3}{6}
+        \end{align*}
+
+        \begin{align*}
+            inf\{U(f,P)\} &= \lim_{n \to \infty}\left(\frac{b^3}{6}\right)\left(\frac{2n^2-3n+1}{2n^2}\right) = \left(\frac{b^3}{6}\right)\lim_{n \to \infty}\frac{2n^2-3n+1}{2n^2}\\
+            &= \left(\frac{b^3}{6}\right)\lim_{n \to \infty}\left(1-\frac{3}{2n}+\frac{1}{2n^2}\right) = \left(\frac{b^3}{6}\right)\lim_{n \to \infty}\left(1-\frac{3}{2}\cdot\frac{1}{n}+\frac{1}{2}\cdot\frac{1}{n^2}\right)\\
+            &= \left(\frac{b^3}{6}\right)\left(1-\frac{3}{2}\cdot0+\frac{1}{2}\cdot0\right) = \frac{b^3}{6}
+        \end{align*}
+
+        \[sup\{L(f,P)\}=inf\{U(f,P)\}=\frac{b^3}{6}\]
+
+        \textbf{$\therefore \ f$ es integrable en [0,b] y} \(\displaystyle\int_{0}^{b}\frac{x^2}{2}dx=\frac{b^3}{6}\)
+
+    \end{proof}
     
     %EJERCICIO C 
-    \item \(\displaystyle\int_{0}^{b}3x^2dx=b^3\)
+    \item \(\displaystyle\int_{0}^{b}3x^2dx=b^3\)\medskip
+    
+    Por demostrar que \(\forall \ \varepsilon>0 \ \exists \ P \ : \ U(f,P)-L(f,P)<\varepsilon\)
     
     %EJERCICIO D
-    \item \(\displaystyle\int_{0}^{b}x^3dx=\frac{b^4}{4}\)
+    \item \(\displaystyle\int_{0}^{b}x^3dx=\frac{b^4}{4}\)\medskip
+    
+    Por demostrar que \(\forall \ \varepsilon>0 \ \exists \ P \ : \ U(f,P)-L(f,P)<\varepsilon\)
     
 \end{enumerate}
 
