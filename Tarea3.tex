@@ -512,6 +512,59 @@
 %EJERCICIO 5 ----------------------------------------------------------------------------------
 5. Mostrar que: \quad \(\displaystyle\int_{ca}^{cb}f(t)dt=c\displaystyle\int_{a}^{b}f(ct)dt\)
 
+\begin{proof}
+    . \medskip
+
+    Por definici\'on, sabemos que:
+
+    \begin{equation}
+        \label{5intab}
+        L(f(ct),P)\leq\int_{a}^{b}f(ct)dt\leq U(f(ct),P)
+    \end{equation}
+
+    y que
+
+    \begin{equation}
+        \label{5intcacb}
+        L(f,P')\leq\int_{ca}^{cb}f(t)dt\leq U(f,P')
+    \end{equation}
+
+    Siendo $P$, una partici\'on definida como: \(P=\{t_0=a,t_1,...,t_n=b\}\). Y $P'$ una partici\'on inducida de $P$ trasa multiplicar cada $t_i$ por $c$: \(P'\{c\cdot t_0=c\cdot a,c\cdot t_1,...,c\cdot t_n=c\cdot b\}\)\bigskip
+
+    \textbf{Considerando $c>0$:}\bigskip
+
+    Multiplicamos \eqref{5intab} por $c$: \quad \(c\cdot L(f,P)\leq c\cdot\int_{a}^{b}f(ct)dt\leq c\cdot U(f,P)\).\bigskip
+
+    Calcularmos las sumas superiores y las inferiores de $f$ con respecto a $P$ y a $P'$:
+
+    \begin{align*}
+        &U(f(ct),P)=\sum_{i=0}^n M_i(t_{i-1}-t_i) \quad &&L(f(ct),P)=\sum_{i=0}^n m_i(t_{i-1}-t_i)\\
+        &U(f,P')=\sum_{i=0}^n M_i'(c\cdot t_{i-1}-c\cdot t_i) \quad &&L(f,P')=\sum_{i=0}^n m_i'(c\cdot t_{i-1}-c\cdot t_i)
+    \end{align*}
+
+    Con: 
+    \begin{align*}
+        &M_i=sup\{f(c\cdot x) \ | \ t_{i-1}\leq x\leq t_i\} \quad &&m_i=inf\{f(c\cdot x) \ | \ t_{i-1}\leq x\leq t_i\}\\
+        &M_i'=sup\{f(x) \ | \ c\cdot t_{i-1}\leq x\leq c\cdot t_i\} \quad &&m_i'=inf\{f(x) \ | \ c\cdot t_{i-1}\leq x\leq c\cdot t_i\}
+    \end{align*}
+
+    (La igualdad entre $M_i=M_i'$, $m_i=m_i'$ es un hecho que me resulta particularmente dificil de explicar, tratar\'e de abordarlo de la mejor forma posible).\bigskip
+
+    Consideremos ahora un valor $u$ cualquiera tal que \(a\leq u\leq b \Longrightarrow t_{0}\leq u\leq t_n\) y lo multiplicamos por $c$ para obtener su equivalente en la partici\'on $P'$: \(c\cdot a\leq c\cdot u\leq c\cdot b \Longrightarrow c\cdot t_{0}\leq c\cdot u\leq c\cdot t_n\).\bigskip
+
+    Y comparamos sus im\'agenes en sus correspondientes funciones: $m$ en \(f(c\cdot x)\) y $c\cdot m$ en \(f(x)\)
+    \[f(c\cdot (u))=f(c\cdot u) \quad \text{y}  \quad f\big((c\cdot u)\big)=f(c\cdot u)\]
+
+    Tenemos, entonces, que \(\forall u\in[a,b]\) y \(\forall (c\cdot u) \in [ca,cb]\) (Valor inducido en la plartici\'on $P'$ por la partici\'on $P$): \(f(c\cdot (u))=f\big((c\cdot u)\big)\).\bigskip
+
+    Asi, pues, si \(f(c\cdot (u_1))<f(c\cdot (u_2)) \Longrightarrow f\big((c\cdot u_1)\big)<f\big((c\cdot u_2)\big)\). Lo que, en otras palabras, significa que si \(u_1\in[a,b]\) es el valor m\'as pequeño de $f(c\cdot x)$, entonces \(c\cdot u_1\in[ca,cb]\) es el valor m\'as pequeño de $f(x)$. De forma a\'naloga sucede con el valor m\'as grande.\bigskip
+
+    Con lo anteior y la defici\'on de \(m_i, \ m_i', \ M_i, \ M_i'\), tenemos que \(M_i=M_i'\) y que \(m_i=m_i'\) \(\forall i\in[1,n]\)
+
+    
+    
+\end{proof}
+
 %EJERCICIO 6 ----------------------------------------------------------------------------------
 6. Sea $b>0$. Supongase que $f$ es una funci\'on integrable sobre $[-b,b]$.
 
