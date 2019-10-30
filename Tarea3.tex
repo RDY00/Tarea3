@@ -517,23 +517,23 @@
 
     Por definici\'on, sabemos que:
 
-    \begin{equation}
+    \begin{multline}
         \label{5intab}
-        L(f(ct),P)\leq\int_{a}^{b}f(ct)dt\leq U(f(ct),P)
-    \end{equation}
+        L(f(ct),P)\leq\int_{a}^{b}f(ct)dt\leq U(f(ct),P) \\ \Longrightarrow sup\{L(f(ct),P)\}=\int_{a}^{b}f(ct)dt=inf\{U(f(ct),P)\}
+    \end{multline}
 
     y que
 
     \begin{equation}
         \label{5intcacb}
-        L(f,P')\leq\int_{ca}^{cb}f(t)dt\leq U(f,P')
+        L(f,P')\leq\int_{ca}^{cb}f(t)dt\leq U(f,P') \Longrightarrow sup\{L(f,P')\}=\int_{ca}^{cb}f(t)dt=inf\{U(f,P')\}
     \end{equation}
 
     Siendo $P$, una partici\'on definida como: \(P=\{t_0=a,t_1,...,t_n=b\}\). Y $P'$ una partici\'on inducida de $P$ trasa multiplicar cada $t_i$ por $c$: \(P'\{c\cdot t_0=c\cdot a,c\cdot t_1,...,c\cdot t_n=c\cdot b\}\)\bigskip
 
-    \textbf{Considerando $c>0$:}\bigskip
+    \textbf{Considerando $c\geq0$:}\bigskip
 
-    Multiplicamos \eqref{5intab} por $c$: \quad \(c\cdot L(f,P)\leq c\cdot\int_{a}^{b}f(ct)dt\leq c\cdot U(f,P)\).\bigskip
+    Multiplicamos \eqref{5intab} por $c$: \quad \(c\cdot L(f(ct),P)\leq c\cdot\int_{a}^{b}f(ct)dt\leq c\cdot U(f(ct),P)\).\bigskip
 
     Calcularmos las sumas superiores y las inferiores de $f$ con respecto a $P$ y a $P'$:
 
@@ -560,6 +560,34 @@
     Asi, pues, si \(f(c\cdot (u_1))<f(c\cdot (u_2)) \Longrightarrow f\big((c\cdot u_1)\big)<f\big((c\cdot u_2)\big)\). Lo que, en otras palabras, significa que si \(u_1\in[a,b]\) es el valor m\'as pequeño de $f(c\cdot x)$, entonces \(c\cdot u_1\in[ca,cb]\) es el valor m\'as pequeño de $f(x)$. De forma a\'naloga sucede con el valor m\'as grande.\bigskip
 
     Con lo anteior y la defici\'on de \(m_i, \ m_i', \ M_i, \ M_i'\), tenemos que \(M_i=M_i'\) y que \(m_i=m_i'\) \(\forall i\in[1,n]\)
+
+    Si usamos ahora la ecuaci\'on \eqref{5intab} multiplicada por $c$ y la desarrollamos tenemos que:
+
+    \begin{align*}
+        c\cdot L(f(ct),P) &= c \cdot \sum_{i=0}^n m_i(t_{i-1}-t_1) = \sum_{i=0}^n m_i\cdot c(t_{i-1}-t_1) \\
+        &= \sum_{i=0}^n m_i(c\cdot t_{i-1}-c\cdot t_1) = \sum_{i=0}^n m_i'(c\cdot t_{i-1}-c\cdot t_1) \\
+        &= L(f,P')
+    \end{align*}
+
+    \begin{align*}
+        c\cdot U(f(ct),P) &= c \cdot \sum_{i=0}^n M_i(t_{i-1}-t_1) = \sum_{i=0}^n M_i\cdot c(t_{i-1}-t_1) \\
+        &= \sum_{i=0}^n M_i(c\cdot t_{i-1}-c\cdot t_1) = \sum_{i=0}^n M_i'(c\cdot t_{i-1}-c\cdot t_1) \\
+        &= U(f,P')
+    \end{align*}
+
+    Tenemos entonces: 
+    \begin{multline*}
+        L(f,P')\leq c\cdot\int_{a}^{b}f(ct)dt\leq U(f,P') \Longrightarrow \\ sup\{L(f,P')\}=c\cdot\int_{a}^{b}f(ct)dt=inf\{U(f,P')\}
+    \end{multline*}
+
+    Recordando la ecuaci\'on \eqref{5intcacb} tenemos: \(sup\{L(f,P')\}=\displaystyle\int_{ca}^{cb}f(t)dt=inf\{U(f,P')\}\)
+
+    Que, por la ley del Sandwitch, nos da:
+    \begin{equation}
+        c\cdot\int_{a}^{b}f(ct)dt=\int_{ca}^{cb}f(t)dt
+    \end{equation}
+
+    \textbf{Considerando $c<0$:}\bigskip
 
     
     
