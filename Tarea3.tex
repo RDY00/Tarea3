@@ -22,6 +22,7 @@
 \setlength{\parindent}{0cm}
 
 \title{Tarea 3}
+
 \author{Fernando Márquez Pérez \\ Juan Antonio Jasso Oviedo \\ Emiliano Dom\'inguez Cruz}
 \date{08/11/2019}
 \affil{Facultad de Ciencias\\UNAM}
@@ -430,15 +431,30 @@
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item \(\sin(x) \text{, en} \ -\pi \leq x \leq \pi\)
+    \item \(\sin(x) \text{, en} \ -\pi \leq x \leq \pi\)\medskip
 
+    Sabemos que $sin(x)$ es continua en cualquier intervalo y además es periodica (el periodo es $2\pi$).Sabemos que $sin(x)$ esta acotada por $1$ y $-1$.Como $\int_{\pi}^{\pi}sin(x)dx$ es integrable en $[\pi,\pi]$ entonces $sup{(L,P)}=inf{(U,P)}$. De lo anterior se sigue entonces que como $sin(\pi)=1$ entonces la cota $M(b-a)$ será $1(\pi-(-\pi))$ ya que es continua e integrable dentro de el intervalo especificado.Ahora para la cota inferior sabemos $sin(-\pi)=-1$ entonces la cota $m(b-a)$ será \(-1(\pi-(-\pi))\).
+     \medskip
+
+    Por lo tanto\(-1(\pi-(-\pi)) \leq \int_{-\pi}^{\pi}sin(x)dx \leq 1(\pi-(-\pi))\)
     %EJERCICIO B
-    \item \(x^4 \text{, en} \ -4 \leq x \leq 4\)
+    \item \(x^4 \text{, en} \ -4 \leq x \leq 4\)\medskip
+
+    Al ser un polinomio $x^4$ es continua en cualquier intervalo e integrable, entonces sabemos que $inf(U,P)=sup(L,P)$.Lo que hacemos es encontrar la primera cota Superior (M) y como $x^4$ es creciente en los positivos, podemos concluir que la cota superior seria la $f(x)$ más grande en los positivos, pero como es par seria la misma en los negativos y en los positivos;asi \(-4^4=4^4\), entonces, la cota $M(b-a)$ es $256(4-(-4))$ ya que la función está acotada en un intervalo cerrado y la menor debera ser \(0^4\), ya que $f(x)$ es par y nunca tiene números negativos, de lo anterior se sigue que $m(b-a)$ es $0(4-(-4))$.\medskip
+
+    De lo anterior, se sigue que:\medskip
+    \(0(4-(-4) \leq \int_{-4}^{4}x^4dx \leq 256(4-(-4)\) \medskip
 
     %EJERCICIO C
     \item \(\tan(x) \text{, en} \ -\displaystyle\frac{\pi}{4} \leq x \leq \frac{\pi}{4}\)
 
-\end{enumerate}
+    Sabemos que $tan(x)$ es continua y que es integrable, como el intervalo no es $-\pi,\pi$(ya que se haría infinito y no se podría encontrar la cota) entonces es integrable en el intervalo \(-\frac{\pi}{4},\frac{\pi}{4}\). Ahora también sabemos que $inf(U,P)=sup(L,P)$ para encontrar las cotas, como no se vuelve infinita la función y es continua,podemos encontrar M y m podemos encontrar la $f(x)$ más grande en el intervalo, es decir $tan(\frac{\pi}{4}=1$ el cual es M, ahora podemos encontrar la $f(x)$ más pequeña en el intervalo, es decir $-\frac{\pi}{4}$
+    y \(tan(\frac{\pi}{4})=-1\) el cual sería m.\medskip
+
+    De lo anterior tiene la cota:\medskip
+    \(-1(\frac{\pi}{4}-(-\frac{\pi}{4})) \leq \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}tan(x)dx \leq 1(\frac{\pi}{4}-(-\frac{\pi}{4})\)
+
+\end{enumerate}"
 
 %EJERCICIO 4 ----------------------------------------------------------------------------------
 4.
@@ -538,8 +554,8 @@
     Calcularmos las sumas superiores y las inferiores de $f$ con respecto a $P$ y a $P'$:
 
     \begin{align*}
-        &U(f(ct),P)=\sum_{i=0}^n M_i(t_i-t_{i-1}) \quad &&L(f(ct),P)=\sum_{i=0}^n m_i(t_i-t_{i-1})\\
-        &U(f,P')=\sum_{i=0}^n M_i'(c\cdot t_i-c\cdot t_{i-1}) \quad &&L(f,P')=\sum_{i=0}^n m_i'(c\cdot t_i-c\cdot t_{i-1})
+        &U(f(ct),P)=\sum_{i=0}^n M_i(t_{i-1}-t_i) \quad &&L(f(ct),P)=\sum_{i=0}^n m_i(t_{i-1}-t_i)\\
+        &U(f,P')=\sum_{i=0}^n M_i'(c\cdot t_{i-1}-c\cdot t_i) \quad &&L(f,P')=\sum_{i=0}^n m_i'(c\cdot t_{i-1}-c\cdot t_i)
     \end{align*}
 
     Con:
@@ -564,14 +580,14 @@
     Si usamos ahora la ecuaci\'on \eqref{5intab} multiplicada por $c$ y la desarrollamos tenemos que:
 
     \begin{align*}
-        c\cdot L(f(ct),P) &= c \cdot \sum_{i=0}^n m_i(t_i-t_{i-1}) = \sum_{i=0}^n m_i\cdot c(t_i-t_{i-1}) \\
-        &= \sum_{i=0}^n m_i(c\cdot t_i-c\cdot t_{i-1}) = \sum_{i=0}^n m_i'(c\cdot t_i-c\cdot t_{i-1}) \\
+        c\cdot L(f(ct),P) &= c \cdot \sum_{i=0}^n m_i(t_{i-1}-t_1) = \sum_{i=0}^n m_i\cdot c(t_{i-1}-t_1) \\
+        &= \sum_{i=0}^n m_i(c\cdot t_{i-1}-c\cdot t_1) = \sum_{i=0}^n m_i'(c\cdot t_{i-1}-c\cdot t_1) \\
         &= L(f,P')
     \end{align*}
 
     \begin{align*}
-        c\cdot U(f(ct),P) &= c \cdot \sum_{i=0}^n M_i(t_i-t_{i-1}) = \sum_{i=0}^n M_i\cdot c(t_i-t_{i-1}) \\
-        &= \sum_{i=0}^n M_i(c\cdot t_i-c\cdot t_{i-1}) = \sum_{i=0}^n M_i'(c\cdot t_i-c\cdot t_{i-1}) \\
+        c\cdot U(f(ct),P) &= c \cdot \sum_{i=0}^n M_i(t_{i-1}-t_1) = \sum_{i=0}^n M_i\cdot c(t_{i-1}-t_1) \\
+        &= \sum_{i=0}^n M_i(c\cdot t_{i-1}-c\cdot t_1) = \sum_{i=0}^n M_i'(c\cdot t_{i-1}-c\cdot t_1) \\
         &= U(f,P')
     \end{align*}
 
@@ -583,58 +599,14 @@
     Recordando la ecuaci\'on \eqref{5intcacb} tenemos: \(sup\{L(f,P')\}=\displaystyle\int_{ca}^{cb}f(t)dt=inf\{U(f,P')\}\)
 
     Que, por la ley del Sandwitch, nos da:
-    \begin{equation*}
+    \begin{equation}
         c\cdot\int_{a}^{b}f(ct)dt=\int_{ca}^{cb}f(t)dt
-    \end{equation*}
+    \end{equation}
 
     \textbf{Considerando $c<0$:}\bigskip
 
-    Multiplicamos \eqref{5intab} por $c$: \quad \(c\cdot L(f(ct),P)\geq c\cdot\int_{a}^{b}f(ct)dt\geq c\cdot U(f(ct),P)\).\bigskip
 
-    Como $c<0$, al inducir la partici\'on $P'$ obtenemos que $t_{i-1}>t_i \ \forall i \in[1,n]$, lo que significa que $ca$ es el valor m\'as grande y $cb$ es m\'as pequeño.\bigskip
 
-    Dada la conmutatividad de la suma y la definici\'on de $L(f,P')$ y $U(f,P')$, es lo mismo cacularlar yendo del intervalo $[ct_n,ct_{n-1}]$ (el de las $t's$ m\'as pequeñas) al intervalo $[t_1,t_0]$ (el de las $t's$ m\'as grandes) que al rev\'es (Del de los valores de $t$ mas grandes a los m\'as chicos).\bigskip
-
-    Con lo anteior, calcularmos las sumas superiores y las inferiores de $f$ con respecto a $P$ y a $P'$:
-
-    \begin{align*}
-        &U(f(ct),P)=\sum_{i=0}^n M_i(t_i-t_{i-1}) \quad &&L(f(ct),P)=\sum_{i=0}^n m_i(t_i-t_{i-1})\\
-        &U(f,P')=\sum_{i=0}^n M_i'(c\cdot t_{i-1}-c\cdot t_i) \quad &&L(f,P')=\sum_{i=0}^n m_i'(c\cdot t_{i-1}-c\cdot t_i)
-    \end{align*}
-
-    Con:
-    \begin{align*}
-        &M_i=sup\{f(c\cdot x) \ | \ t_{i-1}\leq x\leq t_i\} \quad &&m_i=inf\{f(c\cdot x) \ | \ t_{i-1}\leq x\leq t_i\}\\
-        &M_i'=sup\{f(x) \ | \ c\cdot t_{i-1}\leq x\leq c\cdot t_i\} \quad &&m_i'=inf\{f(x) \ | \ c\cdot t_{i-1}\leq x\leq c\cdot t_i\}
-    \end{align*}
-
-    Analago al caso con $c\geq0$: $M_i=M_i'$ y $m_i=m_i'$.
-
-    Usando la ecuaci\'on \eqref{5intab} multiplicada por $c$ y la desarrollamos tenemos:
-
-    \begin{align*}
-        c\cdot L(f(ct),P) &= c \cdot \sum_{i=0}^n m_i(t_i-t_{i-1}) = \sum_{i=0}^n m_i\cdot c(t_i-t_{i-1}) \\
-        &= \sum_{i=0}^n m_i(c\cdot t_{i-1}-c\cdot t_i) \quad &&\text{Porque $c>0$}\\
-        &= \sum_{i=0}^n m_i'(c\cdot t_{i-1}-c\cdot t_i) = L(f,P')
-    \end{align*}
-
-    \begin{align*}
-        c\cdot U(f(ct),P) &= c \cdot \sum_{i=0}^n M_i(t_i-t_{i-1}) = \sum_{i=0}^n M_i\cdot c(t_i-t_{i-1}) \\
-        &= \sum_{i=0}^n M_i(c\cdot t_{i-1}-c\cdot t_i) \quad &&\text{Porque $c>0$}\\
-        &= \sum_{i=0}^n M_i'(c\cdot t_{i-1}-c\cdot t_i) = U(f,P')
-    \end{align*}
-
-    Tenemos entonces:
-    \begin{multline*}
-        L(f,P')\geq c\cdot\int_{a}^{b}f(ct)dt\geq U(f,P') \Longrightarrow \\ sup\{L(f,P')\}=c\cdot\int_{a}^{b}f(ct)dt=inf\{U(f,P')\}
-    \end{multline*}
-
-    Recordando la ecuaci\'on \eqref{5intcacb} tenemos: \(sup\{L(f,P')\}=\displaystyle\int_{ca}^{cb}f(t)dt=inf\{U(f,P')\}\)
-
-    Que, por la ley del Sandwitch, nos da:
-    \begin{equation*}
-        c\cdot\int_{a}^{b}f(ct)dt=\int_{ca}^{cb}f(t)dt
-    \end{equation*}
 \end{proof}
 
 %EJERCICIO 6 ----------------------------------------------------------------------------------
@@ -701,43 +673,7 @@
 \end{enumerate}
 
 %EJERCICIO 10 ----------------------------------------------------------------------------------
-10. Muestre que la regi\'on \(A=\{(x,y) \ | \ x<1, \ 0 \leq y \leq \frac{1}{x}\}\) tiene \'area infinita.\medskip
-
-(Ejercicio realizado en clase).\bigskip
-
-\textbf{Observaciones:}\medskip
-\begin{itemize}
-    \item $A$ se refiere al \'area bajo la curva de \(\displaystyle\frac{1}{x}\) en el intervalo $[0,1]$: \quad \(\displaystyle\int_0^1\frac{1}{x}dx\)
-    \item Propiedad presentada en clase: \(\displaystyle\int_1^{\displaystyle a^b}\frac{1}{x}dx = b\int_1^a\frac{1}{x}dx\)\bigskip
-\end{itemize}
-
-Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
-
-\begin{proof}[Prueba:]
-    . \medskip
-
-    Consideremos $b>0$ en: \(\displaystyle\lim_{b\to0}\int_b^1\frac{1}{x}dx\).\medskip
-
-    \textbf{Nota:} \(\displaystyle\lim_{b\to\infty}\left(\frac{1}{2}\right)^b = \lim_{b\to\infty} \frac{1^b}{2^b} = \lim_{b\to\infty} \frac{1}{2^b} = 0\)\bigskip
-
-    Entonces podemos reescribir la f\'omula como:
-
-    \[\lim_{b\to\infty}\int_{\left(\frac{1}{2}\right)^b}^1\frac{1}{x}dx\]
-
-    Usando las propiedades de las integales y la propiedad de las observaciones tenemos que:
-
-    \begin{align*}
-        \lim_{b\to\infty}\int_{\left(\frac{1}{2}\right)^b}^1\frac{1}{x}dx = \lim_{b\to\infty}-\int^{\left(\frac{1}{2}\right)^b}_1\frac{1}{x}dx = \lim_{b\to\infty}-b\cdot\int^{\left(\frac{1}{2}\right)}_1\frac{1}{x}dx
-    \end{align*}
-
-    \textbf{Observaci\'on:} \(\displaystyle\int^{\left(\frac{1}{2}\right)}_1\frac{1}{x}dx <0\) porque \(1/2<1\). Entonces \(\displaystyle-\int^{\left(\frac{1}{2}\right)}_1\frac{1}{x}dx >0\)\bigskip
-
-    Por tanto:
-    \[\lim_{b\to\infty}-b\cdot \int^{\left(\frac{1}{2}\right)}_1\frac{1}{x}dx  = \lim_{b\to\infty}b\cdot -\int^{\left(\frac{1}{2}\right)}_1\frac{1}{x}dx = \infty\]
-
-    Por transitividad: \qquad \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)\medskip
-
-\end{proof}
+10. Muestre que la regi\'on \(A=\{(x,y) \ | \ x<1, \ 0 \leq y \leq \frac{1}{x}\}\) tiene \'area infinita.
 
 %EJERCICIO 11 ----------------------------------------------------------------------------------
 11. Encontrar la gr\'afica de las siguientes funciones.
@@ -943,3 +879,7 @@ Mostrar que:
 \end{enumerate}
 
 \end{document}
+
+
+
+%PUEDO SUBIR COSAS
