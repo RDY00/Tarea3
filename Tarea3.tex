@@ -433,28 +433,32 @@
     %EJERCICIO A
     \item \(\sin(x) \text{, en} \ -\pi \leq x \leq \pi\)\medskip
 
-    Sabemos que $sin(x)$ es continua en cualquier intervalo y además es periodica (el periodo es $2\pi$).Sabemos que $sin(x)$ esta acotada por $1$ y $-1$.Como $\int_{\pi}^{\pi}sin(x)dx$ es integrable en $[\pi,\pi]$ entonces $sup{(L,P)}=inf{(U,P)}$. De lo anterior se sigue entonces que como $sin(\pi)=1$ entonces la cota $M(b-a)$ será $1(\pi-(-\pi))$ ya que es continua e integrable dentro de el intervalo especificado.Ahora para la cota inferior sabemos $sin(-\pi)=-1$ entonces la cota $m(b-a)$ será \(-1(\pi-(-\pi))\).
-     \medskip
+        Sabemos que $\sin(x)$ es continua en cualquier intervalo y además es periodica (el periodo es $2\pi$). Sabemos, tambi\'en, que $-1\leq \sin(x)\leq 1$.\medskip
+        
+        Como $f$ es integrable en $[-\pi,\pi]$ entonces: \[sup\{L(f,P)\}=\displaystyle\int_{-\pi}^{\pi}\sin(x)dx=inf\{U(f,P)\}\]
+        
+        De lo anterior se sigue que como \(\displaystyle\frac{\pi}{2}\in[\pi,-\pi]\) y $\sin\left(\displaystyle\frac{\pi}{2}\right)=1$ (que es el valor m\'aximo posible), la cota superior $M(b-a)$ será $1(\pi-(-\pi))$. Ahora para la cota inferior sabemos que $\sin(x)$ es impar (Propiedad demostrada en clase), por lo que \(\sin\left(-\displaystyle\frac{\pi}{2}\right)=-1\) (que  es el valor m\'inimo posible) entonces la cota $m(b-a)$ será \(-1(\pi-(-\pi))\). \medskip
 
-    Por lo tanto\(-1(\pi-(-\pi)) \leq \int_{-\pi}^{\pi}sin(x)dx \leq 1(\pi-(-\pi))\)
+        Por lo tanto: \[-1(\pi-(-\pi)) \leq \int_{-\pi}^{\pi}\sin(x)dx \leq 1(\pi-(-\pi))\]
+
     %EJERCICIO B
     \item \(x^4 \text{, en} \ -4 \leq x \leq 4\)\medskip
 
-    Al ser un polinomio $x^4$ es continua en cualquier intervalo e integrable, entonces sabemos que $inf(U,P)=sup(L,P)$.Lo que hacemos es encontrar la primera cota Superior (M) y como $x^4$ es creciente en los positivos, podemos concluir que la cota superior seria la $f(x)$ más grande en los positivos, pero como es par seria la misma en los negativos y en los positivos;asi \(-4^4=4^4\), entonces, la cota $M(b-a)$ es $256(4-(-4))$ ya que la función está acotada en un intervalo cerrado y la menor debera ser \(0^4\), ya que $f(x)$ es par y nunca tiene números negativos, de lo anterior se sigue que $m(b-a)$ es $0(4-(-4))$.\medskip
+        Al ser un polinomio $x^4$ es continua en cualquier intervalo e integrable, entonces sabemos que $inf\{U(f,P)\}=sup\{L(f,P)\}$.Lo que hacemos es encontrar la primera cota Superior (M) y como $x^4$ es creciente en los positivos, podemos concluir que la cota superior seria la $f(x)$ más grande en los positivos, pero como es par seria la misma en los negativos y en los positivos;asi \(-4^4=4^4\), entonces, la cota $M(b-a)$ es $256(4-(-4))$ ya que la función está acotada en un intervalo cerrado y la menor debera ser \(0^4\), ya que $f(x)$ es par y nunca tiene números negativos, de lo anterior se sigue que $m(b-a)$ es $0(4-(-4))$.\medskip
 
-    De lo anterior, se sigue que:\medskip
-    \(0(4-(-4) \leq \int_{-4}^{4}x^4dx \leq 256(4-(-4)\) \medskip
+        De lo anterior, se sigue que:
+        \[0(4-(-4) \leq \int_{-4}^{4}x^4dx \leq 256(4-(-4)\]
 
     %EJERCICIO C
-    \item \(\tan(x) \text{, en} \ -\displaystyle\frac{\pi}{4} \leq x \leq \frac{\pi}{4}\)
+    \item \(\tan(x) \text{, en} \ -\displaystyle\frac{\pi}{4} \leq x \leq \frac{\pi}{4}\) \medskip
 
-    Sabemos que $tan(x)$ es continua y que es integrable, como el intervalo no es $-\pi,\pi$(ya que se haría infinito y no se podría encontrar la cota) entonces es integrable en el intervalo \(-\frac{\pi}{4},\frac{\pi}{4}\). Ahora también sabemos que $inf(U,P)=sup(L,P)$ para encontrar las cotas, como no se vuelve infinita la función y es continua,podemos encontrar M y m podemos encontrar la $f(x)$ más grande en el intervalo, es decir $tan(\frac{\pi}{4}=1$ el cual es M, ahora podemos encontrar la $f(x)$ más pequeña en el intervalo, es decir $-\frac{\pi}{4}$
-    y \(tan(\frac{\pi}{4})=-1\) el cual sería m.\medskip
+        Sabemos que $\tan(x)$ es continua y que es integrable, como el intervalo no es $-\pi,\pi$(ya que se haría infinito y no se podría encontrar la cota) entonces es integrable en el intervalo \(-\frac{\pi}{4},\frac{\pi}{4}\). Ahora también sabemos que $inf\{U(f,P)\}=sup\{L(f,P)\}$ para encontrar las cotas, como no se vuelve infinita la función y es continua,podemos encontrar M y m podemos encontrar la $f(x)$ más grande en el intervalo, es decir $tan(\frac{\pi}{4}=1$ el cual es M, ahora podemos encontrar la $f(x)$ más pequeña en el intervalo, es decir $-\frac{\pi}{4}$
+        y \(tan(\frac{\pi}{4})=-1\) el cual sería m.\medskip
 
-    De lo anterior tiene la cota:\medskip
-    \(-1(\frac{\pi}{4}-(-\frac{\pi}{4})) \leq \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}tan(x)dx \leq 1(\frac{\pi}{4}-(-\frac{\pi}{4})\)
+        De lo anterior obtenemos la cota:
+        \[-1(\frac{\pi}{4}-(-\frac{\pi}{4})) \leq \int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}tan(x)dx \leq 1(\frac{\pi}{4}-(-\frac{\pi}{4})\]
 
-\end{enumerate}"
+\end{enumerate}
 
 %EJERCICIO 4 ----------------------------------------------------------------------------------
 4.
