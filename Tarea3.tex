@@ -557,8 +557,6 @@
     \begin{align*}
         &U(f(ct),P)=\sum_{i=0}^n M_i(t_i-t_{i-1}) \quad &&L(f(ct),P)=\sum_{i=0}^n m_i(t_i-t_{i-1})\\
         &U(f,P')=\sum_{i=0}^n M_i'(c\cdot t_i-c\cdot t_{i-1}) \quad &&L(f,P')=\sum_{i=0}^n m_i'(c\cdot t_i-c\cdot t_{i-1})
-        &U(f(ct),P)=\sum_{i=0}^n M_i(t_{i-1}-t_i) \quad &&L(f(ct),P)=\sum_{i=0}^n m_i(t_{i-1}-t_i)\\
-        &U(f,P')=\sum_{i=0}^n M_i'(c\cdot t_{i-1}-c\cdot t_i) \quad &&L(f,P')=\sum_{i=0}^n m_i'(c\cdot t_{i-1}-c\cdot t_i)
     \end{align*}
 
     Con:
@@ -582,18 +580,12 @@
 
     \begin{align*}
         c\cdot L(f(ct),P) &= c \cdot \sum_{i=0}^n m_i(t_i-t_{i-1}) = \sum_{i=0}^n m_i\cdot c(t_i-t_{i-1}) \\
-        &= \sum_{i=0}^n m_i(c\cdot t_i-c\cdot t_{i-1}) = \sum_{i=0}^n m_i'(c\cdot t_i-c\cdot t_{i-1}) \\
-        c\cdot L(f(ct),P) &= c \cdot \sum_{i=0}^n m_i(t_{i-1}-t_1) = \sum_{i=0}^n m_i\cdot c(t_{i-1}-t_1) \\
-        &= \sum_{i=0}^n m_i(c\cdot t_{i-1}-c\cdot t_1) = \sum_{i=0}^n m_i'(c\cdot t_{i-1}-c\cdot t_1) \\
-        &= L(f,P')
+        &= \sum_{i=0}^n m_i(c\cdot t_i-c\cdot t_{i-1}) = \sum_{i=0}^n m_i'(c\cdot t_i-c\cdot t_{i-1})
     \end{align*}
 
     \begin{align*}
         c\cdot U(f(ct),P) &= c \cdot \sum_{i=0}^n M_i(t_i-t_{i-1}) = \sum_{i=0}^n M_i\cdot c(t_i-t_{i-1}) \\
-        &= \sum_{i=0}^n M_i(c\cdot t_i-c\cdot t_{i-1}) = \sum_{i=0}^n M_i'(c\cdot t_i-c\cdot t_{i-1}) \\
-        c\cdot U(f(ct),P) &= c \cdot \sum_{i=0}^n M_i(t_{i-1}-t_1) = \sum_{i=0}^n M_i\cdot c(t_{i-1}-t_1) \\
-        &= \sum_{i=0}^n M_i(c\cdot t_{i-1}-c\cdot t_1) = \sum_{i=0}^n M_i'(c\cdot t_{i-1}-c\cdot t_1) \\
-        &= U(f,P')
+        &= \sum_{i=0}^n M_i(c\cdot t_i-c\cdot t_{i-1}) = \sum_{i=0}^n M_i'(c\cdot t_i-c\cdot t_{i-1})
     \end{align*}
 
     Tenemos entonces:
@@ -626,7 +618,7 @@
     Con:
     \begin{align*}
         &M_i=sup\{f(c\cdot x) \ | \ t_{i-1}\leq x\leq t_i\} \quad &&m_i=inf\{f(c\cdot x) \ | \ t_{i-1}\leq x\leq t_i\}\\
-        &M_i'=sup\{f(x) \ | \ c\cdot t_{i-1}\leq x\leq c\cdot t_i\} \quad &&m_i'=inf\{f(x) \ | \ c\cdot t_{i-1}\leq x\leq c\cdot t_i\}
+        &M_i'=sup\{f(x) \ | \ c\cdot t_{i-1}\geq x\geq c\cdot t_i\} \quad &&m_i'=inf\{f(x) \ | \ c\cdot t_{i-1}\geq x\geq c\cdot t_i\}
     \end{align*}
 
     Analago al caso con $c\geq0$: $M_i=M_i'$ y $m_i=m_i'$.
@@ -796,12 +788,74 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
     \item \(\arcsin'(x)=\displaystyle\frac{1}{\sqrt{1-x^2}}\), si \(-1<x<1\)
+    
+        \textbf{Observaciones:}
+        \begin{itemize}
+            \item \(\displaystyle\frac{d}{dx}\big(h^{-1}(x)\big) = \frac{1}{h'(h^{-1})}\)
+            \item \(\sin'(x) = \cos'(x)\)
+            \item \(\sin^2(x)+\cos^2(x)=1\)
+            \item \(\sin(\arcsin(x))=x \Longrightarrow \sin^2(\arcsin(x))=x^2\)
+        \end{itemize}
+
+        \begin{proof}[Prueba:]
+            . \medskip
+
+            Considerando que $\arcsin$ es la inversa de $\sin$ tenemos que su derivada esta denotada por la f\'ormula anterior (Aplicando las observaciones):
+            \[\arcsin'(x) = \frac{1}{\sin'(\arcsin(x))} = \frac{1}{\cos(\arcsin(x))}\]
+
+            Despejando \(\cos(x)\) de \(\sin^2(x)+\cos^2(x)=1\), tenemos que: \(\cos(x) = \sqrt{1-\sin^2(x)}\). Sustituyendo lo obtenido en la ecuaci\'on:
+
+            \[\frac{1}{\cos(\arcsin(x))} = \frac{1}{\sqrt{1-\sin^2(\arcsin(x))}} = \frac{1}{\sqrt{1-x^2}}\]
+
+            Finalmente, por transitividad:
+            \[\arcsin'(x) = \frac{1}{\sqrt{1-x^2}}\]
+        \end{proof}
 
     %EJERCICIO B
     \item \(\arccos'(x)=\displaystyle-\frac{1}{\sqrt{1-x^2}}\), si \(-1<x<1\)
+    
+        \textbf{Observaciones:}
+        \begin{itemize}
+            \item \(\displaystyle\frac{d}{dx}\big(h^{-1}(x)\big) = \frac{1}{h'(h^{-1})}\)
+            \item \(\cos'(x) = -\sin'(x)\)
+            \item \(\sin^2(x)+\cos^2(x)=1\)
+            \item \(\cos(\arccos(x))=x \Longrightarrow \cos^2(\arccos(x))=x^2\)
+        \end{itemize}
+
+        \begin{proof}[Prueba:]
+            . \medskip
+
+            Considerando que $\arccos$ es la inversa de $\cos$ tenemos que su derivada esta denotada por la f\'ormula anterior (Aplicando las observaciones):
+            \[\arccos'(x) = \frac{1}{\cos'(\arccos(x))} = \frac{1}{-\sin(\arccos(x))}\]
+
+            Despejando \(\sin(x)\) de \(\sin^2(x)+\cos^2(x)=1\), tenemos que: \(\sin(x) = \sqrt{1-\cos^2(x)}\). Sustituyendo lo obtenido en la ecuaci\'on:
+
+            \[-\frac{1}{\sin(\arccos(x))} = -\frac{1}{\sqrt{1-\cos^2(\arcsin(x))}} = -\frac{1}{\sqrt{1-x^2}}\]
+
+            Finalmente, por transitividad:
+            \[\arccos'(x) = -\frac{1}{\sqrt{1-x^2}}\]
+        \end{proof}
 
     %EJERCICIO C
     \item \(\arctan'(x)=\displaystyle\frac{1}{1+x^2}\), para toda $x$.
+        
+        \textbf{Observaciones:}
+        \begin{itemize}
+            \item \(\displaystyle\frac{d}{dx}\big(h^{-1}(x)\big) = \frac{1}{h'(h^{-1})}\)
+            \item \(\tan'(x) = \sec^2(x)\)
+            \item \(\sec^2(x)=1+\tan^2(x)\)
+            \item \(\tan(\arctan(x))=x \Longrightarrow \tan^2(\arctan(x))=x^2\)
+        \end{itemize}
+
+        \begin{proof}[Prueba:]
+            . \medskip
+
+            Considerando que $\arctan$ es la inversa de $\tan$ tenemos que su derivada esta denotada por la f\'ormula anterior (Aplicando las observaciones):
+            \[\arctan'(x) = \frac{1}{\tan'(\arctan(x))} = \frac{1}{\sec^2(\arctan(x))} = \frac{1}{1+\tan^2(\arctan(x))} = \frac{1}{1+x^2}\]
+
+            Por transitividad:
+            \[\arctan'(x) = \frac{1}{1+x^2}\]
+        \end{proof}
 
 \end{enumerate}
 
