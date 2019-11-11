@@ -785,7 +785,132 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item \(f(x)=\tan(x)-x\)
+    \item \(f(x)=\tan(x)-x\)\bigskip
+    
+        \textbf{Continuidad: }\medskip
+
+            $x$ es un polinomio, por lo que es continua en todos los $\mathbbm{R}$, \(\tan(x)\) es continua en \(\mathbbm{R}\setminus\displaystyle\left\{\frac{(2k+1)\pi}{2}, k\in\mathbbm{Z}\right\}\) porque es donde su denominador (\(\cos(x)\)) se iguala a 0. as\'i entonces \(f(x)\) es continua en \(\mathbbm{R}\setminus\displaystyle\left\{\frac{(2k+1)\pi}{2}, k\in\mathbbm{Z}\right\}\).\bigskip
+        
+        \textbf{Dominio: }\medskip
+            
+            Por lo anterior, sabemos que \(Dom(f):\mathbbm{R}\setminus\displaystyle\left\{\frac{(2k+1)\pi}{2}, k\in\mathbbm{Z}\right\}\)\bigskip
+
+        \textbf{Imagen: }\medskip
+
+            Analizamos la funci\'on en torno a $\tan(x)$ (Una func\'ion ya definicda en clase), y tenemos que:
+
+            \begin{align*}
+                \tan(x)-x<\tan(x) \quad \text{si} \ x>0\\
+                \tan(x)-x>\tan(x) \quad \text{si} \ x<0
+            \end{align*}
+
+            Con lo anterior y sabien que \(\tan(x)\) no est\'a acotada, tenemos que \(\tan(x)-x\) tampoco lo est\'a, asi: \(Img(f): \mathbbm{R}\)\bigskip
+
+        \textbf{Raices: }\medskip
+
+        \textbf{Paridad: }\medskip
+
+            Partimos sabiendo que \(\sin(-x)=-\sin(x)\) (seno es impar) y que \(\cos(-x)=\cos(x)\) (coseno es par).
+
+            \begin{align*}
+                f(-x)&=\tan(-x)-(-x)=\frac{\sin(-x)}{\cos(-x)}+x \\
+                &= \frac{-\sin(x)}{\cos(x)}+x = -\tan(x)+x \\
+                &= -(\tan(x)-x)= -f(x)
+            \end{align*}
+
+            $f$ es impar.\bigskip
+
+        \textbf{Derivadas: }\medskip
+
+            Sabiendo que: \(\displaystyle\frac{d}{dx}\tan(x) = \displaystyle\frac{1}{\cos^2(x)}\)
+
+            \begin{align*}
+                f'(x) &= \frac{d}{dx}\tan(x) - \frac{d}{dx}x = \frac{1}{\cos^2(x)} - 1 = \frac{1}{\cos^2(x)} - \frac{\cos^2(x)}{\cos^2(x)} \\
+                &= \frac{1-\cos^2(x)}{\cos^2(x)} = \frac{\sin^2(x)}{\cos^2(x)} = \tan^2(x)
+            \end{align*}
+
+            \begin{align*}
+                f''(x) &= \frac{d}{dx}\tan^2(x)\cdot\frac{d}{dx}\tan(x) = 2\cdot\tan(x)\cdot\frac{1}{\cos^2(x)} \\
+                &= 2\cdot\frac{\sin(x)}{\cos(x)}\cdot\frac{1}{\cos^2(x)} = \frac{2\sin(x)}{\cos^3(x)}
+            \end{align*}
+            
+        \textbf{Puntos y valores cr\'iticos: }\medskip
+
+            \begin{equation*}
+                f'(x)=0 \Longrightarrow \tan^2(x)=0 \Longrightarrow \frac{\sin(x)}{\cos(x)}=0 \Longrightarrow \sin(x)=0
+            \end{equation*}
+
+            Sabemos, por la definici\'on dada en clase, que \(\sin(x)=0\) en \(x=k\pi, \ k\in\mathbbm{Z}\), as\'i entonces 
+            \[f'(x)=0 \quad \text{si} \ x=k\pi, \ k\in\mathbbm{Z}\]
+
+            Para los valores cr\'iticos tenemos que \(\tan^2(x)=0, \quad \text{si} \ x=k\pi, \ k\in\mathbbm{Z}\), asi:
+
+            \begin{equation*}
+                f(x) = \tan(x)-x \quad \text{con } \  x=k\pi, \ k\in\mathbbm{Z}
+            \end{equation*}
+
+            Como en esos puntos \(\tan(x)=0\), entonces tendremos: \[f(x)=-x \quad \text{con } \  x=k\pi, \ k\in\mathbbm{Z} \Longrightarrow (k\pi,-k\pi) \quad \text{con } \  x=k\pi, \ k\in\mathbbm{Z}\]
+
+        \textbf{Crecencia: }\medskip
+
+            Analizando \(f'(x)\) tenemos que \(\tan^2(x)>0 \ \forall x\in\mathbbm{R}\) (Por el cuadrado), as\'i, $f$ siempre es creciente.
+
+        \textbf{Puntos y valores de Inflexi\'on: }\medskip
+
+            \begin{equation*}
+                f''(x)=0 \Longrightarrow \frac{2\sin(x)}{\cos^3(x)} \Longrightarrow \sin(x)=0
+            \end{equation*}
+
+            Analogo al an\'alisis de los puntos cr\'iticos (Pues en ambos casos llegamos \(\sin(x)=0\)), tendremos que los valores de inflexi\'on ser\'an:
+            \[(k\pi,-k\pi) \quad \text{con } \  x=k\pi, \ k\in\mathbbm{Z}\]
+
+            Lo que tambi\'em significa que todos nuestros puntos cr\'itcos son puntos de inflexi\'on, por lo que la funci\'on no tiene nim\'inimos ni m\'aximos.
+
+        \textbf{Concavidad y Convexidad: }\medskip
+
+        CONVEXIDAD:
+        \begin{equation*}
+            \frac{2\sin(x)}{\cos^3(x)}>0 
+            \begin{cases}
+                2\sin(x)>0 \wedge \cos^3(x)>0 \qquad \sin(x)>0 \wedge \cos(x)>0 \quad \dots (1)\\ \\
+                2\sin(x)<0 \wedge \cos^3(x)<0 \qquad \sin(x)<0 \wedge \cos(x)<0 \quad \dots (2)
+            \end{cases}
+        \end{equation*}
+
+        Analizando con \(0<x<2\pi\)
+
+        \begin{equation*}
+            (1) \dots \ \sin(x)>0 \wedge \cos(x)>0 \Longrightarrow (0,\pi) \cap ([0,\pi/2) \cup (3\pi/2,2\pi]) \Longrightarrow \left(0,\frac{\pi}{2}\right)
+        \end{equation*}
+
+        \begin{equation*}
+            (2) \dots \ \sin(x)<0 \wedge \cos(x)<0 \Longrightarrow (\pi,2\pi) \cap (\pi/2,3\pi/2) \Longrightarrow \left(\pi,\frac{3\pi}{2}\right)
+        \end{equation*}
+
+        Basados en que el periodo de \(\tan(x)\) es $\pi$, extendemos el intervalo y obtenemos que $f$ es c\'convexa en:
+        \[\left(k\pi,\frac{\pi}{2}+k\pi\right) \ k\in\mathbbm{Z}\]
+
+        CONCAVIDAD:
+        \begin{equation*}
+            \frac{2\sin(x)}{\cos^3(x)}<0 
+            \begin{cases}
+                2\sin(x)>0 \wedge \cos^3(x)<0 \qquad \sin(x)>0 \wedge \cos(x)<0 \quad \dots (1)\\ \\
+                2\sin(x)<0 \wedge \cos^3(x)>0 \qquad \sin(x)<0 \wedge \cos(x)>0 \quad \dots (2)
+            \end{cases}
+        \end{equation*}
+
+        \begin{equation*}
+            (1) \dots \ \sin(x)>0 \wedge \cos(x)<0 \Longrightarrow (0,\pi) \cap (\pi/2,3\pi/2) \Longrightarrow \left(\frac{\pi}{2},\pi\right)
+        \end{equation*}
+
+        \begin{equation*}
+            (2) \dots \ \sin(x)<0 \wedge \cos(x)>0 \Longrightarrow (\pi,2\pi) \cap ([0,\pi/2) \cup (3\pi/2,2\pi]) \Longrightarrow \left(\frac{3\pi}{2},2\pi\right)
+        \end{equation*}
+
+        Al igual que con la convexidad usamos la propiedad periodica de $\tan(x)$ para extender el intervalo:
+        \[\left(\frac{\pi}{2}+k\pi,k\pi+\pi\right) \ k\in\mathbbm{Z}\]
+
+        \textbf{Gr\'afica: }\medskip
 
     %EJERCICIO B
     \item \(f(x)=x+\sin(x)\)
@@ -803,7 +928,7 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
     
         Sabemos que: \(\cos(2x)=\cos(x+x)=\cos^2(x)-\sin^2(x)\).\bigskip
         %COS
-        Desarrollando lo anterior para tener a $\cos$ en t\'erminos de $\cos(2x)$:
+        Desarrollando lo anterior para tener a $\cos(x)$ en t\'erminos de $\cos(2x)$:
         \begin{align*}
             \cos(2x) &= \cos^2(x)-\sin^2(x) = \cos^2(x)-\sin^2(x) + 0 \\
             &= \cos^2(x)-\sin^2(x) + \cos^2(x) - \cos^2(x) \\
@@ -813,7 +938,7 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
             \cos(2x)= 2\cos^2(x)-1 \Longrightarrow \cos^2(x) = \frac{1+\cos(2x)}{2}
         \end{equation*}
         %SIN
-        Ahora para $\sin$:
+        Ahora para $\sin(x)$:
         \begin{align*}
             \cos(2x) &= \cos^2(x)-\sin^2(x) = \cos^2(x)-\sin^2(x) + 0 \\
             &= \cos^2(x)-\sin^2(x) + \sin^2(x) - \sin^2(x) \\
@@ -834,7 +959,7 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
         Como, por hip\'otesis, \(0 \leq t \leq \displaystyle\frac{\pi}{2}\), \(0\leq\displaystyle\frac{t}{2}<\frac{\pi}{4}\). Por lo que \(1\geq\cos(t)>0\) y \(\frac{1+\cos(2t)}{2}>0\) por lo que podemos sacar ra\'iz cuadrada a ambos lados, asi:
         \[\cos\left(\displaystyle\frac{t}{2}\right)=\sqrt{\frac{1+\cos(t)}{2}}\]
 
-        NOTA: Aunque la ra\'z denota un $\pm$, como ya especificamos que, dado el intervalo, $\cos$ es mayor a 0, podemos dar por especificado el signo positivo. El caso ser\'a el mismo para $\sin$.\bigskip
+        NOTA: Aunque la ra\'z denota un $\pm$, como ya especificamos que, dado el intervalo, $\cos(x)$ es mayor a 0, podemos dar por especificado el signo positivo. El caso ser\'a el mismo para $\sin(x)$.\bigskip
         %SIN
         Ahora con seno: \(\sin^2(x) = \frac{1-\cos(2x)}{2}\)\bigskip
 
@@ -962,10 +1087,63 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item \(f(x)=(1+x)(1+e^{x^2})\)
+    \item \(f(x)=(1+x)(1+e^{x^2})\)\bigskip
+    
+        Aplicamos logaritmo natural a ambos lados de la igualdad:
+        \[\ln(f(x))=\ln((1+x)(1+e^{x^2}))\]
+
+        Por las propiedades del \(\ln\) tenemos: \quad \(\ln(f(x))=\ln(1+x)+\ln(1+e^{x^2})\)
+
+        Derivando:
+        \begin{align*}
+            \frac{d}{dx}\ln(f(x)) &= \frac{d}{dx}(\ln(1+x)+\ln(1+e^{x^2}))\\
+            \frac{f'(x)}{f(x)} &= \frac{\frac{d}{dx}(1+x)}{1+x}+\frac{\frac{d}{dx}(1+e^{x^2})}{1+e^{x^2}} = \frac{1}{1+x}+\frac{2xe^{x^2}}{1+e^{x^2}}\\
+            &= \frac{(1+e^{x^2})+(2xe^{x^2})(1+x)}{(1+x)(1+e^{x^2})}\\
+            &= \frac{1+e^{x^2}+2xe^{x^2}+2x^2e^{x^2}}{(1+x)(1+e^{x^2})}\\
+            f'(x)&= (1+x)(1+e^{x^2})\left[\frac{1+e^{x^2}+2xe^{x^2}+2x^2e^{x^2}}{(1+x)(1+e^{x^2})}\right]\\
+            &= 1+e^{x^2}+2xe^{x^2}+2x^2e^{x^2}
+        \end{align*}
 
     %EJERCICIO B
-    \item \(f(x)=(\cos(x))^{\sin(x)}+(\sin(x))^{\cos(x)}\)
+    \item \(f(x)=(\cos(x))^{\sin(x)}+(\sin(x))^{\cos(x)}\)\bigskip
+    
+        Sabiendo que \(e^{\ln(a)}=a\), lo aplicamos a cada operando de la suma: 
+        \[f(x)=e^{\ln(\cos(x)^{\sin(x)})}+e^{\ln(\sin(x)^{\cos(x)})}\]
+
+        Usando la propiedad logar\'itmica de los exponene tenemos:
+        \[f(x)=e^{\sin(x)\ln(\cos(x))}+e^{\cos(x)\ln(\sin(x))}\]
+
+        Derivando:
+        \begin{align*}
+            f'(x) &= \frac{d}{dx}\left[e^{\sin(x)\ln(\cos(x))}+e^{\cos(x)\ln(\sin(x))}\right] = \frac{d}{dx}\left(e^{\sin(x)\ln(\cos(x))}\right) + \frac{d}{dx}\left(e^{\cos(x)\ln(\sin(x))}\right)\\
+            &= \left[e^{\sin(x)\ln(\cos(x))}\cdot \frac{d}{dx}[\sin(x)\ln(\cos(x))]\right] + \left[e^{\cos(x)\ln(\sin(x))}\cdot \frac{d}{dx}[\cos(x)\ln(\sin(x))]\right]
+        \end{align*}
+
+        Desarrolando las derivadas:
+        \begin{align*}
+            \frac{d}{dx}[\sin(x)\ln(\cos(x))] &= \frac{d}{dx}\sin(x)\cdot\ln(\cos(x)) + \sin(x)\cdot\frac{d}{dx}(\ln(\cos(x)))\\
+            &= \cos(x)\cdot\ln(\cos(x)) + \sin(x)\cdot\frac{-\sin(x)}{\cos(x)}\\
+            &=  \cos(x)\cdot\ln(\cos(x)) - \frac{\sin(x)^2}{\cos(x)}
+        \end{align*}
+
+        \begin{align*}
+            \frac{d}{dx}[\cos(x)\ln(\sin(x))] &= \frac{d}{dx}\cos(x)\cdot\ln(\sin(x)) + \cos(x)\cdot\frac{d}{dx}(\ln(\sin(x)))\\
+            &= -\sin(x)\cdot\ln(\sin(x))+\cos(x)\cdot\frac{\cos(x)}{\sin(x)}\\
+            &= -\sin(x)\cdot\ln(\sin(x))+\frac{\cos^2(x)}{\sin(x)}
+        \end{align*}
+
+        Recordando que \(e^{\ln(a)}=a\), resustitumos todo:
+
+        \begin{align*}
+            f'(x) &= \cos(x)^{\sin(x)}\left[\cos(x)\cdot\ln(\cos(x)) - \frac{\sin(x)^2}{\cos(x)}\right]+\\
+            & \quad  \ \sin(x)^{\cos(x)}\left[-\sin(x)\cdot\ln(\sin(x))+\frac{\cos^2(x)}{\sin(x)}\right]\\
+            &= \left[\cos(x)^{\sin(x)}\cdot\cos(x)\cdot\ln(\cos(x)) - \cos(x)^{\sin(x)}\cdot\frac{\sin(x)^2}{\cos(x)}\right]+\\
+            & \quad \ \left[-\sin(x)^{\cos(x)}\cdot\sin(x)\cdot\ln(\sin(x)) + \sin(x)^{\cos(x)}\cdot\frac{\cos^2(x)}{\sin(x)}\right]
+        \end{align*}
+
+        \begin{multline*}
+            f'(x) = \cos(x)^{\sin(x)+1}\cdot\ln(\cos(x)) - \cos(x)^{\sin(x)-1}\sin^2(x) \\- \sin(x)^{\cos(x)+1}\cdot\ln(\sin(x)) + \sin(x)^{\cos(x)-1}\cos^2(x)
+        \end{multline*}
 
     %EJERCICIO C
     \item \(f(x)=\displaystyle\frac{(3-x)^{1/3}x^3}{(1-x)(3+x)^{2/3}}\)
@@ -1008,48 +1186,291 @@ Mostrar que:
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
     \item \(\cosh^2(x)-\sinh^2(x)=1\)
+    
+        \begin{proof}[Prueba:]
+            \begin{align*}
+                \cosh^2(x)-\sinh^2(x) &= \left(\frac{e^x+e^{-x}}{2}\right)^2-\left(\frac{e^x-e^{-x}}{2}\right)^2 = \frac{(e^x+e^{-x})^2}{4} - \frac{(e^x-e^{-x})^2}{4}\\
+                &= \frac{(e^x+e^{-x})^2-(e^x-e^{-x})^2}{4} \\
+                &= \frac{e^{2x}+2e^xe^{-x}+e^{-2x}-e^{2x}+2e^xe^{-x}-e^{-2x}}{4}\\
+                &= \frac{4e^{x-x}}{4} = \frac{4e^0}{4} = \frac{4(1)}{4} = 1
+            \end{align*}
+        \end{proof}
 
     %EJERCICIO B
     \item \(\sinh'(x)=\cosh(x)\)
+    
+        \begin{proof}[Prueba:]
+            \begin{align*}
+                \frac{d}{dx}\sinh(x) &= \frac{d}{dx}\left[\frac{e^x-e^{-x}}{2}\right] = \frac{1}{2}\cdot\frac{d}{dx}(e^x-e^{-x})\\
+                &= \frac{1}{2}(e^x(1)-e^{-x}(-1)) = \frac{e^x+e^{-x}}{2} = \cosh(x)
+            \end{align*}
+        \end{proof}
 
     %EJERCICIO C
-    \item \(\cosh'(x)=\sinh(x)\)
+    \item \(\cosh'(x)=\sinh(x)\) 
+    
+        \begin{proof}[Prueba:]
+            \begin{align*}
+                \frac{d}{dx}\cosh(x) &= \frac{d}{dx}\left[\frac{e^x+e^{-x}}{2}\right] = \frac{1}{2}\cdot\frac{d}{dx}(e^x+e^{-x})\\
+                &= \frac{1}{2}(e^x(1)+e^{-x}(-1)) = \frac{e^x-e^{-x}}{2} = \sinh(x)
+            \end{align*}
+        \end{proof}
 
     %EJERCICIO D
     \item \(\tanh^2(x)+\displaystyle\frac{1}{\cosh^2(x)}=1\)
+    
+    \begin{proof}[Prueba:]
+        \begin{equation*}
+            \tanh(x) = \frac{e^x-e^{-x}}{e^x+e^{-x}} = \frac{e^x-e^{-x}}{e^x+e^{-x}}\cdot\frac{1/2}{1/2} = \frac{\displaystyle\frac{e^x-e^{-x}}{2}}{\displaystyle\frac{e^x+e^{-x}}{2}} = \frac{\sinh(x)}{\cosh(x)}
+        \end{equation*}
+
+        \begin{multline*}
+            \tanh^2(x)+\frac{1}{\cosh^2(x)} = \left(\frac{\sinh(x)}{\cosh(x)}\right)^2+\frac{1}{\cosh^2(x)} \\ = \frac{\sinh^2(x)}{\cosh^2(x)}+\frac{1}{\cosh^2(x)} = \frac{\sinh^2(x)+1}{\cosh^2(x)}
+        \end{multline*}
+
+        Recordando el inciso a: \(\cosh^2(x)-\sinh^2(x)=1\). Si despejamos \(\cosh^2(x)\) obtenemos: 
+        \[\cosh^2(x) = 1+\sinh^2(x)\]
+
+        Sustituyendo:
+
+        \begin{equation*}
+            \frac{\sinh^2(x)+1}{\cosh^2(x)} = \frac{\cosh^2(x)}{\cosh^2(x)} = 1
+        \end{equation*}
+    \end{proof}
 
     %EJERCICIO E
     \item \(\tanh'(x)=\displaystyle\frac{1}{\cosh^2(x)}\)
+    
+    \begin{proof}[Prueba:]
+        \begin{align*}
+            \tanh(x)=\frac{\sinh(x)}{\cosh(x)} \quad \text{(Demostrado en el inciso c)}
+        \end{align*}
+
+        Usando derivaci\'on logar\'itmica:
+        \begin{align*}
+            \ln(\tanh(x)) &= \ln\left(\frac{\sinh(x)}{\cosh(x)}\right) = \ln(\sinh(x))-\ln(\cosh(x))\\
+            \frac{d}{dx}\big(\ln(\tanh(x))\big) &= \frac{d}{dx}\big[\ln(\sinh(x))-\ln(\cosh(x))\big]\\
+            \frac{\tanh'(x)}{\tanh(x)} &= \frac{\sinh'(x)}{\sinh(x)} - \frac{\cosh'(x)}{\cosh(x)} =\frac{\cosh(x)}{\sinh(x)} - \frac{\sinh(x)}{\cosh(x)}\\
+            \tanh'(x) &= \tanh(x)\left[\frac{\cosh(x)}{\sinh(x)} - \frac{\sinh(x)}{\cosh(x)}\right] = \frac{\sinh(x)}{\cosh(x)}\left[\frac{\cosh(x)}{\sinh(x)} - \frac{\sinh(x)}{\cosh(x)}\right]\\
+            &= \frac{\sinh(x)}{\cosh(x)}\cdot\frac{\cosh(x)}{\sinh(x)} - \frac{\sinh(x)}{\cosh(x)}\cdot\frac{\sinh(x)}{\cosh(x)} = 1-\frac{\sinh^2(x)}{\cosh^2(x)}\\
+            &= \frac{\cosh^2(x)}{\cosh^2(x)} - \frac{\sinh^2(x)}{\cosh^2(x)} = \frac{\cosh^2(x)-\sinh^2(x)}{\cosh^2(x)}\\
+            &= \frac{1}{\cosh^2(x)} \quad \text{(Por el inciso a)}
+        \end{align*}
+    \end{proof}
+
 
     %EJERCICIO F
     \item \(\sinh(x+y)=\sinh(x)\cosh(y)+\sinh(y)\cosh(x)\)
+    
+    \begin{proof}[Prueba:]
+        \begin{align*}
+            \sinh(x+y) &= \frac{e^{x+y}-e^{-(x+y)}}{2} = \frac{e^{x+y}-e^{-(x+y)}}{2}\cdot\frac{2}{2} = \frac{2e^{x+y}-2e^{-(x+y)}}{4} \\
+            &= \frac{2e^xe^y-2e^{-x}e^{-y}+0+0}{4}\\
+            &= \frac{2e^xe^y-2e^{-x}e^{-y}+(e^{x-y}-e^{x-y})+(e^{y-x}-e^{y-x})}{4}\\
+            &= \frac{(e^xe^y-e^{-x}e^{-y}+e^{x-y}-e^{y-x})+(e^xe^y-e^{-x}e^{-y}-e^{x-y}+e^{y-x})}{4}\\
+            &= \frac{(e^xe^y-e^{-x}e^{-y}+e^xe^{-y}-e^ye^{-x})+(e^xe^y-e^{-x}e^{-y}-e^xe^{-y}+e^ye^{-x})}{4}\\
+            &= \frac{[e^x(e^y+e^{-y})-e^{-x}(e^y+e^{-y})]+[e^x(e^y-e^{-y})+e^{-x}(e^y-e^{-y})]}{4}\\
+            &= \frac{[(e^x-e^{-x})(e^y+e^{-y})]+[(e^x+e^{-x})(e^y-e^{-y})]}{4}\\
+            &= \frac{(e^x-e^{-x})(e^y+e^{-y})}{4}+\frac{(e^x+e^{-x})(e^y-e^{-y})}{4}\\
+            &= \frac{e^x-e^{-x}}{2}\cdot\frac{e^y+e^{-y}}{2}+\frac{e^x+e^{-x}}{2}\cdot\frac{e^y-e^{-y}}{2}\\
+            &= \sinh(x)\cosh(y)+\cosh(x)\sinh(y)
+        \end{align*}
+    \end{proof}
 
     %EJERCICIO G
     \item \(\cosh(x+y)=\cosh(x)\cosh(y)+\sinh(y)\sinh(x)\)
+    
+    \begin{proof}[Prueba:]
+        \begin{align*}
+            \cosh(x+y) &= \frac{e^{x+y}+e^{-(x+y)}}{2} = \frac{e^{x+y}+e^{-(x+y)}}{2}\cdot\frac{2}{2} = \frac{2e^{x+y}+2e^{-(x+y)}}{4}\\
+            &= \frac{2e^xe^y+2e^{-x}e^{-y}+0+0}{4}\\
+            &= \frac{2e^xe^y+2e^{-x}e^{-y}+(e^{x-y}-e^{x-y})+(e^{y-x}-e^{y-x})}{4}\\
+            &= \frac{(e^xe^y+e^{-x}e^{-y}+e^{x-y}+e^{y-x})+(e^xe^y+e^{-x}e^{-y}-e^{x-y}-e^{y-x})}{4}\\
+            &= \frac{(e^xe^y+e^{-x}e^{-y}+e^xe^{-y}+e^ye^{-x})+(e^xe^y+e^{-x}e^{-y}-e^xe^{-y}-e^ye^{-x})}{4}\\
+            &= \frac{[e^x(e^y+e^{-y})+e^{-x}(e^y+e^{-y})]+[e^x(e^y-e^{-y})-e^{-x}(e^y-e^{-y})]}{4}\\
+            &= \frac{[(e^x+e^{-x})(e^y+e^{-y})]+[(e^x-e^{-x})(e^y-e^{-y})]}{4}\\
+            &= \frac{(e^x+e^{-x})(e^y+e^{-y})}{4}+\frac{(e^x-e^{-x})(e^y-e^{-y})}{4}\\
+            &= \frac{e^x+e^{-x}}{2}\cdot\frac{e^y+e^{-y}}{2}+\frac{e^x-e^{-x}}{2}\cdot\frac{e^y-e^{-y}}{2}\\
+            &= \cosh(x)\cosh(y)+\sinh(x)\sinh(y)
+        \end{align*}
+    \end{proof}
 
 \end{enumerate}
 
 %EJERCICIO 17 ----------------------------------------------------------------------------------
-17. ELIMINADO.
+17. ELIMINADO.\medskip
 
 %EJERCICIO 18 ----------------------------------------------------------------------------------
 18. Evalua los l\'imites usando la regla de L'H\^opital.
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item \(\displaystyle\lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}}{x^2}\)
+    \item \(\displaystyle\lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}}{x^2}\)\bigskip
+    
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}}{x^2} = \frac{e^0-1-0-\frac{0^2}{2}}{0^2} = \frac{1-1}{0} = \frac{0}{0}
+        \end{equation*}
+
+        Como el l\'imite se indetermina en \(\displaystyle\frac{0}{0}\), comprobamos el l\'imite de las derivadas para poder utilizar L'H\^opital:
+
+        \begin{equation*}
+            \frac{d}{dx}\left(e^x-1-x-\frac{x^2}{2}\right) = e^x-1-\frac{1}{2}\cdot2x = e^x-1-x \qquad \quad \frac{d}{dx}x^2=2x
+        \end{equation*}
+
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1-x}{2x} = \frac{e^0-1-0}{2(0)} = \frac{1-1}{0} = \frac{0}{0}
+        \end{equation*}
+
+        Dado que el l\'imite de volvio a indeterminar en \(\displaystyle\frac{0}{0}\), volvemos a probar el l\'imite de las derivadas:
+
+        \begin{equation*}
+            \frac{d}{dx}(e^x-1-x) = e^x-1 \qquad \quad \frac{d}{dx}2x = 2
+        \end{equation*}
+
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1}{2} = \frac{e^0-1}{2} = \frac{1-1}{2} = \frac{0}{2} = 0
+        \end{equation*}
+
+        Como el l\'imite de las derivadas existe, podemos decir que el l\'imite existe y que:
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}}{x^2} = \lim_{x \to 0}\frac{e^x-1-x}{2x} = \lim_{x \to 0}\frac{e^x-1}{2} = 0
+        \end{equation*}
 
     %EJERCICIO B
     \item \(\displaystyle\lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}-\frac{x^3}{6}}{x^3}\)
+    
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}-\frac{x^3}{6}}{x^3} = \frac{e^0-1-0-\frac{0^2}{2}-\frac{0^3}{6}}{0^3} = \frac{1-1}{0} = \frac{0}{0}
+        \end{equation*}
+
+        Como el l\'imite se indetermina en \(\displaystyle\frac{0}{0}\), comprobamos el l\'imite de las derivadas para poder utilizar L'H\^opital:
+
+        \begin{equation*}
+            \frac{d}{dx}\left(e^x-1-x-\frac{x^2}{2}-\frac{x^3}{6}\right) = e^x-1-\frac{1}{2}\cdot2x-\frac{1}{6}\cdot3x^2 = e^x-1-x-\frac{x^2}{2} \qquad \quad \frac{d}{dx}x^3=3x^2
+        \end{equation*}
+
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}}{3x^2} = \frac{e^0-1-0-\frac{0^2}{2}}{2(0)^2} = \frac{1-1}{0} = \frac{0}{0}
+        \end{equation*}
+
+        Dado que el l\'imite de volvio a indeterminar en \(\displaystyle\frac{0}{0}\), volvemos a probar el l\'imite de las derivadas:
+
+        \begin{equation*}
+            \frac{d}{dx}(e^x-1-x-\frac{x^2}{2}) = e^x-1-x \qquad \quad \frac{d}{dx}3x^2 = 6x
+        \end{equation*}
+
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1-x}{6x} = \frac{e^0-1-0}{6(0)} = \frac{1-1}{0} = \frac{0}{0}
+        \end{equation*}
+
+        De nuevo, el l\'imite indetermin\'o en \(\displaystyle\frac{0}{0}\), por lo que volvemos a probar el l\'imite de las derivadas:
+
+        \begin{equation*}
+            \frac{d}{dx}(e^x-1-x) = e^x-1 \qquad \quad \frac{d}{dx}6x = 6
+        \end{equation*}
+
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1}{6} = \frac{e^0-1}{6} = \frac{1-1}{6} = \frac{0}{6} = 0
+        \end{equation*}
+
+        Como el l\'imite de las derivadas existe, podemos decir que el l\'imite existe y que:
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}-\frac{x^3}{6}}{x^3} =  \lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}}{3x^2} = \lim_{x \to 0}\frac{e^x-1-x}{6x} =  \lim_{x \to 0}\frac{e^x-1}{6} = 0
+        \end{equation*}
 
     %EJERCICIO C
     \item \(\displaystyle\lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}}{x^3}\)
+    
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}}{x^2} = \frac{e^0-1-0-\frac{0^2}{2}}{0^2} = \frac{1-1}{0} = \frac{0}{0}
+        \end{equation*}
+
+        Como el l\'imite se indetermina en \(\displaystyle\frac{0}{0}\), comprobamos el l\'imite de las derivadas para poder utilizar L'H\^opital:
+
+        \begin{equation*}
+            \frac{d}{dx}(e^x-1-x-\frac{x^2}{2}) = e^x-1-(\frac{1}{2}\cdot2x) = e^x-1-x \qquad \quad \frac{d}{dx}x^2=2x
+        \end{equation*}
+
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1-x}{2x} = \frac{e^0-1-0}{2(0)} = \frac{1-1}{0} = \frac{0}{0}
+        \end{equation*}
+
+        Dado que el l\'imite de volvio a indeterminar en \(\displaystyle\frac{0}{0}\), volvemos a probar el l\'imite de las derivadas:
+
+        \begin{equation*}
+            \frac{d}{dx}(e^x-1-x) = e^x-1 \qquad \quad \frac{d}{dx}2x = 2
+        \end{equation*}
+
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1}{2} = \frac{e^0-1}{2} = \frac{1-1}{2} = \frac{0}{2} = 0
+        \end{equation*}
+
+        Como el l\'imite de las derivadas existe, podemos decir que:
+        \begin{equation*}
+            \lim_{x \to 0}\frac{e^x-1-x-\frac{x^2}{2}}{x^2} = \lim_{x \to 0}\frac{e^x-1-x}{2x} = \lim_{x \to 0}\frac{e^x-1}{2} = 0
+        \end{equation*}
 
     %EJERCICIO D
     \item \(\displaystyle\lim_{x \to 0}\frac{\ln(1+x)-x-\frac{x^2}{2}}{x^2}\)
+        
+        \begin{equation*}
+            \lim_{x \to 0}\frac{\ln(1+x)-x-\frac{x^2}{2}}{x^2} = \frac{\ln(1+0)-0-\frac{0^2}{2}}{0^2} = \frac{\ln(1)}{0} = \frac{0}{0}
+        \end{equation*}
+
+        Como el l\'imite se indetermina en \(\displaystyle\frac{0}{0}\), comprobamos el l\'imite de las derivadas para poder utilizar L'H\^opital:
+
+        \begin{equation*}
+            \frac{d}{dx}\left(\ln(1+x)-x-\frac{x^2}{2}\right) = \frac{1}{1+x}-1-x \qquad \quad \frac{d}{dx}x^2=2x
+        \end{equation*}
+
+        \begin{equation*}
+            \lim_{x \to 0}\frac{\frac{1}{1+x}-1-x}{2x} = \frac{\frac{1}{1+0}-1-0}{2(0)} = \frac{1-1}{0} = \frac{0}{0}
+        \end{equation*}
+
+        Dado que el l\'imite de volvio a indeterminar en \(\displaystyle\frac{0}{0}\), volvemos a probar el l\'imite de las derivadas:
+
+        \begin{equation*}
+            \frac{d}{dx}\left(\frac{1}{1+x}-1-x\right)= -\frac{1}{(1+x)^2}-1 \qquad \quad \frac{d}{dx}2x=2
+        \end{equation*}
+
+        \begin{equation*}
+            \lim_{x \to 0}\frac{-\frac{1}{(1+x)^2}-1}{2} = \frac{-\frac{1}{(1+0)^2}-1}{2} = \frac{-1-1}{2} = -\frac{2}{2} = -1
+        \end{equation*}
+
+        Como el l\'imite de las derivadas existe, podemos decir que:
+
+        \begin{equation*}
+            \lim_{x \to 0}\frac{\ln(1+x)-x-\frac{x^2}{2}}{x^2} =  \lim_{x \to 0}\frac{\frac{1}{1+x}-1-x}{2x} =  \lim_{x \to 0}\frac{-\frac{1}{(1+x)^2}-1}{2} = -1
+        \end{equation*}
 
     %EJERCICIO E
     \item \(\displaystyle\lim_{x \to 0}\frac{\ln(1+x)-x-\frac{x^2}{2}}{x^3}\)
+        
+        \begin{equation*}
+            \lim_{x \to 0}\frac{\ln(1+x)-x-\frac{x^2}{2}}{x^3} = \frac{\ln(1+0)-0-\frac{0^2}{2}}{0^3} = \frac{\ln(1)}{0} = \frac{0}{0}
+        \end{equation*}
+
+        Como el l\'imite se indetermina en \(\displaystyle\frac{0}{0}\), comprobamos el l\'imite de las derivadas para poder utilizar L'H\^opital:
+
+        \begin{equation*}
+            \frac{d}{dx}\left(\ln(1+x)-x-\frac{x^2}{2}\right) = \frac{1}{1+x}-1-x \qquad \quad \frac{d}{dx}x^3=3x^2
+        \end{equation*}
+
+        \begin{equation*}
+            \lim_{x \to 0}\frac{\frac{1}{1+x}-1-x}{3x^2} = \frac{\frac{1}{1+0}-1-0}{3(0)^2} = \frac{1-1}{0} = \frac{0}{0}
+        \end{equation*}
+
+        Dado que el l\'imite de volvio a indeterminar en \(\displaystyle\frac{0}{0}\), volvemos a probar el l\'imite de las derivadas:
+
+        \begin{equation*}
+            \frac{d}{dx}\left(\frac{1}{1+x}-1-x\right)= -\frac{1}{(1+x)^2}-1 \qquad \quad \frac{d}{dx}3x^2=6x
+        \end{equation*}
+
+        \begin{equation*}
+            \lim_{x \to 0}\frac{-\frac{1}{(1+x)^2}-1}{6x} = \frac{-\frac{1}{(1+0)^2}-1}{6(0)} = \frac{-1-1}{0} \Rightarrow\!\Leftarrow
+        \end{equation*}
+
+        El l\'imite de las derivadas no existe, por lo que no podemos usar L'H\^opital.
 
 \end{enumerate}
 
@@ -1058,16 +1479,87 @@ Mostrar que:
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item \(\displaystyle\lim_{y \to 0}\frac{\ln(1+y)}{y}\)
+    \item \(\displaystyle\lim_{y \to 0}\frac{\ln(1+y)}{y}\)\bigskip
+    
+    Manipulando algebraicamente el l\'imite tenemos que:
+    \begin{equation*}
+        \lim_{y \to 0}\frac{\ln(1+y)}{y} = \lim_{y \to 0}\frac{\ln(1+y)+0}{y} = \lim_{y \to 0}\frac{\ln(1+y)+\ln(1)}{y}
+    \end{equation*}
+
+    Que resulta corresponder con la definici\'on de la derivada de \(\ln(x)\) evaluada en 1. Sabemos que \(\ln'(x)=\displaystyle\frac{1}{x}\), as\'i que la evaluamos en \(x=1\): \(\ln'(1)=\displaystyle\frac{1}{1}=1\). \medskip
+
+    As\'i entonces: \[\lim_{y \to 0}\frac{\ln(1+y)}{y} = \ln'(1) = 1\]
 
     %EJERCICIO B
-    \item \(\displaystyle\lim_{x \to \infty}x\ln\left(1+\frac{1}{x}\right)\)
+    \item \(\displaystyle\lim_{x \to \infty}x\ln\left(1+\frac{1}{x}\right)\)\bigskip
+    
+    Proponemos un cambio de base tal que \(y = 1/x\), asi:
+
+    \begin{itemize}
+        \item \(x = 1/y\)
+        \item \(\displaystyle\lim_{x \to \infty}\frac{1}{x} = 0\)
+        \item Por lo anterior: \(x\to\infty \Rightarrow 1/x\to0 \Rightarrow y\to0\)
+    \end{itemize}
+
+    \[\lim_{x \to \infty}x\ln\left(1+\frac{1}{x}\right) = \lim_{y\to0}\frac{1}{y}\ln\left(1+y\right) = \lim_{y\to0}\frac{\ln(1+y)}{y}\]
+
+    Por el inciso a sabemos que \(\displaystyle\lim_{y \to 0}\frac{\ln(1+y)}{y}=1\), por lo que:
+    \[\lim_{x \to \infty}x\ln\left(1+\frac{1}{x}\right) = \lim_{y\to0}\frac{\ln(1+y)}{y} = 1\]
 
     %EJERCICIO C
-    \item \(e=\displaystyle\lim_{x \to \infty}\left(1+\frac{1}{x}\right)^x\)
+    \item \(e=\displaystyle\lim_{x \to \infty}\left(1+\frac{1}{x}\right)^x\)\bigskip
+    
+        Sabiendo que \(e^{\ln(a)}=a\), manipulamos algebraicamente el l\'imite con las propiedades del \(\ln\):
+        \begin{equation*}
+            \lim_{x \to \infty}\left(1+\frac{1}{x}\right)^x = \lim_{x \to \infty}e^{\displaystyle\ln\left(1+\frac{1}{x}\right)^x} = \lim_{x \to \infty}e^{\displaystyle x\ln\left(1+\frac{1}{x}\right)}
+        \end{equation*}
+
+        Como $e$ es una funci\'on continua en todos los $\mathbbm{R}$, el l\'imite puede introducirse en la funci\'on:  
+        \begin{equation*}
+            \lim_{x \to \infty}e^{\displaystyle x\ln\left(1+\frac{1}{x}\right)} = e^{\displaystyle\lim_{x \to \infty}x\ln\left(1+\frac{1}{x}\right)}
+        \end{equation*}
+
+        Por el inciso b sabemos que: \(\displaystyle\lim_{x \to \infty}x\ln\left(1+\frac{1}{x}\right)=1\), as\'i: \quad \(\displaystyle e^{\displaystyle\lim_{x \to \infty}x\ln\left(1+\frac{1}{x}\right)} = e^1 = e\)\bigskip
+
+        Por lo tanto (Por transitividad): \qquad
+        \(\displaystyle\lim_{x \to \infty}\left(1+\frac{1}{x}\right)^x=e\)\bigskip
 
     %EJERCICIO D
-    \item \(e^a=\displaystyle\lim_{x \to \infty}\left(1+\frac{a}{x}\right)^x\)
+    \item \(e^a=\displaystyle\lim_{x \to \infty}\left(1+\frac{a}{x}\right)^x\)\bigskip
+    
+        Analogo al anterior, manipulamos el l\'imite:
+
+        \begin{equation*}
+            \lim_{x \to \infty}\left(1+\frac{a}{x}\right)^x = \lim_{x \to \infty}e^{\displaystyle\ln\left(1+\frac{a}{x}\right)^x} = \lim_{x \to \infty}e^{\displaystyle x\ln\left(1+\frac{a}{x}\right)}
+        \end{equation*}
+
+        Proponemos un cambio de variable tal que \(y=x/a\), as\'i:
+
+        \begin{itemize}
+            \item \(a/x = 1/y\)
+            \item \(x=ay\)
+            \item \(\lim_{x \to \infty}\frac{x}{a}=\infty\)
+            \item Por lo anteior \(x\to\infty \Rightarrow \frac{x}{a}\to\infty \Rightarrow y\to\infty\)
+        \end{itemize}
+
+        \begin{equation*}
+            \lim_{x \to \infty}e^{\displaystyle x\ln\left(1+\frac{a}{x}\right)} = \lim_{y \to \infty}e^{\displaystyle ay\ln\left(1+\frac{1}{y}\right)}
+        \end{equation*}
+
+        Como $e$ es una funci\'on continua en todos los $\mathbbm{R}$, el l\'imite puede introducirse en la funci\'on:
+
+        \begin{equation*}
+            \lim_{y \to \infty}e^{\displaystyle ay\ln\left(1+\frac{1}{y}\right)} = e^{\displaystyle\lim_{y \to \infty}ay\ln\left(1+\frac{1}{y}\right)} = e^{\displaystyle a\lim_{y \to \infty}y\ln\left(1+\frac{1}{y}\right)}
+        \end{equation*}
+
+        Por el inciso b sabemos que: \(\displaystyle\lim_{x \to \infty}x\ln\left(1+\frac{1}{x}\right)=1\), as\'i (sustituyendo $x$ por $y$):
+
+        \begin{equation*}
+            e^{a\displaystyle\lim_{y \to \infty}y\ln\left(1+\frac{1}{y}\right)} = e^{a\cdot1} = e^a
+        \end{equation*}\medskip
+
+        Por lo tanto (Por transitividad): \qquad
+        \(\displaystyle\lim_{x \to \infty}\left(1+\frac{a}{x}\right)^x=e^a\)\bigskip
 
 \end{enumerate}
 
@@ -1102,3 +1594,25 @@ Mostrar que:
 \end{enumerate}
 
 \end{document}
+
+    \textbf{Continuidad: }
+
+    \textbf{Dominio: }
+
+    \textbf{Imagen: }
+
+    \textbf{Raices: }
+
+    \textbf{Paridad: }
+
+    \textbf{Derivadas: }
+
+    \textbf{Puntos y valores cr\'iticos: }
+
+    \textbf{Crecencia: }
+
+    \textbf{Puntos y valores de Inflexi\'on: }
+
+    \textbf{Concavidad y Convexidad: }
+
+    \textbf{Gr\'afica: }
