@@ -793,11 +793,11 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
         
         \textbf{Dominio: }\medskip
             
-            Por lo anterior, sabemos que \(Dom(f):\mathbbm{R}\setminus\displaystyle\left\{\frac{(2k+1)\pi}{2}, k\in\mathbbm{Z}\right\}\)\bigskip
+            Como no hay ing\'un punto donde la funci\'on est\'e indefinida: \(Dom(f):\mathbbm{R}\setminus\displaystyle\left\{\frac{(2k+1)\pi}{2}, k\in\mathbbm{Z}\right\}\)\bigskip
 
         \textbf{Imagen: }\medskip
 
-            Analizamos la funci\'on en torno a $\tan(x)$ (Una func\'ion ya definicda en clase), y tenemos que:
+            Analizamos la funci\'on en torno a $\tan(x)$ (Una func\'ion ya definida en clase), y tenemos que:
 
             \begin{align*}
                 \tan(x)-x<\tan(x) \quad \text{si} \ x>0\\
@@ -1158,19 +1158,241 @@ Hallar la gr\'afica de las siguientes funciones.
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item \(f(x)=e^{1+x}\)
+    \item \(f(x)=e^{1+x}\)\bigskip
+    
+        \textbf{Continuidad: }\medskip
+
+            \(1+x\) es un polimonio, por lo que es continuo en todos los \(\mathbbm{R}\). $e^x$ es una funci\'on continua tambi\'en, y la composici\'on de dos funciones continuas es continua, por lo que \(e^{1+x}\) es continua en todos los \(\mathbbm{R}\)
+
+        \textbf{Dominio: }\medskip
+
+            Por el punto anteior y por el hecho de que $x$ no tiene ning\'un tipo de restricci\'on: \(Dom(f): \mathbbm{R}\)\medskip
+
+            NOTA: \(f(0)=e^{1+0}=e\), lo que signica que la funci\'on se inteseca con el eje de las $y$ en \((0,e)\)\medskip
+
+        \textbf{Imagen: }
+            \begin{equation}
+                \label{cotainfa}
+                1+x>x \Longrightarrow e^{1+x}>e^x>0
+            \end{equation}
+
+            Sabiendo que: \(\lim_{x\to-\infty}e^x=0\)
+            \begin{equation}
+                \label{lima}
+                \lim_{x\to-\infty}e^{1+x}=\lim_{x\to-\infty}e\cdot e^x=e\lim_{x\to-\infty}e^x=e\cdot(0)=0
+            \end{equation}
+
+            Por la ecuaci\'on \eqref{lima} y por la definici\'on de la exponencial, sabemos que $f(x)>0$. Luego, por la ecuaci\'on \eqref{cotainfa}, sabemos que \(e^{1+x}\) est\'a por encima de \(e^x\), sabemos tambi\'en que \(e^x\) no est\'a acotada superiormente, por lo que \(e^{1+x}\) tampoco lo est\'a. As\'i entonces, la imagen de $f$ es:
+            \[Img(f): \mathbbm{R}^+\]
+
+        \textbf{Paridad: }
+            \begin{equation*}
+                f(-x) = e^{1+(-x)} = e^{1-x} \qquad \text{(No es ni par ni impar)}
+            \end{equation*}
+
+        \textbf{Derivadas: }
+
+            \begin{align*}
+                f'(x) &= \frac{d}{dx}e^{1+x} = \frac{d}{dx}e^{1+x}\cdot\frac{d}{dx}(1+x) = e^{1+x}(1) = e^{1+x}
+            \end{align*}
+
+            Por lo anterior \(f''(x) = e^{1+x}\)\medskip
+
+        \textbf{Puntos y valores cr\'iticos: }\medskip
+
+            Como \(f'(x)=f(x)\) y ya demostramos en la imagen de la funci\'on que \'esta nunca toca el 0, asi pues, la funci\'on no tiene puntos cr\'iticos.\medskip
+
+        \textbf{Crecencia: }\medskip
+
+            De nuevo, como \(f'(x)=f(x)\) y \(f(x)>0 \ \forall x\in\mathbbm{R}\), la funci\'on es siempre creciente.\medskip
+
+        \textbf{Puntos y valores de Inflexi\'on: }\medskip
+
+            Analogo a los puntos cr\'ticos (\(f''(x)=f(x)\)), la funci\'on no tiene puntos de inflexi\'on porque \(f''(x)\) nunca es 0.\medskip
+
+        \textbf{Concavidad y Convexidad: }\medskip
+
+            Como \(f''(x)=f(x)\) y \(f(x)>0 \ \forall x\in\mathbbm{R}\), la funci\'on es siempre convexa.\medskip
+
+        \textbf{Gr\'afica: }
 
     %EJERCICIO B
     \item \(f(x)=e^{\sin(x)}\)
+    
+        \textbf{Continuidad: }\medskip
+
+            \(\sin(x)\) y \(e^x\) son continuas en todos los \(\mathbbm{R}\), por lo que su compocisi\'on (\(e^{\sin(x)}\)), es continua en todos los reales.\medskip
+
+        \textbf{Dominio: }\medskip
+
+            Como no hay nig\'un punto en el que la funci\'on no est\'e indefinida: \(Dom(f): \mathbbm{R}\)\medskip
+
+        \textbf{Imagen: }
+            \begin{equation*}
+                -1\leq\sin(x)\leq1 \Longrightarrow e^{-1}\leq e^{\sin(x)}\leq e^1 \Longrightarrow Img(f):\left[\frac{1}{e},e\right]
+            \end{equation*}
+
+        \textbf{Raices: }\medskip
+
+            Como \(\frac{1}{e}>0\), $f(x)$ nunca es 0.\medskip
+
+        \textbf{Paridad: }\medskip
+
+            Sabiendo que seno es par \(\sin(-x)=\sin(x)\)
+            \begin{equation*}
+                f(-x) = e^{\sin(-x)} = e^{\sin(x)} = f(x) \quad \text{(es par)}
+            \end{equation*}
+
+        \textbf{Derivadas: }
+            \begin{equation*}
+                f'(x) = \frac{d}{dx}e^{\sin(x)}\cdot \frac{d}{dx}\sin(x) = e^{\sin(x)}\cdot\cos(x)
+            \end{equation*}
+
+            \begin{align*}
+                f''(x) &= \frac{d}{dx}\left(e^{\sin(x)}\cdot\cos(x)\right) = \frac{d}{dx}e^{\sin(x)}\cdot\frac{d}{dx}\sin(x)\cdot\cos(x)+e^{\sin(x)}\cdot\frac{d}{dx}\cos(x)\\
+                &= e^{\sin(x)}\cdot\cos^2(x)-e^{\sin(x)}\cdot\sin(x)\\
+                &= e^{\sin(x)}\big(\cos^2(x)-\sin(x)\big)
+            \end{align*}
+
+        \textbf{Puntos y valores cr\'iticos: }
+            \begin{equation*}
+                f'(x)=0 \Rightarrow e^{\sin(x)}\cdot\cos(x)=0
+            \end{equation*}
+
+            Como sabemos que \(e^{\sin(x)}> \ \forall x\in\mathbbm{R}\), \(f'(x)\) s\'olo ser\'a 0 cuando \(\cos(x)=0\) que sabemos, por la definici\'on de coseno dada en clase, que eso sucede en: \(\displaystyle x=\frac{(2k+1)\pi}{2},k\in\mathbbm{Z}\)\\medskip
+
+            Sabemos tambi\'en que \(\cos(\pi/2)=0 \ \wedge \ \sin(\pi/2)=1 \Rightarrow e^{\sin(\pi/2)=e}\) y que \(\cos(3\pi/2)=0 \ \wedge \ \sin(3\pi/2)=-1 \Rightarrow e^{\sin(3\pi/2)=e^-1}\)\medskip
+
+            Al final usamos el periodo de seno (\(2\pi\)) y su paridad para encontrar todos los valores cr\'iticos.\medskip
+
+        \textbf{Crecencia: }
+            \begin{equation*}
+                f'(x)>0 \Rightarrow e^{\sin(x)}\cdot\cos(x)>0
+            \end{equation*}
+
+            Como \(e^{\sin(x)}\) es mayor a o siempre, \(f'(x)\) ser\'a mayor a 0 cuando \(\cos(x)>0\)\medskip
+
+            Sabemos, por la definici\'on de \(\cos(x)\), que este es mayor a 0 en \(\left(0,\displaystyle\frac{\pi}{2}\right)\cup\left(\frac{3\pi}{2},2\pi\right)\) y que eso se repite cada \(2\pi\) (Por su periodo).\medskip
+
+            Analogo a lo anterior, \(f'(x)<0\) s\'olo cuando \(\cos(x)<0\), que, por definici\'on, sucede en \(\left(\displaystyle\frac{\pi}{2},\frac{3\pi}{2}\right)\) y se repite cada \(2\pi\). Entonces:\medskip
+
+            $f$ es creciente en: \quad \(\left(-\displaystyle\frac{\pi}{2}+2k\pi,\frac{\pi}{2}+2k\pi\right), k\in\mathbbm{Z}\)\medskip
+
+            $f$ es decreciente en: \quad \(\left(\displaystyle\frac{\pi}{2}+2k\pi,\frac{3\pi}{2}+2k\pi\right), k\in\mathbbm{Z}\)\medskip
+
+        \textbf{Puntos y valores de Inflexi\'on: }\medskip
+
+        \textbf{Concavidad y Convexidad: }\medskip
+        
+        CONCAVIDAD:
+        
+        CONVEXIDAD:
+
+        \textbf{Gr\'afica: }
 
     %EJERCICIO C
     \item \(f(x)=e^x+e^{-x}\)
+    
+        \textbf{Continuidad: }\medskip
+
+            \(e^x\) y \(e^{-x}\) son funciones continuas en todos los \(\mathbbm{R}\), por lo que su suma (\(e^x+e^{-x}\)), tambi\'en lo es.\medskip
+
+        \textbf{Dominio: }\medskip
+
+            Como no hay valores donde $x$ est\'e indefinida: \(Dom(f):\mathbbm{R}\)\medskip
+
+        \textbf{Imagen: }
+
+        \textbf{Raices: }
+
+        \textbf{Paridad: }
+            \begin{equation*}
+                f(-x) = e^{-x}+e^{-(-x)} = e^{-x}+e^x = e^x+e^{-x} = f(x) \qquad \text{(es par)}
+            \end{equation*}
+
+        \textbf{Derivadas: }
+            \begin{equation*}
+                f'(x) = \frac{d}{dx}\left(e^x+e^{-x}\right) = e^x(1)+e^{-x}(-1) = e^x-e^{-x}
+            \end{equation*}
+
+            \begin{equation*}
+                f''(x) = \frac{d}{dx}\left(e^x-e^{-x}\right) = e^x(1)-e^{-x}(-1) = e^x+e^{-x}
+            \end{equation*}
+            
+
+        \textbf{Puntos y valores cr\'iticos: }
+
+        \textbf{Crecencia: }
+
+        \textbf{Puntos y valores de Inflexi\'on: }
+
+        \textbf{Concavidad y Convexidad: }
+
+        \textbf{Gr\'afica: }
 
     %EJERCICIO D
     \item \(f(x)=e^x-e^{-x}\)
+    
+        \textbf{Continuidad: }\medskip
+
+            \(e^x\) y \(e^{-x}\) son funciones continuas en todos los \(\mathbbm{R}\), por lo que su resta (\(e^x-e^{-x}\)), tambi\'en lo es.\medskip
+
+        \textbf{Dominio: }\medskip
+
+            Como no hay valores donde $x$ est\'e indefinida: \(Dom(f):\mathbbm{R}\)\medskip
+
+        \textbf{Imagen: }
+
+        \textbf{Raices: }
+
+        \textbf{Paridad: }
+            \begin{equation*}
+                f(-x) = e^{-x}-e^{-(-x)} = e^{-x}-e^{x} = -(e^x-e^{-x}) = -f(x) \qquad \text{(es impar)}
+            \end{equation*}
+
+        \textbf{Derivadas: }
+            \begin{equation*}
+                f'(x) = \frac{d}{dx}\left(e^x-e^{-x}\right) = e^x(1)-e^{-x}(-1) = e^x+e^{-x}
+            \end{equation*}
+
+            \begin{equation*}
+                f''(x) = \frac{d}{dx}\left(e^x+e^{-x}\right) = e^x(1)+e^{-x}(-1) = e^x-e^{-x}
+            \end{equation*}
+
+        \textbf{Puntos y valores cr\'iticos: }
+
+        \textbf{Crecencia: }
+
+        \textbf{Puntos y valores de Inflexi\'on: }
+
+        \textbf{Concavidad y Convexidad: }
+
+        \textbf{Gr\'afica: }
 
     %EJERCICIO E
     \item \(f(x)=\displaystyle\frac{e^x-e^{-x}}{e^x+e^{-x}}=\frac{2}{e^{2x}+1}\)
+    
+        \textbf{Continuidad: }
+
+        \textbf{Dominio: }
+
+        \textbf{Imagen: }
+
+        \textbf{Raices: }
+
+        \textbf{Paridad: }
+
+        \textbf{Derivadas: }
+
+        \textbf{Puntos y valores cr\'iticos: }
+
+        \textbf{Crecencia: }
+
+        \textbf{Puntos y valores de Inflexi\'on: }
+
+        \textbf{Concavidad y Convexidad: }
+
+        \textbf{Gr\'afica: }
 
 \end{enumerate}
 
