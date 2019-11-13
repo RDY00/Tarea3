@@ -1930,10 +1930,45 @@ Mostrar que:
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item Una muestra e radio-226 tiene una masa de $100mg$. Encontrar una fórmula para la masa de la muestra que queda después de $t$ años.
+    \item Una muestra e radio-226 tiene una masa de $100mg$. Encontrar una fórmula para la masa de la muestra que queda después de $t$ años.\medskip
+    
+        Conocemos la \'ormula del decaimiento radioactivo y sabemos que \(\displaystyle\frac{dA(t)}{dt}=Ak \Longrightarrow A(t) = e^{kt}\cdot c\) (Demostrado en clase).\medskip
+
+        Como lo que buscamos es una funci\'on de $m(t)$ sustituimos $A$ por $m$:
+        \[m(t)=e^{kt}\cdot c\]
+
+        Para encontrar nuestra constante, evaluamos la f\'ormula en un caso "base" dado por el problema: \(m(0)=100\):
+        \[100=m(0)=e^{k\cdot0}\cdot c \Longrightarrow 100=e^0\cdot c=1\cdot c=c \Longrightarrow c=100\]
+
+        Ahora, para encontrar la constante de proporcionalidad evaluamos la f\'ormula en otro caso, el de la vida media del radio-226: 
+        
+        Como conocemos la vida media del elemento, la denotamos como: \(m(1590)=100/2=50\), evaluanto la f\'romula con lo anterior:
+        \begin{equation*}
+            50=m(1590)=100\cdot e^{k\cdot1590} \Longrightarrow e^{k\cdot1590}=\frac{50}{100}=\frac{1}{2}
+        \end{equation*}
+
+        Como \(1/2>0\) y \(e^{k\cdot1590}\) tambi\'en es siempre mayor a 0 (por la definic\'on de exponencial), podemos operar $\ln$ de ambos lados:
+
+        \begin{equation*}
+            e^{k\cdot1590}=\frac{1}{2} \Longrightarrow \ln\left(e^{k\cdot1590}\right)=\ln\left(\frac{1}{2}\right)
+        \end{equation*}
+
+        Usando las propiedades de los logarirmos...
+
+        \begin{equation*}
+            \ln\left(e^{k\cdot1590}\right)=\ln\left(\frac{1}{2}\right) \Longrightarrow k\cdot1590 = \ln(2^{-1}) = -(1)\ln(2) \Longrightarrow k = -\frac{\ln(2)}{1590}
+        \end{equation*}
+
+        AS\'i entonces nuestra f\'ormula para calcular la masa restante en funci\'on del tiempo es:
+        \[m(t)=100\cdot e^{-\frac{\ln(2)}{1590}t}\]
 
     %EJERCICIO B
-    \item Diga cuál es la masa después de 1000 años, dé su resultado en $mg$.
+    \item Diga cuál es la masa después de 1000 años, dé su resultado en $mg$.\medskip
+    
+        Usando la f\'romula del inciso a evaluada en 1000 tenenmos que:
+        \[m(1000)=100\cdot e^{-\frac{\ln(2)}{1590}(1000)} = 100\cdot e^{-\frac{\ln(2)}{1.590}}\approx64.66\]
+
+        As\'i entonces, la masa despues de 1000 años ser\'ia \(100\cdot e^{-\frac{\ln(2)}{1.590}}\approx64.66\) (Haciendo uso de calculadora con el \'unico fin de dar un resultado m\'as num\'erico).\medskip
 
     %EJERCICIO C
     \item En qué tiempo la masa de la muestra se reducirá a $30mg$.
