@@ -424,7 +424,17 @@
     \displaystyle\frac{1}{x} \quad \text{si} \ \ 0<x<1\\
     0 \quad \text{si} \ \ x=0
 \end{cases}
-\) no es integrable.
+\) no es integrable.\bigskip
+
+    Para poder demostrar que una funci\'on es integrable mediante el criterio de integraci\'on, esta debe de estar acotada en el intervalo a evaluar. Pero recordemos que \(\frac{1}{x}\) no est\'a acotada superiormente (\(\lim_{x\to0^+}\frac{1}{x}=\infty\). Presentado una prueba m\'as formal:\medskip
+
+    Supongamos que f(x) est\'a acotada superiormente en el intervalo \((0,1)\). Lo que significa que:
+    \[\exists M\in\mathbbm{N} \ tq \ \forall x\in(0,1) \Rightarrow \left|f(x)\right|<M\]
+
+    Pero si proponemos \(\displaystyle x=\frac{1}{M+1}\) tenemos que:
+    \[f\left(\frac{1}{M+1}\right)=\frac{1}{\frac{1}{M+1}}=M+1\]
+
+    Entonces: \(\displaystyle M+1<M \Rightarrow\!\Leftarrow\). As\'i, por contradicci\'on, \(\displaystyle\frac{1}{x}\) no est\'a acotada en el intervalo \((0,1)\), por lo que no se puede utilizar el criterio de integraci\'on.\medskip
 
 %EJERCICIO 3 ----------------------------------------------------------------------------------
 3. Obtenga la cota de la forma \(m(b-a) \leq \displaystyle\int_{0}^{b}f(x)dx \leq M(b-a)\), en los intervalos indicados de los siguientes incisos.
@@ -793,7 +803,7 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
         
         \textbf{Dominio: }\medskip
             
-            Como no hay ing\'un punto donde la funci\'on est\'e indefinida:\medskip
+            Dada la continuidad de la funci\'on y deebido al dominio de \(tan(x)\):\medskip
 
             \(Dom(f):\mathbbm{R}\setminus\displaystyle\left\{\frac{(2k+1)\pi}{2}, k\in\mathbbm{Z}\right\}\)\bigskip
 
@@ -915,10 +925,133 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
         \textbf{Gr\'afica: }\medskip
 
     %EJERCICIO B
-    \item \(f(x)=x+\sin(x)\)
+    \item \(f(x)=x+\sin(x)\)\bigskip
+    
+    \textbf{Continuidad: }\medskip
+
+        $x$ es una recta continua y \(sin(x)\) es tambi\'en continuo en todos los $\mathbbm{R}$. Por lo que \(f(x)\) es continua en todos los $\mathbbm{R}$.\medskip
+
+    \textbf{Dominio: }\medskip
+
+        Como no hay nig\'un punto en el que la funci\'on est\'e indefinida: \(Dom(f): \mathbbm{R}\)\medskip
+
+    \textbf{Imagen: }\medskip
+        \begin{equation*}
+            -1\leq\sin(x)\leq1 \Longrightarrow x-1\leq x+\sin(x)\leq x+1
+        \end{equation*}
+
+        Lo que significa que \(f(x)\) est\'a por debajo de \(x+1\) (y \(x+1\) no est\'a acotada inferiormente) y por encima de \(x-1\) (y \(x-1\) no est\'a acotada superiormente). \(x+\sin(x)\) no est\'a acotada, por lo que: \(Img(f): \mathbbm{R}\)\medskip
+
+    \textbf{Ra\'ices: }\medskip
+
+        \(x+1\) tiene ra\'iz en -1 (\((-1)+1=0\)) y \(x-1\) tiene ra\'iz en 1 \(1-1=0\). Como \(f(x)\) est\'a entre dichas funciones, s\'olo puede tener ra\'iz en \([-1,1]\), buscando la \(x\in[-1,1]\) tal que \(f(x)=0\), encontramos que el \'unico punto posible es \(x=0 \Rightarrow f(0)=0-\sin(0)=0-0=0\) (Cosa que se respalda dado que la funci\'on es impar).\medskip
+
+    \textbf{Paridad: }\medskip
+
+        Sabiendo que \(\sin(-x)=-\sin(x)\) (seno es impar):
+        \begin{align*}
+            f(-x)=(-x)+\sin(-x)=-x-\sin(x)=-(x+\sin(x))=-f(x) \quad \text{(es impar)}
+        \end{align*}
+
+    \textbf{Derivadas: }
+        \begin{align*}
+            f'(x) = \frac{d}{dx}[x+\sin(x)] = 1+\cos(x)
+        \end{align*}
+
+        \begin{align*}
+            f''(x) = \frac{d}{dx}[1+\cos(x)]=-\sin(x)        
+        \end{align*}
+
+    \textbf{Puntos y valores cr\'iticos: }
+        \begin{align*}
+            f'(x)=0 \Longrightarrow 1+\cos(x)=0 \Longrightarrow \cos(x)=-1
+        \end{align*}
+
+        Sabemos que \(\cos(x)=-1\) en \([0,2\pi]\) s\'olo cuando \(x=\pi\) (Por la definici\'on geom\'etrica de coseno) y su que s periodo es \(2\pi\), por lo que los puntos cr\'iticos de $f$ son:
+        \[x=(2k+1)\pi, \ k\in\mathbbm{Z}\]
+
+        Evaluando \(f(\pi)=\pi+\sin(\pi)=\pi+0=\pi\) y otro pnto cr\'itico: \(f(-\pi)=-\pi+\sin(-\pi)=-\pi+0=-\pi\)\medskip
+
+        Por lo que los valores cr\'iticos de \(f\) son (considerando el periodo de seno (\(2\pi\))):
+        \[([2k+1]\pi,[2k+1]\pi), \ k\in\mathbbm{Z}\]
+
+    \textbf{Crecencia: }
+        \begin{align*}
+            -1\leq\cos(x)\leq1 \Longrightarrow 1-1\leq1+\cos(x)\leq1+1 \Longrightarrow 0\leq1+\cos(x)\leq2 
+        \end{align*}
+
+        Habiendo acotado \(f'(x)=x+\cos(x)\) nos damos cuenta de que \(f'(x)>0\) en todos los puntos en los que no es 0 (Los puntos cr\'iticos), por lo que la funci\'on es siempre creciente.\medskip
+
+    \textbf{Puntos y valores de Inflexi\'on: }
+        \begin{equation*}
+            f''(x)=0 \Longrightarrow -\sin(x)=0 \Longrightarrow \sin(x)=0 
+        \end{equation*}
+
+        Sabemos, por la definici\'on de seno, que \(\sin(x)=0\) cuando \(x=\pi \ \vee x=0 \vee x=2\pi\), lo que, aplicando el periodo de \(\sin(x)\), se reescribe como:
+        \[x=k\pi, k\in\mathbbm{Z} \quad \text{(Puntos de inflexión)}\]
+
+        Valores de inflexi\'on:
+        \[f(k\pi)=k\pi+\sin(k\pi)=k\pi+0=k\pi \Longrightarrow (k\pi,k\pi), k\in\mathbbm{Z}\]
+
+    \textbf{Concavidad y Convexidad: }\medskip
+        CONCAVIDAD:
+        \begin{equation*}
+            f''(x)>0 \Longrightarrow -\sin(x)>0 \Longrightarrow \sin(x)<0
+        \end{equation*}
+
+        Sabemos, por definici\'on, que \(\sin(x)<0\) en \((\pi,2\pi)\), que aplicando el periodo de \(\sin(x)\) nos proporciona los intervalos:
+        \[(2k\pi+\pi, \ 2k\pi+2\pi), k\in\mathbbm{Z}\]
+
+        CONVEXIDAD:
+        \begin{equation*}
+            f''(x)<0 \Longrightarrow -\sin(x)<0 \Longrightarrow \sin(x)>0
+        \end{equation*}
+
+        Sabemos, por definici\'on, que \(\sin(x)>0\) en \((0,\pi)\), que aplicando el periodo de \(\sin(x)\) nos proporciona los intervalos:
+        \[(2k\pi, \ 2k\pi+\pi), k\in\mathbbm{Z}\]
+
+    \textbf{Gr\'afica: }
 
     %EJERCICIO C
-    \item \(f(x)=\sin(x)+\sin(2x)\)
+    \item \(f(x)=\sin(x)+\sin(2x)\)\bigskip
+    
+    \textbf{Continuidad: }\medskip
+
+        \(\sin(x)\) y \(\sin(2x)\) son funciones continuas en todos los \(\mathbbm{R}\), por lo que su suma (\(\sin(x)+\sin(2x)\)), tambi\'en es continua en todos los \(\mathbbm{R}\).\medskip
+
+    \textbf{Dominio: }\medskip
+
+        Como no hay nug\'un punto en el que la funci\'on no est\'e definida: \(Dom(f): \mathbbm{R}\)\medskip
+
+    \textbf{Imagen: }
+
+    \textbf{Ra\'ices: }
+
+    \textbf{Paridad: }\medskip
+        
+        Sabiendo que \(\sin(x)\) es par:
+        \begin{equation*}
+            f(-x)=\sin(-x)+\sin(-2x) = -\sin(x) - \sin(2x) = -(\sin(x)+\sin(2x)) = -f(x)
+        \end{equation*}
+
+    \textbf{Derivadas: }
+        \begin{align*}
+            f'(x) = \frac{d}{dx}[\sin(x)+\sin(2x)] = \cos(x) + 2\cos(2x) = \cos(x) + 2(\cos^2(x)-\sin^2(x)) 
+        \end{align*}
+
+        \begin{align*}
+            f''(x) = \frac{d}{dx}[\cos(x) + 2\cos(2x)] = -\sin(x) - 2\cdot2\sin(2x) = -\sin(x) - 4\sin(2x)
+        \end{align*}
+
+    \textbf{Puntos y valores cr\'iticos: }
+
+    \textbf{Crecencia: }
+
+    \textbf{Puntos y valores de Inflexi\'on: }
+
+    \textbf{Concavidad y Convexidad: }
+
+    \textbf{Gr\'afica: }
 
 \end{enumerate}
 
@@ -1135,7 +1268,6 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
         \end{align*}
 
         Recordando que \(e^{\ln(a)}=a\), resustitumos todo:
-
         \begin{align*}
             f'(x) &= \cos(x)^{\sin(x)}\left[\cos(x)\cdot\ln(\cos(x)) - \frac{\sin(x)^2}{\cos(x)}\right]+\\
             & \quad  \ \sin(x)^{\cos(x)}\left[-\sin(x)\cdot\ln(\sin(x))+\frac{\cos^2(x)}{\sin(x)}\right]\\
@@ -1148,10 +1280,34 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
         \end{multline*}
 
     %EJERCICIO C
-    \item \(f(x)=\displaystyle\frac{(3-x)^{1/3}x^3}{(1-x)(3+x)^{2/3}}\)
+    \item \(f(x)=\displaystyle\frac{(3-x)^{1/3}x^3}{(1-x)(3+x)^{2/3}}\)\bigskip
+        \begin{align*}
+            f(x)&= \frac{(3-x)^{1/3}x^3}{(1-x)(3+x)^{2/3}} \Longrightarrow \ln(f(x)) = \ln\left(\frac{(3-x)^{1/3}x^3}{(1-x)(3+x)^{2/3}}\right)\\
+            \ln(f(x)) &= \ln((3-x)^{1/3}) + \ln(x^3) - (\ln(1-x) + \ln((3+x)^{2/3}))\\
+            &= \frac{1}{3}\cdot\ln(3-x) + 3\ln(x) - \ln(1-x) - \frac{2}{3}\cdot\ln(3+x)\\
+            \ln(f(x))' &= \frac{d}{dx}\left[\frac{1}{3}\cdot\ln(3-x) + 3\ln(x) - \ln(1-x) - \frac{2}{3}\cdot\ln(3+x)\right]\\
+            \frac{f'(x)}{f(x)} &= \frac{-1}{3(3-x)} + \frac{3}{x} - \frac{-1}{1-x} - \frac{2}{3(3+x)}\\
+            f'(x)&=f(x)\left[\frac{-1}{3(3-x)} + \frac{3}{x} - \frac{-1}{1-x} - \frac{2}{3(3+x)}\right]\\
+            &= \frac{(3-x)^{1/3}x^3}{(1-x)(3+x)^{2/3}}\left[\frac{-1}{3(3-x)} + \frac{3}{x} - \frac{-1}{1-x} - \frac{2}{3(3+x)}\right]\\
+            f'(x)&= \frac{(3-x)^{1/3}x^3}{(1-x)(3+x)^{2/3}}\left[-\frac{1}{9-3x} + \frac{3}{x} + \frac{1}{1-x} - \frac{2}{9+3x}\right]
+        \end{align*}
 
     %EJERCICIO D
-    \item \(f(x)=\displaystyle\frac{e^x-e^{-x}}{e^{3x}(1+x^3)}\)
+    \item \(f(x)=\displaystyle\frac{e^x-e^{-x}}{e^{3x}(1+x^3)}\)\bigskip
+        \begin{align*}
+            f(x)&=\frac{e^x-e^{-x}}{e^{3x}(1+x^3)} \Longrightarrow \ln(f(x)) = \ln\left(\frac{e^x-e^{-x}}{e^{3x}(1+x^3)}\right)\\
+            \ln(f(x))&= \ln(e^x-e^{-x}) - [\ln(e^{3x}) + \ln(1+x^3)]\\
+            \ln(f(x))' &= \frac{d}{dx}\left[\ln(e^x-e^{-x}) - \ln(e^{3x}) - \ln(1+x^3)\right]\\
+            \frac{f'(x)}{f(x)} &= \frac{\frac{d}{dx}(e^x-e^{-x})}{e^x-e^{-x}} - \frac{\frac{d}{dx}e^{3x}}{e^{3x}} - \frac{3x^2}{1+x^3}\\
+            &= \frac{e^x+e^{-x}}{e^x-e^{-x}} - \frac{3e^{3x}}{e^{3x}} - \frac{3x^2}{1+x^3}\\
+            &= \frac{e^x+e^{-x}}{e^x-e^{-x}} - \frac{3x^2}{1+x^3} -3\\
+            f'(x) &= f(x)\left[\frac{e^x+e^{-x}}{e^x-e^{-x}} - \frac{3x^2}{1+x^3} -3\right]\\
+            &= \frac{e^x-e^{-x}}{e^{3x}(1+x^3)}\left[\frac{e^x+e^{-x}}{e^x-e^{-x}} - \frac{3x^2}{1+x^3} -3\right]\\
+            &= \frac{e^x-e^{-x}}{e^{3x}(1+x^3)}\cdot\frac{e^x+e^{-x}}{e^x-e^{-x}} -\frac{e^x-e^{-x}}{e^{3x}(1+x^3)}\cdot\frac{3x^2}{1+x^3} -\frac{3(e^x-e^{-x})}{e^{3x}(1+x^3)}\\
+            &= \frac{e^x+e^{-x}}{e^{3x}(1+x^3)} - \frac{3x^2(e^x-e^{-x})}{e^{3x}(1+x^3)^2} - \frac{3(e^x-e^{-x})}{e^{3x}(1+x^3)}\\
+            &= \frac{(1+x^3)(e^x+e^{-x})-3x^2(e^x-e^{-x})-3(e^x-e^{-x})(1+x^3)}{e^{3x}(1+x^3)^2}\\
+            f'(x) &= \frac{(1+x^3)(e^x+e^{-x})-3(e^x-e^{-x})(x^3+x^2+1)}{e^{3x}(1+x^3)^2}\\
+        \end{align*}
 
 \end{enumerate}
 
@@ -1227,7 +1383,7 @@ Hallar la gr\'afica de las siguientes funciones.
 
         \textbf{Dominio: }\medskip
 
-            Como no hay nig\'un punto en el que la funci\'on no est\'e indefinida: \(Dom(f): \mathbbm{R}\)\medskip
+            Como no hay nig\'un punto en el que la funci\'on est\'e indefinida: \(Dom(f): \mathbbm{R}\)\medskip
 
         \textbf{Imagen: }
             \begin{equation*}
@@ -1311,7 +1467,7 @@ Hallar la gr\'afica de las siguientes funciones.
 
         \textbf{Dominio: }\medskip
 
-            Como no hay valores donde $x$ est\'e indefinida: \(Dom(f):\mathbbm{R}\)\medskip
+            Como no hay valores donde $f(x)$ est\'e indefinida: \(Dom(f):\mathbbm{R}\)\medskip
 
         \textbf{Imagen: }\medskip
 
@@ -1380,7 +1536,7 @@ Hallar la gr\'afica de las siguientes funciones.
 
         \textbf{Dominio: }\medskip
 
-            Como no hay valores donde $x$ est\'e indefinida: \(Dom(f):\mathbbm{R}\)\medskip
+            Como no hay valores donde $f(x)$ est\'e indefinida: \(Dom(f):\mathbbm{R}\)\medskip
 
         \textbf{Imagen: }\medskip
 
@@ -1445,7 +1601,7 @@ Hallar la gr\'afica de las siguientes funciones.
 
         \textbf{Dominio: }\medskip
 
-            Como no hay valores donde $x$ est\'e indefinida: \(Dom(f):\mathbbm{R}\)\medskip
+            Como no hay valores donde $f(x)$ est\'e indefinida: \(Dom(f):\mathbbm{R}\)\medskip
 
         \textbf{Imagen: }\medskip
 
@@ -1915,13 +2071,38 @@ Mostrar que:
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item ¿Cuál es la tasa de crecimiento relativa?
+    \item ¿Cuál es la tasa de crecimiento relativa?\medskip
+    
+        Sabemos que: 
+        \[\frac{P'(t)}{P(t)}=a \Longrightarrow \frac{dP(t)}{dt}=a\cdot P(t)\]
+        Con \(P'(x)\) la tasa de crecimiento poblacional, \(P(x)\) el tamaño poblacional y $a$ la constante de proporcionalidad.\medskip
+
+        Sabemos también, por lo demostrado en clase, que: \(\displaystyle\frac{dP(t)}{dt}=a\cdot P(t) \Longrightarrow P(t)=c\cdot e^{at}\)\medskip
+
+        Buscamos la constrante $c$ con el caso al que consideraremos \(t=0\), que ser\'a la poblaci\'on de 1950: \(2560=P(0)=e^{0\cdot a}\cdot c = e^0\cdot c = c\), as\'i tenemos: \(P(t)=2560\cdot e^{at}\)\medskip
+
+        Ahora, para calcular $a$, usaremos el otro dato que tenemos, que es la poblaci\'on de 1960 (Como \(t=0\) es la poblaci\'on de 1950, tendremos que tomar \(t=10\)) y despejaremos $a$:
+        \begin{multline*}
+            3040=P(10)=2560\cdot e^{10a} \Longrightarrow 0<e^{10a}=\frac{3040}{2560}=\frac{19}{16}>0 \\\Longrightarrow \ln\left(e^{10a}\right)=\ln\left(\frac{19}{16}\right)\Longrightarrow 10a=\ln\left(\frac{19}{16}\right) \Longrightarrow a=\frac{\ln\left(\frac{19}{16}\right)}{10}
+        \end{multline*}
+
+        As\'i tenemos que nuestra f\'ormula ser\'a: (Con t en años y P en millones de persona)
+        \[P(t)=2560\cdot e^{\frac{\ln\left(19/16\right)}{10}t}\]
 
     %EJERCICIO B
-    \item Use el modelo de crecimiento poblacional para estimar cuánta gente habrá en 2020.
+    \item Use el modelo de crecimiento poblacional para estimar cuánta gente habrá en 2020.\medskip
+    
+        Evaluamos la f\'ormula en \(2020-1950=70\):
+        \begin{equation*}
+            P(70)=2560\cdot e^{\frac{\ln\left(19/16\right)}{10}(70)}=2560\cdot e^{7\ln\left(19/16\right)}\approx8524.62 \ \text{millones de personas}
+        \end{equation*}
 
     %EJERCICIO C
-    \item Indague y diga si ese número se acerca a la población actual. Cite la fuente.
+    \item Indague y diga si ese número se acerca a la población actual. Cite la fuente.\medskip
+    
+        La poblaci\'on actual es de 7750 millones, lo que significa que la diferencia entre el dato y lo obtenido por la f\'ormula es de 774 millones de personales \medskip
+        
+        Fuente: https://www.worldometers.info/world-population/\medskip
 
 \end{enumerate}
 
@@ -1948,30 +2129,36 @@ Mostrar que:
         \end{equation*}
 
         Como \(1/2>0\) y \(e^{k\cdot1590}\) tambi\'en es siempre mayor a 0 (por la definic\'on de exponencial), podemos operar $\ln$ de ambos lados:
-
         \begin{equation*}
             e^{k\cdot1590}=\frac{1}{2} \Longrightarrow \ln\left(e^{k\cdot1590}\right)=\ln\left(\frac{1}{2}\right)
         \end{equation*}
 
-        Usando las propiedades de los logarirmos...
-
+        Usando las propiedades de los logaritmos...
         \begin{equation*}
             \ln\left(e^{k\cdot1590}\right)=\ln\left(\frac{1}{2}\right) \Longrightarrow k\cdot1590 = \ln(2^{-1}) = -(1)\ln(2) \Longrightarrow k = -\frac{\ln(2)}{1590}
         \end{equation*}
 
-        AS\'i entonces nuestra f\'ormula para calcular la masa restante en funci\'on del tiempo es:
+        As\'i entonces nuestra f\'ormula para calcular la masa restante en funci\'on del tiempo es (Con t en años y m en mg):
         \[m(t)=100\cdot e^{-\frac{\ln(2)}{1590}t}\]
 
     %EJERCICIO B
     \item Diga cuál es la masa después de 1000 años, dé su resultado en $mg$.\medskip
     
         Usando la f\'romula del inciso a evaluada en 1000 tenenmos que:
-        \[m(1000)=100\cdot e^{-\frac{\ln(2)}{1590}(1000)} = 100\cdot e^{-\frac{\ln(2)}{1.590}}\approx64.66\]
+        \[m(1000)=100\cdot e^{-\frac{\ln(2)}{1590}(1000)}\approx64.66\]
 
-        As\'i entonces, la masa despues de 1000 años ser\'ia \(100\cdot e^{-\frac{\ln(2)}{1.590}}\approx64.66\) (Haciendo uso de calculadora con el \'unico fin de dar un resultado m\'as num\'erico).\medskip
+        As\'i entonces, la masa despues de 1000 años ser\'ia \(100\cdot e^{-\frac{1000\ln(2)}{1590}}\approx64.66\) (Haciendo uso de calculadora con el \'unico fin de dar un resultado m\'as num\'erico).\medskip
 
     %EJERCICIO C
-    \item En qué tiempo la masa de la muestra se reducirá a $30mg$.
+    \item En qué tiempo la masa de la muestra se reducirá a $30mg$.\medskip
+    
+        Sustituimos en la f\'ormula del inciso \(m=30\) y despejamos $t$:
+        \begin{align*}
+            &30=100\cdot e^{-\frac{\ln(2)}{1590}t} \Longrightarrow 0<e^{-\frac{\ln(2)}{1590}t}=\frac{30}{100}=\frac{3}{10}>0\Longrightarrow \ln\left(e^{-\frac{\ln(2)}{1590}t}\right)=\ln\left(\frac{3}{10}\right)\\
+            &\Longrightarrow -\frac{\ln(2)}{1590}t = \ln\left(\frac{3}{10}\right) \Longrightarrow \ln(2)t = -1590\cdot\ln\left(\frac{3}{10}\right) \Longrightarrow t = -\frac{1590\cdot\ln\left(\frac{3}{10}\right)}{\ln(2)}
+        \end{align*}
+
+        Entonces, el tiempo en el que la masa de la muestra se reducir\'a a \(30mg\) es:\quad \(t = -\frac{1590\cdot\ln\left(\frac{3}{10}\right)}{\ln(2)}\approx2761.77\) años. (Haciendo uso de calculadora con el \'unico fin de dar un resultado m\'as num\'erico).\medskip
 
 \end{enumerate}
 
