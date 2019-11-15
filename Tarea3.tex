@@ -434,7 +434,7 @@
     Pero si proponemos \(\displaystyle x=\frac{1}{M+1}\) tenemos que:
     \[f\left(\frac{1}{M+1}\right)=\frac{1}{\frac{1}{M+1}}=M+1\]
 
-    Entonces: \(\displaystyle M+1<M \Rightarrow\!\Leftarrow\). As\'i, por contradicci\'on, \(\displaystyle\frac{1}{x}\) no est\'a acotada en el intervalo \((0,1)\), por lo que no se puede utilizar el criterio de integraci\'on.\medskip
+    Entonces: \(\displaystyle M+1<M \Rightarrow\!\Leftarrow\). As\'i, por contradicci\'on, \(\displaystyle\frac{1}{x}\) no est\'a acotada en el intervalo \((0,1)\), por lo que la funci\'on no es ntegrable seg\'un el criterio de integraci\'on.\medskip
 
 %EJERCICIO 3 ----------------------------------------------------------------------------------
 3. Obtenga la cota de la forma \(m(b-a) \leq \displaystyle\int_{0}^{b}f(x)dx \leq M(b-a)\), en los intervalos indicados de los siguientes incisos.
@@ -1024,8 +1024,37 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
         Como no hay nug\'un punto en el que la funci\'on no est\'e definida: \(Dom(f): \mathbbm{R}\)\medskip
 
     \textbf{Imagen: }
+        \begin{equation*}
+            -1\leq<sin(2x)\leq1 \quad \text{y} \quad -1\leq\sin(x)\leq1
+        \end{equation*}
+
+        Asi que:
+        \begin{equation*}
+            -1-1<\sin(x)+\sin(2x)<1+1 \Longrightarrow -2<\sin(x)+\sin(2x)<2
+        \end{equation*}
+
+        La imagen que obtenemos es: \(I:[-2,2]\). Pero resulta no ser exacta, ps \(\sin(x_0)\) no es igual que \(\sin(x_0)\). Por lo que resulta es un desface en la suma de las funciones, por lo que, en realidad, la imagen de $f$ es un subconunto de I.\medskip
 
     \textbf{Ra\'ices: }
+        \begin{equation*}
+            \sin(x)+\sin(2x) = \sin(x)+2\sin(x)\cos(x) = \sin(x)(1+2\cos(x))
+        \end{equation*}
+
+        As\'i entonces, \(f(x)=0\) cuando \(\sin(x)=0 \Longrightarrow x=2k\pi, k\in\mathbbm{Z}\) y cuando \(1+2\cos(x)=0\)\medskip
+
+        Sabemos que \(f(\pi/2)=1+2\cos(\pi/2)=1+0=1\) y que \(f(\pi) = 1+2\cos(\pi) = 1-2 = -1\), por lo que, por el TVI (Porque la funci\'on es continua), sabemos que hay una ra\'iz en \((\pi/2,\pi)\)\medskip
+
+        Usando el m\'etodo de Newton-Raphson:
+        \begin{equation*}
+            x_1 = x_0 - \frac{f(x_0)}{f'(x_0)} = \frac{\pi}{2} - \frac{\sin(\frac{\pi}{2})+\sin(2\frac{\pi}{2})}{\cos(\frac{\pi}{2})+2\cos(2\frac{\pi}{2})} = \frac{\pi}{2}+\frac{1+0}{0+2(-1)} = \frac{\pi}{2}-\frac{1}{2}
+        \end{equation*}
+
+        Resulta ser una buena aproximaci\'on a la ra\'iz que, probando numeros, queda \(f(2\pi/3) = 0\) y \(\displaystyle\frac{2\pi}{3}\approx\frac{\pi}{2}-\frac{1}{2}\) (No la usaremos en la descripci\'on pues se obtuvo con calculos no permitidos).\medskip
+
+        As\'i, las raices de \(f\) son:
+        \begin{align*}
+            x = 2k\pi \quad \text{y} \quad x = \frac{2k\pi}{3}, \ k\in \mathbbm{Z}
+        \end{align*}
 
     \textbf{Paridad: }\medskip
         
@@ -1036,7 +1065,9 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
 
     \textbf{Derivadas: }
         \begin{align*}
-            f'(x) = \frac{d}{dx}[\sin(x)+\sin(2x)] = \cos(x) + 2\cos(2x) = \cos(x) + 2(\cos^2(x)-\sin^2(x)) 
+            f'(x) &= \frac{d}{dx}[\sin(x)+\sin(2x)] = \cos(x) + 2\cos(2x) \\
+            &= \cos(x) + 2(\cos^2(x)-\sin^2(x)) = \cos(x) + 2(\cos^2(x)-(1-\cos^2(x))) \\
+            &= \cos(x) + 2(2\cos^2(x)-1) = 4\cos^2(x)+\cos(x)-2
         \end{align*}
 
         \begin{align*}
@@ -1044,12 +1075,48 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
         \end{align*}
 
     \textbf{Puntos y valores cr\'iticos: }
+        \begin{align*}
+            f'(x) = 0 \Longrightarrow 4\cos^2(x)+\cos(x)-2=0
+        \end{align*}
 
-    \textbf{Crecencia: }
+        Sustituendo con \(u=\cos(x)\) tenemos que:
+        \begin{equation*}
+            4u^2+u-2=0 \quad \text{a=4, b=1, c=-2}
+        \end{equation*}
+        \begin{equation*}
+            \cos(x) = u = \frac{-1\pm\sqrt{1^2-4(4(-2))}}{2(4)} = \frac{-1\pm\sqrt{33}}{8}
+        \end{equation*}
+        Acotando lo obtenido tenemos dos casos:
+        \begin{align*}
+            (1) \quad &25<33<36 \Longrightarrow \sqrt{25}<\sqrt{33}<\sqrt{36} \Longrightarrow 5<\sqrt{33}<6 \\
+            &\Longrightarrow 4<-1+\sqrt{33}<5 \\
+            &\Longrightarrow 0<\frac{1}{2}<\frac{-1+\sqrt{33}}{8}<\frac{5}{8}<1
+        \end{align*}
+        \begin{align*}
+            (2) \quad &25<33<36 \Longrightarrow \sqrt{25}<\sqrt{33}<\sqrt{36} \Longrightarrow -5>-\sqrt{33}>-6 \\
+            &\Longrightarrow -6>-1-\sqrt{33}>-7 \\
+            &\Longrightarrow 0>-\frac{3}{4}>\frac{-1-\sqrt{33}}{8}>-\frac{7}{8}>-1
+        \end{align*}
 
-    \textbf{Puntos y valores de Inflexi\'on: }
+        Entonces los puntos cr\'iticos en \([-1,1]\): \medskip
+        
+        \(\cos(x_0)=\displaystyle\frac{-1+\sqrt{33}}{8} \Longrightarrow x = \arccos\left(\frac{-1+\sqrt{33}}{8}\right)\) y \medskip
+        
+        \(\cos(x_1)=\displaystyle\frac{-1-\sqrt{33}}{8} \Longrightarrow x = \arccos\left(\frac{1+\sqrt{33}}{8}\right)\)
 
-    \textbf{Concavidad y Convexidad: }
+        Donde \(\arccos(0)<x_0<\arccos(1) \Longrightarrow \frac{3\pi}{2}<x_0<2\pi\) y \(\arccos(-1)<x_1<\arccos(0) \Longrightarrow \frac{\pi}{2}<x_0<\pi\).
+
+        Al extender ambos puntos por el periodo tendremos:
+        \begin{align*}
+            x_0 = \pm\arccos\left(\frac{-1+\sqrt{33}}{8}\right)+2k\pi \ , \ x_1 = \pm\arccos\left(\frac{1+\sqrt{33}}{8}\right)+2k\pi+\pi\ , \ k\in\mathbbm{R}
+        \end{align*}
+        NOTA: El \(\pm\) se debe a que \(\cos(-x)=\cos(x)\)\medskip
+
+        Como la derivada de \(\cos(x)\) es \(-\sin(x)\) y \(\frac{3\pi}{2}<x_0<2\pi\). En dicho intervalo \(\sin(x)<0\), por lo que el punto que observamos es un m\'aximo cuando tomamos el positivo y un m\'inimo cuando tomamos el negativo (porque lo tomamos del cuadrante contrario, sonde seno (por se impar) es poitivo).
+
+        Analogo es el caso de \(\frac{\pi}{2}<x_0<\pi\). Intervalo donde \(\sin(x)<0\). Por lo que si tomamos el positivo el punto es in m\'aximo y si tomamos el negativo un m\'inimo
+
+        Analizamos la funci\'on en base a los puntos cr\'iticos obtenidos con respecto a \(\cos(x)\) y a \(\sin(x)\) para obtener los datos restantes.
 
     \textbf{Gr\'afica: }
 
@@ -1312,7 +1379,7 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
 \end{enumerate}
 
 %EJERCICIO 15 ----------------------------------------------------------------------------------
-Hallar la gr\'afica de las siguientes funciones.
+15. Hallar la gr\'afica de las siguientes funciones.
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
@@ -1449,6 +1516,60 @@ Hallar la gr\'afica de las siguientes funciones.
             $f$ es decreciente en: \quad \(\left(\displaystyle\frac{\pi}{2}+2k\pi,\frac{3\pi}{2}+2k\pi\right), k\in\mathbbm{Z}\)\medskip
 
         \textbf{Puntos y valores de Inflexi\'on: }\medskip
+
+            Considerando el intervalo \(0<x<2\pi\):
+            \begin{align*}
+                f''(x)=0 \Longrightarrow e^{\sin(x)}\big(\cos^2(x)-\sin(x)\big)=0
+            \end{align*}
+
+            Como \(e^{\sin(x)}>0 \ \forall x\in\mathbbm{R}\), \(f''(x)\) s\'olo va a ser 0 cuando \(\cos^2(x)-\sin(x)=0\). As\'i entonces:
+            \begin{equation*}
+                \cos^2(x)-\sin(x)=0 \Longrightarrow 1-\sin^2(x)-\sin(x) \Longrightarrow -\sin^2(x)-\sin(x)+1
+            \end{equation*}
+            Propodenos un cambio de variable tal que: \(\sin(x)=u\): \quad \(-u^2-u+1=0 \Longrightarrow u^2+u-1=0\)\medskip
+            Usamos la f\'ormula general con \(a=1, \ b=1, \ c=-1\):
+            \begin{equation*}
+                u = \frac{-(1)\pm\sqrt{(1)^2-4(1)(-1)}}{2(1)} = \frac{-1\pm\sqrt{5}}{2} 
+            \end{equation*}
+            \begin{multline*}
+                4<5<9 \Longrightarrow \sqrt{4}<\sqrt{5}<\sqrt{9} \Longrightarrow 2<\sqrt{5}<3 \\ \Longrightarrow 1<-1+\sqrt{5}<2 \Longrightarrow 0<\frac{1}{2}<\frac{-1+\sqrt{5}}{2}<1
+            \end{multline*}
+            \begin{multline*}
+                4<5<9 \Longrightarrow \sqrt{4}<\sqrt{5}<\sqrt{9} \Longrightarrow -2>-\sqrt{5}>-3 \\ \Longrightarrow -3<-1-\sqrt{5}<-4 \Longrightarrow -\frac{3}{2}<\frac{-1-\sqrt{5}}{2}<-2 \Rightarrow\!\Leftarrow
+            \end{multline*}
+
+            El segundo caso no es posbile porque seno s\'olo est\'a definido entre -1 y 1\medskip
+
+            Como el caso 1 est\'a en el dominio del arcsen \([-1,1]\). As\'i tendremos que:
+            \begin{align*}
+                \arcsin(0)<\arcsin\left(\frac{1}{2}\right)<\arcsin\left(\frac{-1+\sqrt{5}}{2}\right)<\arcsin(1)
+            \end{align*}
+
+            Buscando valores de \(\sin(x)\) que nos den los resultados del \(\arcsin(x)\):
+            \begin{align*}
+                &\frac{\pi}{2}<\arcsin\left(\frac{1}{2}\right)<\arcsin\left(\frac{-1+\sqrt{5}}{2}\right)<\pi\\
+                &\frac{3\pi}{2}<\arcsin\left(\frac{1}{2}\right)<-\arcsin\left(\frac{-1+\sqrt{5}}{2}\right)<2\pi
+            \end{align*}
+            NOTA: El negativo del segundo arcsin se debe a que analizamos la otra posibilidad del \(\sin(x)\) (En el cuadrante negativo).\medskip
+
+            As\'i podemos decir que los puntos de inflexi\'on de \(f(x)\) son:
+            \begin{equation*}
+                x_0 = \arcsin\left(\frac{-1+\sqrt{5}}{2}\right) \quad \text{y} \quad x_1 = -\arcsin\left(\frac{-1+\sqrt{5}}{2}\right)
+            \end{equation*}
+            Sabiendo que: \(\displaystyle\frac{\pi}{2}<x_0<\pi\) y \(\displaystyle\frac{3\pi}{2}<x_1<2\pi\).\medskip
+
+            Los valores de inflexi\'on ser\'ian:
+            \begin{equation*}
+                f(x_0) = e^{\sin\left(\arcsin\left(\frac{-1+\sqrt{5}}{2}\right)\right)} = e^{\frac{-1+\sqrt{5}}{2}}
+            \end{equation*}
+            \begin{equation*}
+                f(x_1) = e^{\sin\left(-\arcsin\left(\frac{-1+\sqrt{5}}{2}\right)\right)} = e^{-\frac{-1+\sqrt{5}}{2}}
+            \end{equation*}
+
+            Extendiendo lo obtenido con el periodo de \(\cos(x)\) tendremos:
+            \begin{equation*}
+                x_0 = \arcsin\left(\frac{-1+\sqrt{5}}{2}\right)+2k\pi \quad \text{y} \quad x_1 = -\arcsin\left(\frac{-1+\sqrt{5}}{2}\right)+(2k+1)\pi, \ k \in \mathbbm{Z}
+            \end{equation*}
 
         \textbf{Concavidad y Convexidad: }\medskip
         
@@ -2073,9 +2194,11 @@ Mostrar que:
     %EJERCICIO A
     \item ¿Cuál es la tasa de crecimiento relativa?\medskip
     
+        Para calcularla primero obtendremos el modelo poblacional (Que nos rservir\'a para encontrar la soluci\'on y para los incisos posteriores).
+    
         Sabemos que: 
         \[\frac{P'(t)}{P(t)}=a \Longrightarrow \frac{dP(t)}{dt}=a\cdot P(t)\]
-        Con \(P'(x)\) la tasa de crecimiento poblacional, \(P(x)\) el tamaño poblacional y $a$ la constante de proporcionalidad.\medskip
+        Con \(P'(x)\) la tasa de crecimiento poblacional, \(P(x)\) el tamaño poblacional y $a$ la tasa de crecimiento relativa.\medskip
 
         Sabemos también, por lo demostrado en clase, que: \(\displaystyle\frac{dP(t)}{dt}=a\cdot P(t) \Longrightarrow P(t)=c\cdot e^{at}\)\medskip
 
@@ -2089,6 +2212,8 @@ Mostrar que:
         As\'i tenemos que nuestra f\'ormula ser\'a: (Con t en años y P en millones de persona)
         \[P(t)=2560\cdot e^{\frac{\ln\left(19/16\right)}{10}t}\]
 
+        Por lo que la tasa de crecimiento relativa ser\'a: \(a = \displaystyle\frac{\ln\left(\frac{19}{16}\right)}{10}\)\medskip
+
     %EJERCICIO B
     \item Use el modelo de crecimiento poblacional para estimar cuánta gente habrá en 2020.\medskip
     
@@ -2100,7 +2225,7 @@ Mostrar que:
     %EJERCICIO C
     \item Indague y diga si ese número se acerca a la población actual. Cite la fuente.\medskip
     
-        La poblaci\'on actual es de 7750 millones, lo que significa que la diferencia entre el dato y lo obtenido por la f\'ormula es de 774 millones de personales \medskip
+        La poblaci\'on actual es de 7750 millones, lo que significa que la diferencia entre el dato y lo obtenido por la f\'ormula es de 774 millones de personas \medskip
         
         Fuente: https://www.worldometers.info/world-population/\medskip
 
@@ -2163,25 +2288,3 @@ Mostrar que:
 \end{enumerate}
 
 \end{document}
-
-    \textbf{Continuidad: }
-
-    \textbf{Dominio: }
-
-    \textbf{Imagen: }
-
-    \textbf{Ra\'ices: }
-
-    \textbf{Paridad: }
-
-    \textbf{Derivadas: }
-
-    \textbf{Puntos y valores cr\'iticos: }
-
-    \textbf{Crecencia: }
-
-    \textbf{Puntos y valores de Inflexi\'on: }
-
-    \textbf{Concavidad y Convexidad: }
-
-    \textbf{Gr\'afica: }
