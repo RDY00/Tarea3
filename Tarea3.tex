@@ -901,7 +901,7 @@
         Seg\'un la gr\'afica tenemos que el \'area qeu buscamos est\'a denotada por: 
         \[\int_{-\sqrt{2}}^{\sqrt{2}}2dx-\int_{-\sqrt{2}}^{\sqrt{2}}x^2dx-\left[\int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}}(1-x^2)dx - \int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}} x^2dx\right]\]
 
-        Entonces podemos usar el inciso para decir que: 
+        Entonces podemos usar el inciso b para decir que: 
         \[\int_{-\sqrt{2}}^{\sqrt{2}}2dx-\int_{-\sqrt{2}}^{\sqrt{2}}x^2dx-\frac{4}{3\sqrt{2}}\]
         \begin{align}
             \int_{-\sqrt{2}}^{\sqrt{2}}2dx-\int_{-\sqrt{2}}^{\sqrt{2}}x^2dx-\frac{4}{3\sqrt{2}} &= [2(\sqrt{2})-2(-\sqrt{2})] - \left[\frac{(\sqrt{2})^3}{3}-\frac{(-\sqrt{2})^3}{3}\right]-\frac{4}{3\sqrt{2}}\\
@@ -1131,6 +1131,13 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
             Con lo anterior y sabiendo que \(\tan(x)\) no est\'a acotada, tenemos que \(\tan(x)-x\) tampoco lo est\'a, asi: \(Img(f): \mathbbm{R}\)\bigskip
 
         \textbf{Ra\'ices: }\medskip
+            \begin{align*}
+                \tan(x)-x=0 \Rightarrow \tan(x)=x \Rightarrow \frac{\sin(x)}{\cos(x)}=x
+            \end{align*}
+
+            Un punto en el que esto sucede es cuando \(x=0\): \(\tan(0)-0=0\)
+
+            Esto ocurre cuando $\tan(x)$ est\'a en el intervalo \((-\pi/2,\pi/2)\). CAbe recordar que como la funci\'on es siempre creciente s\'olo puede tocar una vez el 0 por periodo.
 
         \textbf{Paridad: }\medskip
 
@@ -1311,6 +1318,7 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
         \[f(k\pi)=k\pi+\sin(k\pi)=k\pi+0=k\pi \Longrightarrow (k\pi,k\pi), k\in\mathbbm{Z}\]
 
     \textbf{Concavidad y Convexidad: }\medskip
+    
         CONCAVIDAD:
         \begin{equation*}
             f''(x)>0 \Longrightarrow -\sin(x)>0 \Longrightarrow \sin(x)<0
