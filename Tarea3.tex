@@ -572,12 +572,14 @@
 \begin{proof}
     . \medskip
 
+    Supongamos que \(f(ct)\) es integrable sobre \([a,b]\), por lo que: \(\forall \ \varepsilon>0 \ \exists \ P \ : \ U(f,P)-L(f,P)<\varepsilon/c<\varepsilon\)
+
     Por definici\'on, sabemos que:
     \begin{multline}
         \label{5intab}
         L(f(ct),P)\leq\int_{a}^{b}f(ct)dt\leq U(f(ct),P) \\ \Longrightarrow sup\{L(f(ct),P)\}=\int_{a}^{b}f(ct)dt=inf\{U(f(ct),P)\}
     \end{multline}
-    y que
+    y buscamos:
     \begin{equation}
         \label{5intcacb}
         L(f,P')\leq\int_{ca}^{cb}f(t)dt\leq U(f,P') \Longrightarrow sup\{L(f,P')\}=\int_{ca}^{cb}f(t)dt=inf\{U(f,P')\}
@@ -623,6 +625,13 @@
         c\cdot U(f(ct),P) &= c \cdot \sum_{i=0}^n M_i(t_i-t_{i-1}) = \sum_{i=0}^n M_i\cdot c(t_i-t_{i-1}) \\
         &= \sum_{i=0}^n M_i(c\cdot t_i-c\cdot t_{i-1}) = \sum_{i=0}^n M_i'(c\cdot t_i-c\cdot t_{i-1})
     \end{align*}
+
+    As\'i:
+    \begin{multline*}
+        c\cdot(U(f(ct),P)-L(f(ct),P))<c\cdot\varepsilon/c \Longrightarrow c\cdot U(f(ct),P)-c\cdot L(f(ct),P)< \varepsilon \\ \Longrightarrow U(f,P')-L(f,P')<\varepsilon
+    \end{multline*}
+
+    Lo que significa que si $f(ct)$ es integrable sobre \([a,b]\), entonces $f$ es integrable sobre \([ca,cb]\)
 
     Tenemos entonces:
     \begin{multline*}
@@ -694,22 +703,40 @@
     %EJERCICIO A
     \item Si $f$ es una funci\'on par, demostrar que \(\displaystyle\int_{-b}^{b}f(t)dt=2\int_{0}^{b}f(t)dt\).\medskip
     
-    Observemos que \(b > 0\) y \(f\) integrable en \([-b, b]\) por lo que podemos rescribir la integral de esta manera
-    \[\displaystyle\int_{-b}^{b}f(t)dt \Rightarrow \displaystyle\int_{-b}^{0}f(t)dt + \displaystyle\int_{0}^{b}f(t)dt\]
-    Y eso puede tambien ser rescrito \[\displaystyle\int_{0}^{b}f(t)dt - \displaystyle\int_{0}^{-b}f(t)dt\]
-    Ahora, sabiendo que una funcion es par solo si \(f(x)=f(-x)\) podemos afirmar que \(ft=-ft\) por lo que 
-    \[\displaystyle\int_{0}^{b}f(t)dt=\displaystyle\int_{0}^{-b}f(t)dt\]
-    Entonces nuestra expresion original es \(\displaystyle\int_{0}^{b}f(t)dt+\displaystyle\int_{0}^{b}f(t)dt\)
-    Que es \[2\displaystyle\int_{0}^{b}f(t)dt\]
+    Observemos que \(b > 0\) y \(f\) integrable en \([-b, b]\) por lo que podemos rescribir la integral de esta manera:
+    \[\int_{-b}^{b}f(t)dt = \int_{-b}^{0}f(t)dt + \int_{0}^{b}f(t)dt\]
+    Y eso puede tambien ser rescrito: 
+    \[\int_{-b}^{b}f(t)dt = \int_{0}^{b}f(t)dt - \int_{0}^{-b}f(t)dt\]
+
+    Como $f$ es par por hip\'otesis: \(f(t) = f(-t) = f((-1)t)\)\medskip
+    \[\int_{-b}^{b}f(t)dt = \int_{0}^{b}f(t)dt + (-1)\int_{0}^{-b}f((-1)t)dt\]
+    
+    Utilizando la propiedad demostrada en el ejercicio 5 tenemos que:
+    \begin{equation*}
+        (-1)\int_{0}^{-b}f(t(-1))dt = \int_{0(-1)}^{-b(-1)}f(t) = \int_{0}^{b}f(t)
+    \end{equation*}
+    Sustituyendo en nuestra ecuaci\'on:
+    \[\int_{-b}^{b}f(t)dt = \int_{0}^{b}f(t)dt + \int_{0}^{b}f(t) = 2\int_{0}^{b}f(t)dt\]
     
     %EJERCICIO B
     \item Si $f$ es una funci\'on impar, demostrar que \(\displaystyle\int_{-b}^{b}f(t)dt=0\).\medskip
     
-    Observemos que \(b>0\) y\(f\) integrable en \([-b,b]\) por lo que podemos rescribir la integral de esta manera
+    Observemos que \(b>0\) y\(f\) integrable en \([-b,b]\) por lo que podemos rescribir la integral de esta manera:
     \[\displaystyle\int_{-b}^{b}f(t)dt = \displaystyle\int_{-b}^{0}f(t)dt+\displaystyle\int_{0}^{b}f(t)dt\]
-    Y eso puede tambien ser rescrito \[\int_{-b}^{b}f(t)dt=\int_{0}^{b}f(t)dt - \displaystyle\int_{0}^{-b}f(t)dt\]
-     Ahora, sabiendo que una funcion es par solo si \(-f(x)=(f(-x)\) podemos afirmar que 
-     \[\displaystyle\int_{0}^{b}f(t)dt-\displaystyle\int_{0}^{b}f(t)dt = 0\]
+    Y eso puede tambien ser rescrito:
+    \[\int_{-b}^{b}f(t)dt=\int_{0}^{b}f(t)dt - \displaystyle\int_{0}^{-b}f(t)dt\]
+
+    Como $f$ es par por hip\'otesis: \(f(t) = -f(-t) = (-1)f((-1)t)\)\medskip
+    \begin{multline*}
+        \int_{-b}^{b}f(t)dt = \int_{0}^{b}f(t)dt + (-1)\int_{0}^{-b}(-1)f((-1)t)dt\\ = \int_{0}^{b}f(t)dt + (-1)(-1)\int_{0}^{-b}f((-1)t)dt
+    \end{multline*}
+    
+    Utilizando la propiedad demostrada en el ejercicio 5 tenemos que:
+    \begin{equation*}
+        (-1)\int_{0}^{-b}f(t(-1))dt = \int_{0(-1)}^{-b(-1)}f(t) = \int_{0}^{b}f(t)
+    \end{equation*}
+    Sustituyendo en nuestra ecuaci\'on:
+    \[\int_{-b}^{b}f(t)dt = \int_{0}^{b}f(t)dt + (-1)\int_{0}^{b}f(t) = \int_{0}^{b}f(t)dt - \int_{0}^{b}f(t)dt = 0\]
 
 \end{enumerate}
 
@@ -769,6 +796,11 @@
         \textbf{Crecencia: } Es decreciente cuando \(x<0\) y decreciente cuando \(x>0\) (Por $g'(x)$).\medskip
 
         \textbf{Concavidad y Convexidad: }\(g''(x)>0\) Es convexa.\bigskip
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{7-a}
+        \end{figure}
         
         Primero debemos observar donde se intersecan para entender que area esta contenida entre las funciones, \(x^2=\displaystyle\frac{x^2}{2}+2\)
         \[2x^2=x^2+4\Rightarrow x^2=4\Rightarrow x=\pm 2\]
@@ -814,6 +846,11 @@
 
         \textbf{Concavidad y Convexidad: } \(g''(x)<0\) es c\'oncava siempre y no tiene puntos de inflexi\'on.\medskip
 
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{7-b}
+        \end{figure}
+
         Veamos donde se intersecan las funciones \(x^2=1-x^2\) 
         \[2x^2=1\Rightarrow x^2=\displaystyle\frac{1}{2}\Rightarrow x=\pm\displaystyle\frac{1}{\sqrt{2}}\]
         Las funciones se cruzan en \(\left(-\frac{1}{\sqrt{2}},\displaystyle\frac{1}{2}\right)\) y \(\left(\frac{1}{\sqrt{2}},\displaystyle\frac{1}{2}\right)\) y por sus derivadas y sus puntos c\'iticos podremos saber que en el intervalo \(1-x^2\) es la funcion superior.\medskip
@@ -853,6 +890,11 @@
         \textbf{Crecencia: } Al ser constante no crece ni decrece.\medskip
 
         \textbf{Concavidad y Convexidad: } Al ser constante no es Concava ni Convexa.\bigskip
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{7-c}
+        \end{figure}
 
         Como ya sabemos, $f$ y $g$ se intersecan en \(\left(-\frac{1}{\sqrt{2}},\displaystyle\frac{1}{2}\right)\) y \(\left(\frac{1}{\sqrt{2}},\displaystyle\frac{1}{2}\right)\). Como \(g(x)\leq1\), nunca de encuentra con \(h\), \(f(x)\), por su par, si que se interseca con \(h\) en \((2,\sqrt{2}),\ (2,-\sqrt{2})\) (despejando x de \(2=x^2 \Rightarrow x=\pm\sqrt{2}\)).\medskip
 
@@ -907,6 +949,11 @@
         \(2x-2>0\Rightarrow 2x>2\Leftrightarrow x>1\), $g$ es creciente cuando \(x>1\).\medskip
 
         \textbf{Concavidad y Convexidad: }\(g''(x)>0\) Es Convexa siempre.\bigskip
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{7-d}
+        \end{figure}
 
         Al usar el eje Y, tenemos uno de los extremos de nuestro rango \(x=0\), encontremos el otro \(x^2 = x^2-2x+4\Rightarrow 2x=4\Rightarrow x=2\) Asi que nuestro intervalo es \([0,2]\).\medskip
 
@@ -1189,6 +1236,11 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
 
         \textbf{Gr\'afica: }\medskip
 
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{11-a}
+        \end{figure}
+
     %EJERCICIO B
     \item \(f(x)=x+\sin(x)\)\bigskip
     
@@ -1275,7 +1327,12 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
         Sabemos, por definici\'on, que \(\sin(x)>0\) en \((0,\pi)\), que aplicando el periodo de \(\sin(x)\) nos proporciona los intervalos:
         \[(2k\pi, \ 2k\pi+\pi), k\in\mathbbm{Z}\]
 
-    \textbf{Gr\'afica: }
+    \textbf{Gr\'afica: }\medskip
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.5\textwidth]{11-b}
+    \end{figure}
 
     %EJERCICIO C
     \item \(f(x)=\sin(x)+\sin(2x)\)\bigskip
@@ -1383,7 +1440,12 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
 
         Analizamos la funci\'on en base a los puntos cr\'iticos obtenidos con respecto a \(\cos(x)\) y a \(\sin(x)\) para obtener los datos restantes.
 
-    \textbf{Gr\'afica: }
+    \textbf{Gr\'afica: }\medskip
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.5\textwidth]{11-c}
+    \end{figure}
 
 \end{enumerate}
 
@@ -1705,7 +1767,12 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
 
             Como \(f''(x)=f(x)\) y \(f(x)>0 \ \forall x\in\mathbbm{R}\), la funci\'on es siempre convexa.\medskip
 
-        \textbf{Gr\'afica: }
+        \textbf{Gr\'afica: }\medskip
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{15-a}
+        \end{figure}
 
     %EJERCICIO B
     \item \(f(x)=e^{\sin(x)}\)\medskip
@@ -1837,13 +1904,12 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
                 x_0 = \arcsin\left(\frac{-1+\sqrt{5}}{2}\right)+2k\pi \quad \text{y} \quad x_1 = -\arcsin\left(\frac{-1+\sqrt{5}}{2}\right)+(2k+1)\pi, \ k \in \mathbbm{Z}
             \end{equation*}
 
-        \textbf{Concavidad y Convexidad: }\medskip
-        
-        CONCAVIDAD:
-        
-        CONVEXIDAD:
+        \textbf{Gr\'afica: }\medskip
 
-        \textbf{Gr\'afica: }
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{15-b}
+        \end{figure}
 
     %EJERCICIO C
     \item \(f(x)=e^x+e^{-x}\)\medskip
@@ -1912,7 +1978,12 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
 
             Analogo a los puntos de inflexi\'on. Como \(f''(x)=f(x)\) y \(f(x)\geq2>0\), entonces \(f''(x)>0 \ \forall x\in\mathbbm{R}\), por lo que la funci\'on es siempre convexa.\medskip
 
-        \textbf{Gr\'afica: }
+        \textbf{Gr\'afica: }\medskip
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{15-c}
+        \end{figure}
 
     %EJERCICIO D
     \item \(f(x)=e^x-e^{-x}\)\medskip
@@ -1977,7 +2048,12 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
 
             Como \(f''(x)=e^x-e^{-x}=f(x)\) y ya demostramos que cuando \(x>0 \Rightarrow f(x)>0\), la funci\'on es convexa en \((0,\infty)\), y, como es impar, es c\'oncava en \(x<0\).\medskip
 
-        \textbf{Gr\'afica: }
+        \textbf{Gr\'afica: }\medskip
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{15-d}
+        \end{figure}
 
     %EJERCICIO E
     \item \(f(x)=\displaystyle\frac{e^x-e^{-x}}{e^x+e^{-x}}=1-\frac{2}{e^{2x}+1}\)\medskip
@@ -2060,7 +2136,12 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
 
             Como la funci\'on es impar, es c\'oncava en \(x>0\).\medskip
 
-        \textbf{Gr\'afica: }
+        \textbf{Gr\'afica: }\medskip
+
+        \begin{figure}[ht]
+            \centering
+            \includegraphics[width=0.5\textwidth]{15-e}
+        \end{figure}
 
 \end{enumerate}
 
