@@ -80,7 +80,7 @@
                 L(f,P)=\sum_{i=1}^n m_i(t_i-t_{i-1}) = \sum_{i=1}^n \big(f(t_{i-1})\big)\left(\displaystyle\frac{b}{n}\right)
             \end{equation*}
 
-            Analogo a \(f(t_i)\), sabemos que \(f(t_{i-1})=\displaystyle\frac{b(i-1)}{3n}\)
+            Analogo a \(f(t_i)\), sabemos que \(f(t_{i-1})=\displaystyle\frac{b(i-1)}{3n}\)\medskip
 
             Entonces:
             \begin{equation*}
@@ -434,7 +434,7 @@
     Pero si proponemos \(\displaystyle x=\frac{1}{M+1}\) tenemos que:
     \[f\left(\frac{1}{M+1}\right)=\frac{1}{\frac{1}{M+1}}=M+1\]
 
-    Entonces: \(\displaystyle M+1<M \Rightarrow\!\Leftarrow\). As\'i, por contradicci\'on, \(\displaystyle\frac{1}{x}\) no est\'a acotada en el intervalo \((0,1)\), por lo que la funci\'on no es ntegrable seg\'un el criterio de integraci\'on.\medskip
+    Entonces: \(\displaystyle M+1<M \Rightarrow\!\Leftarrow\). As\'i, por contradicci\'on, \(\displaystyle\frac{1}{x}\) no est\'a acotada en el intervalo \((0,1)\), por lo que la funci\'on no cumple con las hip\'otesis del criterio de integraci\'on.\medskip
 
 %EJERCICIO 3 ----------------------------------------------------------------------------------
 3. Obtenga la cota de la forma \(m(b-a) \leq \displaystyle\int_{0}^{b}f(x)dx \leq M(b-a)\), en los intervalos indicados de los siguientes incisos.
@@ -606,7 +606,6 @@
 
     Consideremos ahora un valor $u$ cualquiera tal que \(a\leq u\leq b \Longrightarrow t_{0}\leq u\leq t_n\) y lo multiplicamos por $c$ para obtener su equivalente en la partici\'on $P'$: \(c\cdot a\leq c\cdot u\leq c\cdot b \Longrightarrow c\cdot t_{0}\leq c\cdot u\leq c\cdot t_n\).\bigskip
     Y comparamos sus im\'agenes en sus correspondientes funciones: $m$ en \(f(c\cdot x)\) y $c\cdot m$ en \(f(x)\)
-
     \[f(c\cdot (u))=f(c\cdot u) \quad \text{y}  \quad f\big((c\cdot u)\big)=f(c\cdot u)\]
     Tenemos, entonces, que \(\forall u\in[a,b]\) y \(\forall (c\cdot u) \in [ca,cb]\) (Valor inducido en la plartici\'on $P'$ por la partici\'on $P$): \(f(c\cdot (u))=f\big((c\cdot u)\big)\).\bigskip
     Asi, pues, si \(f(c\cdot (u_1))<f(c\cdot (u_2)) \Longrightarrow f\big((c\cdot u_1)\big)<f\big((c\cdot u_2)\big)\). Lo que, en otras palabras, significa que si \(u_1\in[a,b]\) es el valor m\'as pequeño de $f(c\cdot x)$, entonces \(c\cdot u_1\in[ca,cb]\) es el valor m\'as pequeño de $f(x)$. De forma a\'naloga sucede con el valor m\'as grande.\bigskip
@@ -632,7 +631,7 @@
 
     Recordando la ecuaci\'on \eqref{5intcacb} tenemos: \(sup\{L(f,P')\}=\displaystyle\int_{ca}^{cb}f(t)dt=inf\{U(f,P')\}\)
 
-    Que, por la ley del Sandwitch, nos da:
+    Que nos da:
     \begin{equation*}
         c\cdot\int_{a}^{b}f(ct)dt=\int_{ca}^{cb}f(t)dt
     \end{equation*}
@@ -643,7 +642,7 @@
 
     Como $c<0$, al inducir la partici\'on $P'$ obtenemos que $t_{i-1}>t_i \ \forall i \in[1,n]$, lo que significa que $ca$ es el valor m\'as grande y $cb$ es m\'as pequeño.\bigskip
 
-    Dada la conmutatividad de la suma y la definici\'on de $L(f,P')$ y $U(f,P')$, es lo mismo cacularlar yendo del intervalo $[ct_n,ct_{n-1}]$ (el de las $t's$ m\'as pequeñas) al intervalo $[t_1,t_0]$ (el de las $t's$ m\'as grandes) que al rev\'es (Del de los valores de $t$ mas grandes a los m\'as chicos).\bigskip
+    Dada la conmutatividad de la suma y la definici\'on de $L(f,P')$ y $U(f,P')$, es lo mismo cacularlar yendo del intervalo $[ct_n,ct_{n-1}]$ (el de las $t's$ m\'as pequeñas) al intervalo $[t_1,t_0]$ (el de las $t's$ m\'as grandes) que al rev\'es (Desde los valores de $t$ mas grandes a los m\'as chicos).\bigskip
 
     Con lo anteior, calcularmos las sumas superiores y las inferiores de $f$ con respecto a $P$ y a $P'$:
 
@@ -681,7 +680,7 @@
 
     Recordando la ecuaci\'on \eqref{5intcacb} tenemos: \(sup\{L(f,P')\}=\displaystyle\int_{ca}^{cb}f(t)dt=inf\{U(f,P')\}\)
 
-    Que, por la ley del Sandwitch, nos da:
+    Que nos da:
     \begin{equation*}
         c\cdot\int_{a}^{b}f(ct)dt=\int_{ca}^{cb}f(t)dt
     \end{equation*}
@@ -693,10 +692,24 @@
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item Si $f$ es una funci\'on par, demostrar que \(\displaystyle\int_{-b}^{b}f(t)dt=2\int_{0}^{b}f(t)dt\).
-
+    \item Si $f$ es una funci\'on par, demostrar que \(\displaystyle\int_{-b}^{b}f(t)dt=2\int_{0}^{b}f(t)dt\).\medskip
+    
+    Observemos que \(b > 0\) y \(f\) integrable en \([-b, b]\) por lo que podemos rescribir la integral de esta manera
+    \[\displaystyle\int_{-b}^{b}f(t)dt \Rightarrow \displaystyle\int_{-b}^{0}f(t)dt + \displaystyle\int_{0}^{b}f(t)dt\]
+    Y eso puede tambien ser rescrito \[\displaystyle\int_{0}^{b}f(t)dt - \displaystyle\int_{0}^{-b}f(t)dt\]
+    Ahora, sabiendo que una funcion es par solo si \(f(x)=f(-x)\) podemos afirmar que \(ft=-ft\) por lo que 
+    \[\displaystyle\int_{0}^{b}f(t)dt=\displaystyle\int_{0}^{-b}f(t)dt\]
+    Entonces nuestra expresion original es \(\displaystyle\int_{0}^{b}f(t)dt+\displaystyle\int_{0}^{b}f(t)dt\)
+    Que es \[2\displaystyle\int_{0}^{b}f(t)dt\]
+    
     %EJERCICIO B
-    \item Si $f$ es una funci\'on impar, demostrar que \(\displaystyle\int_{-b}^{b}f(t)dt=0\).
+    \item Si $f$ es una funci\'on impar, demostrar que \(\displaystyle\int_{-b}^{b}f(t)dt=0\).\medskip
+    
+    Observemos que \(b>0\) y\(f\) integrable en \([-b,b]\) por lo que podemos rescribir la integral de esta manera
+    \[\displaystyle\int_{-b}^{b}f(t)dt = \displaystyle\int_{-b}^{0}f(t)dt+\displaystyle\int_{0}^{b}f(t)dt\]
+    Y eso puede tambien ser rescrito \[\int_{-b}^{b}f(t)dt=\int_{0}^{b}f(t)dt - \displaystyle\int_{0}^{-b}f(t)dt\]
+     Ahora, sabiendo que una funcion es par solo si \(-f(x)=(f(-x)\) podemos afirmar que 
+     \[\displaystyle\int_{0}^{b}f(t)dt-\displaystyle\int_{0}^{b}f(t)dt = 0\]
 
 \end{enumerate}
 
@@ -705,16 +718,206 @@
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item Las gr\'aficas de \(f(x)=x^2\) y \(g(x)=\displaystyle\frac{x^2}{2}+2\).
+    \item Las gr\'aficas de \(f(x)=x^2\) y \(g(x)=\displaystyle\frac{x^2}{2}+2\).\bigskip
+    
+        Observemos como se comportan las funciones. 
+        La funcion \(f(x)=x^2\) tiene:\medskip
+
+        \textbf{Continuidad: }\(x^2\) Es un polinomio, por lo que es continua.\medskip
+
+        \textbf{Dominio: }\(\mathbb{R}\) ya que nunca se indetermina.\medskip
+        
+        \textbf{Imagen: }\(x^2 \Rightarrow\sqrt{x^2}\Rightarrow|x|\Rightarrow x\geq 0\)\medskip
+
+        \textbf{Ra\'ices: }\(x^2=0\Rightarrow x=0\)\medskip
+
+        \textbf{Paridad: }\(x^2=(-x)^2=x^2\) Es par\medskip
+
+        \textbf{Derivadas: }\(f'(x)=2x\)\qquad\(f''(x)=2\)  \medskip
+
+        \textbf{Puntos y valores criticos: }\medskip
+        
+        \(2x=0 \Leftrightarrow x=0\) y sustituyendo en \(f(x) \Rightarrow x^2=0 \Leftrightarrow x=0\Rightarrow 2>0\) \((0,0)\). Como \(f''(x)>0\) siempre, el punto es un m\'inimo\medskip
+
+        \textbf{Crecencia: }\medskip
+        
+        \(2x>0 \Leftrightarrow x>0\) y \(2x<0 \Leftrightarrow x<0\) por lo que es decreciente en el intervalo \((-\infty,0)\) y creciente en \((0,\infty)\)\medskip
+
+        \textbf{Concavidad y Convexidad: }\quad\(f''(x)>0\) Es Convexa.\bigskip
+        
+        La funcion \(g(x)=\displaystyle\frac{x^2}{2}+2\) tiene:\medskip
+
+        \textbf{Dominio: }\(\mathbb{R}\) ya que nunca se indetermina \medskip
+
+        \textbf{Imagen: }
+        \[y=\frac{x^2}{2}+2 \Rightarrow \frac{x^2}{2}=y-2 \Rightarrow x^2=2y-4 \Rightarrow x=\sqrt{2y-4} \Longrightarrow 2y-4\geq0 \Rightarrow y\geq2\]
+
+        \(Img(f): [2,\infty)\)\medskip
+
+        \textbf{Continuidad: } Cociente de continuas es continua (y x o tiene restricciones), suma de continuas tambien lo es, por lo que $f$ es continua.\medskip
+
+        \textbf{Raices: }
+        \[\displaystyle\frac{x^2}{2}+2=0\Rightarrow\displaystyle\frac{x^2}{2}=-2\Rightarrow x^2=-1\]No tiene raices reales.\medskip
+
+        \textbf{Paridad: }\quad \(\displaystyle\frac{x^2}{2}+2=\frac{(-x)^2}{2}+2 = \frac{x^2}{2}+2\) es par.\medskip
+
+        \textbf{Derivadas: }\quad \(g'(x)=x\) y \(g''(x)=1\)\medskip
+
+        \textbf{Puntos y valores criticos:}\medskip
+        
+        \(x=0\) \, como \(g''(x)\) siempre es mayor a 0. es un m\'inimo
+        \textbf{Crecencia: } Es decreciente cuando \(x<0\) y decreciente cuando \(x>0\) (Por $g'(x)$).\medskip
+
+        \textbf{Concavidad y Convexidad: }\(g''(x)>0\) Es convexa.\bigskip
+        
+        Primero debemos observar donde se intersecan para entender que area esta contenida entre las funciones, \(x^2=\displaystyle\frac{x^2}{2}+2\)
+        \[2x^2=x^2+4\Rightarrow x^2=4\Rightarrow x=\pm 2\]
+        Las funciones se cruzan en \((-2,4)\) y \((2,4)\) y sabemos, por su imagen, que \(x^2<\displaystyle\frac{x^2}{2}+2\) en \([-2,2]\)\medskip
+        El area contenida entre dos funciones puede ser representada como la diferencia entre el area de la superior y el de la inferior.\medskip
+
+        La primitiva de \(x^n\) es \(x^{n-1}/(n-1)\) y la de \(c\) es \(cx\).
+        \begin{align*}
+            \int_{-2}^{2}\left(\frac{x^2}{2}+2\right)dx - \int_{-2}^{2}x^2dx&= \int_{-2}^{2}\frac{x^2}{2}dx + \int_{-2}^{2}2dx - \int_{-2}^{2}x^2dx\\
+            &= \left[\frac{2^3}{6}-\frac{(-2)^3}{6}\right]+\big[2(2)-2(-2)\big]-\left[\frac{2^3}{3}-\frac{(-2)^3}{3}\right]\\
+            &= \left[\frac{8}{6}+\frac{8}{6}\right]+8-\left[\frac{8}{3}+\frac{8}{3}\right]\\
+            &= \frac{8}{3}+8-\frac{16}{3} = \frac{8}{3}+\frac{24}{3}-\frac{16}{3}\\
+            &= \frac{16}{3}
+        \end{align*}
 
     %EJERCICIO B
-    \item Las gr\'aficas de \(f(x)=x^2\) y \(g(x)=1-x^2\).
+    \item Las gr\'aficas de \(f(x)=x^2\) y \(g(x)=1-x^2\).\bigskip
+    
+        Observemos como funciona la funcion que aun no conocemos:\bigskip
+
+        La funcion \(1-x^2\) tiene: \medskip
+
+        \textbf{Dominio: }\(\mathbb{R}\) ya que nunca se indetermina.\medskip
+
+        \textbf{Imagen: }\medskip
+        \begin{equation*}
+            y=1-x^2 \Rightarrow x^2=1-y \Rightarrow x = \sqrt{1-y} \Rightarrow 1-y\geq0 \Rightarrow y\leq1
+        \end{equation*}
+
+        \(Img(f): [1,\infty]\)\medskip
+
+        \textbf{Continuidad: } x no tiene restricciones y resta de continuas es continua.\medskip
+
+        \textbf{Raices: }\(1-x^2=0\Rightarrow x^2=1\Rightarrow x=\pm1\) o \(x=\pm1\)\medskip
+
+        \textbf{Paridad: }\(1-x^2 = 1-(-x)^2=1-x^2\) es par\medskip
+
+        \textbf{Derivadas: }\(g'(x)=-2x \qquad g''(x)=-2\)\medskip
+
+        \textbf{Puntos y valores criticos: }\(-2x=0\Rightarrow x=0\) y sustituyendo en \(g'(x)\Rightarrow -2(0)=0\) (No nos dice nada). Pero al evaluar en \(f(0)=1-0^2=1\), \((0,1)\), por la imagen, es un m\'aximo\medskip
+
+        \textbf{Crecencia: }\(-2x>0\Rightarrow x<0\) Por lo que es Creciente en \(x<0\). \(-2x<0\Leftrightarrow x>0\) Por lo que es decreciente en \(x>0\)\medskip
+
+        \textbf{Concavidad y Convexidad: } \(g''(x)<0\) es c\'oncava siempre y no tiene puntos de inflexi\'on.\medskip
+
+        Veamos donde se intersecan las funciones \(x^2=1-x^2\) 
+        \[2x^2=1\Rightarrow x^2=\displaystyle\frac{1}{2}\Rightarrow x=\pm\displaystyle\frac{1}{\sqrt{2}}\]
+        Las funciones se cruzan en \(\left(-\frac{1}{\sqrt{2}},\displaystyle\frac{1}{2}\right)\) y \(\left(\frac{1}{\sqrt{2}},\displaystyle\frac{1}{2}\right)\) y por sus derivadas y sus puntos c\'iticos podremos saber que en el intervalo \(1-x^2\) es la funcion superior.\medskip
+
+        El area contenida entre dos funciones puede ser representada como la diferencia entre el area de la superior y el de la inferior.\medskip
+        \begin{align*}
+            \int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}}(1-x^2)dx - \int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}} x^2dx &= \int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}} 1dx - \int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}} x^2dx - \int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}} x^2dx\\
+            &= \int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}} 1dx - 2\int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}} x^2dx\\
+            &= \frac{1}{\sqrt{2}}-\left(-\frac{1}{\sqrt{2}}\right) - 2\left[\frac{\left(\frac{1}{\sqrt{2}}\right)^3}{3}-\frac{\left(-\frac{1}{\sqrt{2}}\right)^3}{3}\right]\\
+            &= \frac{2}{\sqrt{2}} - 2\left[\frac{\frac{1}{2\sqrt{2}}}{3}+\frac{\frac{1}{2\sqrt{2}}}{3}\right]\\
+            &= \frac{2}{\sqrt{2}} - 2\left[\frac{2}{6\sqrt{2}}\right] = \frac{2}{\sqrt{2}} - \frac{4}{6\sqrt{2}}\\
+            &= \frac{12-4}{6\sqrt{2}} = \frac{8}{6\sqrt{2}} = \frac{4}{3\sqrt{2}}
+        \end{align*}
+        NOTA: \((\sqrt{2})^3 = (2^{1/2})^3 = 2^{3(1/2)} = 2^{3/2} = \sqrt{2^3} = \sqrt{2\cdot2^2} = 2\sqrt{2}\)\medskip
 
     %EJERCICIO C
-    \item Las gr\'aficas de \(f(x)=x^2\) y \(g(x)=1-x^2\) y \(h(x)=2\).
+    \item Las gr\'aficas de \(f(x)=x^2\) y \(g(x)=1-x^2\) y \(h(x)=2\).\medskip
+    
+        Observemos como se comporta la funcion que aun no conocemos\medskip
+
+        La funcion \(h(x)=2\) tiene:\bigskip
+
+        \textbf{Dominio: }\(\mathbb{R}\) ya que nunca se indetermina.\medskip
+        
+        \textbf{Imagen: } \(x=2\)\medskip
+
+        \textbf{Continuidad: }Toda constante, es continua.\medskip
+
+        \textbf{Raices: }\(2\neq0\) No tiene.\medskip
+        
+        \textbf{Paridad: }\(2=2\) Par.\medskip
+
+        \textbf{Derivados: }\(h'(x)=0 \qquad h''(x)=0\)\medskip
+        
+        \textbf{Puntos y valores criticos: } Al ser constante todos sus puntos son m\'aximos y m\'inimos.\medskip
+        
+        \textbf{Crecencia: } Al ser constante no crece ni decrece.\medskip
+
+        \textbf{Concavidad y Convexidad: } Al ser constante no es Concava ni Convexa.\bigskip
+
+        Como ya sabemos, $f$ y $g$ se intersecan en \(\left(-\frac{1}{\sqrt{2}},\displaystyle\frac{1}{2}\right)\) y \(\left(\frac{1}{\sqrt{2}},\displaystyle\frac{1}{2}\right)\). Como \(g(x)\leq1\), nunca de encuentra con \(h\), \(f(x)\), por su par, si que se interseca con \(h\) en \((2,\sqrt{2}),\ (2,-\sqrt{2})\) (despejando x de \(2=x^2 \Rightarrow x=\pm\sqrt{2}\)).\medskip
+
+        Seg\'un la gr\'afica tenemos que el \'area qeu buscamos est\'a denotada por: 
+        \[\int_{-\sqrt{2}}^{\sqrt{2}}2dx-\int_{-\sqrt{2}}^{\sqrt{2}}x^2dx-\left[\int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}}(1-x^2)dx - \int_{-\frac{1}{\sqrt{2}}}^{\frac{1}{\sqrt{2}}} x^2dx\right]\]
+
+        Entonces podemos usar el inciso para decir que: 
+        \[\int_{-\sqrt{2}}^{\sqrt{2}}2dx-\int_{-\sqrt{2}}^{\sqrt{2}}x^2dx-\frac{4}{3\sqrt{2}}\]
+        \begin{align}
+            \int_{-\sqrt{2}}^{\sqrt{2}}2dx-\int_{-\sqrt{2}}^{\sqrt{2}}x^2dx-\frac{4}{3\sqrt{2}} &= [2(\sqrt{2})-2(-\sqrt{2})] - \left[\frac{(\sqrt{2})^3}{3}-\frac{(-\sqrt{2})^3}{3}\right]-\frac{4}{3\sqrt{2}}\\
+            &= 4\sqrt{2}-\left[\frac{2\sqrt{2}}{3}+\frac{2\sqrt{2}}{3}\right]-\frac{4}{3\sqrt{2}}\\
+            &= 4\sqrt{2}-\frac{4\sqrt{2}}{3}-\frac{4}{3\sqrt{2}} = 4\left[\sqrt{2}-\frac{\sqrt{2}}{3}-\frac{1}{3\sqrt{2}}\right]\\
+            &= 4\left[\frac{3\sqrt{2}^2-\sqrt{2}^2-1}{3\sqrt{2}}\right] = 4\left[\frac{6-2-1}{3\sqrt{2}}\right]\\
+            &= 4\frac{3}{3\sqrt{2}} = \frac{4}{\sqrt{2}} = \frac{2^2}{2^{1/2}} = 2^{3/2} = 2\sqrt{2}
+        \end{align}
 
     %EJERCICIO D
-    \item Las gr\'aficas de \(f(x)=x^2\) y \(g(x)=x^2-2x+4\) y el eje vertical.
+    \item Las gr\'aficas de \(f(x)=x^2\) y \(g(x)=x^2-2x+4\) y el eje vertical.\bigskip
+    
+        Observemos como se comporta la funcion que aun no conocemos.\medskip
+
+        La funcion \(g(x) = x^2-2x+4\) tiene:\medskip
+
+        \textbf{Continuidad: } Todo polinomio es continuo.\medskip
+
+        \textbf{Dominio: }\(\mathbb{R}\) porque es un polinomio.\medskip
+
+        \textbf{Imagen: } \(y = x^2-2x+4 \Longrightarrow x^2-2x+(4-y)=0\)\medskip
+
+        Aplicamos la f\'ormula general con \(a=1, \ b=-2, \ c=4-y\):
+        \begin{equation*}
+            x=\frac{-(-2)\pm\sqrt{(-2)^2-4(1)(4-y)}}{2(1)} = \frac{2\pm\sqrt{-12+4y}}{2}
+        \end{equation*}
+        Entonces..
+        \begin{align}
+            -12+4y\geq0 \Longrightarrow 4y\geq12 \Longrightarrow y\geq3
+        \end{align}
+        \(Img(f): [3,\infty]\)\medskip
+
+        \textbf{Raices: } No tiene ya que \(x\geq 3\).\medskip
+
+        \textbf{Paridad: } \(f(-x)=(-x)^2-2(-x)+4=x^2+2x+4\) No es ni par ni impar.\medskip
+
+        \textbf{Derivados: }\(g'(x)=2x-2 \qquad g''(x)=2\)\medskip
+
+        \textbf{Puntos y valores criticos: } \(2x-2=0\Rightarrow 2x=2\Rightarrow x=1\) y sustituyendo en \(g(x)\Rightarrow 1^2-2\cdot1\)\((1,3)\) es un m\'inimo porque \(g''(x)>0\)\medskip
+
+        \textbf{Crecencia: }\medskip
+        
+        \(2x-2<0\Rightarrow 2x<2\Leftrightarrow x<1\), $g$ es decreciente cuando \(x<1\).\medskip
+
+        \(2x-2>0\Rightarrow 2x>2\Leftrightarrow x>1\), $g$ es creciente cuando \(x>1\).\medskip
+
+        \textbf{Concavidad y Convexidad: }\(g''(x)>0\) Es Convexa siempre.\bigskip
+
+        Al usar el eje Y, tenemos uno de los extremos de nuestro rango \(x=0\), encontremos el otro \(x^2 = x^2-2x+4\Rightarrow 2x=4\Rightarrow x=2\) Asi que nuestro intervalo es \([0,2]\).\medskip
+
+        \(0\leq x\leq2 \Longrightarrow 0\leq x^2\leq 4\) y \(0\leq2x\leq4 \Longrightarrow 0\geq -2x\geq -4 \Longrightarrow 4\geq 4-2x\geq 0\)\medskip
+
+        Asi entonces \(x^2<x^2+(4-2x)\) (Porque \(4-2x\) es positivo en el intervalo a evaluar). entonces \(g\) es la funci\'on superior.
+        \begin{align*}
+            \int_{0}^{2}(x^2-2x+4)dx-\int_{0}^{2}x^2dx &= \int_{0}^{2}x^2dx -\int_{0}^{2}2xdx +\int_{0}^{2}4dx -\int_{0}^{2}x^2dx \\
+            &= -2\int_{0}^{2}xdx +\int_{0}^{2}4dx = -2\left[\frac{2^2}{2}-\frac{0^2}{2}\right]+4(2)-4(0)\\
+            &= -4+8=4
+        \end{align*}
 
 \end{enumerate}
 
@@ -723,13 +926,41 @@
 
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
-    \item \(F(x)=\displaystyle\int_{a}^{x^3}\sin^3(t)dt\)
+    \item \(F(x)=\displaystyle\int_{a}^{x^3}\sin^3(t)dt\)\medskip
+    
+        Vemos a \(F(x)\) como una composici\'on de funciones:
+        \[g(x)=\int_{a}^{x}\sin^3(t)dt \qquad h(x)=x^3 \Longrightarrow F(x)=g(h(x))\]
 
+        Derivando \(F(x)\) tenemos:
+        \[F'(x)=g'(h(x))h'(x)\]
+        \(h'(x)=\frac{d}{dx}x^3=3x^2\)\medskip
+
+        \(g'(x)\): seno es continua y derivable en todos los \(\mathbb{R}\), por lo que \(\sin(x)^3\) tambi\'en lo es, adem\'as el intervalo va de \([a,x]\). As\'i podemos usar el primer teorema fundamental del c\'alculo para decir que:
+        \[g'(x) = sin^3(x)\]
+
+        Entonces: \(F'(x)=g'(h(x))h'(x) = (sin^3(x^3))(3x^2) = 3x^2\cdot\sin^3(x^3)\)\medskip
+        
     %EJERCICIO B
-    \item \(F(x)=\displaystyle\int_{3}^{\left(\displaystyle\int_{1}^{x}\sin^3(t)dt\right)}\frac{1}{1+\sin^6(t)+t^2}dt\)
+    \item \(F(x)=\displaystyle\int_{3}^{\left(\displaystyle\int_{1}^{x}\sin^3(t)dt\right)}\frac{1}{1+\sin^6(t)+t^2}dt\)\medskip
+    
+        Vemos a \(F(x)\) como una composici\'on de funciones:
+        \[g(x)=\int_{3}^{x}\frac{1}{1+\sin^6(t)+t^2}dt \qquad h(x)=\int_{1}^{x}\sin^3(t)dt \Longrightarrow F(x)=g(h(x))\]
+
+        Derivando \(F(x)\) tenemos:
+        \[F'(x)=g'(h(x))h'(x)\]
+
+        Con el inciso a obtenemos \(h'(x) = \sin^3(x)\).\medskip
+
+        \(g'(x)\): \(\sin^6(x)\geq0\) y \(t^2\geq0\) (Por ser exponentes par) \(\sin^6(x)+t^2+1>\sin^6(x)+t^2\geq0\). Por lo que el denominador nunca es 0. seno es continuo y \(t^2+1\) (polinomio) tambi\'en. As\'i \(\frac{1}{1+\sin^6(t)+t^2}\) es continua. Adem\'as el intervalo es \([3,x]\). Con lo que se puede usar el PTFC para afirmar que:
+        \[g'(x) = \frac{1}{1+\sin^6(x)+x^2}\]
+
+        Entonces: \(\displaystyle F'(x) = g'(h(x))h'(x) = \frac{\sin^3(x)}{1+\sin^6\left(\int_{1}^{x}\sin^3(t)dt\right)+\left(\int_{1}^{x}\sin^3(t)dt\right)^2}\)\medskip
 
     %EJERCICIO C
-    \item \(F(x)=\displaystyle\int_{15}^{x}\left(\int_{8}^{y}\frac{1}{1+\sin^2(t)+t^2}dt\right)dy\)
+    \item \(F(x)=\displaystyle\int_{15}^{x}\left(\int_{8}^{y}\frac{1}{1+\sin^2(t)+t^2}dt\right)dy\)\medskip
+    
+        Analogo a como se demostr\'o en el inciso b, \(\displaystyle\frac{1}{1+\sin^2(t)+t^2}\) es continua. As\'i, su integral N cualquier intervalo es continua. Adem\'as el intervalo de la integral de \(F(x)\) es \([15,x]\). Por lo que se puede utilizar el PTFC para decir que:
+        \[F'(x) = \int_{8}^{x}\frac{1}{1+\sin^2(t)+t^2}dt\]
 
 \end{enumerate}
 
@@ -739,15 +970,49 @@
 \begin{enumerate}[\hspace{9px} a)]
     %EJERCICIO A
     \item \(\displaystyle\int_{0}^{\infty}x^rdx\) si $r<-1$
+        \begin{equation*}
+            \int_{0}^{\infty}x^rdx = \lim_{b\to\infty}\int_{0}^{b}x^rdx
+        \end{equation*}
+
+        Como la funci\'on es continua e integrable, podemos obtener una primitiva: \(g(x)=\displaystyle\frac{x^{r+1}}{r+1}\) (Como \(r<-1\) nunca de indetermina). As\'i tenemos (Por el STFC) que:
+        \[\lim_{b\to\infty}\int_{0}^{b}x^rdx = \lim_{b\to\infty}\left[\frac{b^{r+1}}{r+1}-\frac{0^{r+1}}{r+1}\right] = \lim_{b\to\infty}\frac{b^{r+1}}{r+1}\]
+        Como \(r<-1 \Longrightarrow r+1<0\), lo que significa que \(r+1\) siempre es negativo, por lo que \(a^{r+1}=1/a^{-(r+1)}\):
+        \begin{equation*}
+            \lim_{b\to\infty}\frac{b^{r+1}}{r+1} = \lim_{b\to\infty}\frac{\frac{1}{b^{-(r+1)}}}{r+1} = \frac{1}{r+1}\lim_{b\to\infty}\frac{1}{b^{-(r+1)}} \Rightarrow\ \text{Como \(-(r+1)>0\)} \Rightarrow \frac{1}{r+1}\cdot0 = 0
+        \end{equation*}
+
+        Por lo tanto, como el l\'imite existe y no es \(\pm\infty\), la integral converge.\bigskip
 
     %EJERCICIO B
-    \item \(\displaystyle\int_{1}^{\infty}\frac{1}{x}dx\)
+    \item \(\displaystyle\int_{1}^{\infty}\frac{1}{x}dx\)\medskip
+        
+        (Resuleto en clase)\medskip
+
+        Sabiendo que \(\displaystyle\int_1^{\displaystyle a^b}\frac{1}{x}dx = b\int_1^a\frac{1}{x}dx\). Podemos reescribir la inegral como (\(a>1\)):
+        \[\int_{1}^{\infty}\frac{1}{x}dx = \lim_{b\to\infty}\int_{1}^{a^b}\frac{1}{x}dx = \lim_{b\to\infty}b\int_{1}^{a}\frac{1}{x}dx\]
+        Como \(a>1\) (Por como construimos la integral), la integral es postivia, asi:
+        \[\lim_{b\to\infty}b\int_{1}^{a}\frac{1}{x}dx = \int_{1}^{a}\frac{1}{x}dx\lim_{b\to\infty}b = \infty\]
+
+        Por lo tanto, la integral diverge.\bigskip
 
     %EJERCICIO C
-    \item \(\displaystyle\int_{0}^{a}x^r\) si $-1<r<0$
+    \item \(\displaystyle\int_{0}^{a}x^rdx\) si $-1<r<0$\bigskip
+        
+        Analogo al ejericicio a. La primitiva es \(g(x)=\displaystyle\frac{x^{r+1}}{r+1}\):
+        \begin{equation*}
+            \int_{0}^{a}x^rdx = \frac{a^{r+1}}{r+1} - \frac{0^{r+1}}{r+1}
+        \end{equation*}
+        Como \(-1<r<0 \Rightarrow 0<r+1<1\), \(\displaystyle\frac{0^{r+1}}{r+1}=0\) por lo que:
+        \begin{equation*}
+            \int_{0}^{a}x^rdx = \frac{a^{r+1}}{r+1}
+        \end{equation*}
+
+        Por lo tanto, la integral converge.\bigskip
 
     %EJERCICIO D
-    \item \(\displaystyle\int_{0}^{1}\frac{1}{x}dx\)
+    \item \(\displaystyle\int_{0}^{1}\frac{1}{x}dx\)\medskip
+    
+    (Resuelto en el inciso 10)\bigskip
 
 \end{enumerate}
 
@@ -803,7 +1068,7 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
         
         \textbf{Dominio: }\medskip
             
-            Dada la continuidad de la funci\'on y deebido al dominio de \(tan(x)\):\medskip
+            Dada la continuidad de la funci\'on y debido al dominio de \(tan(x)\):\medskip
 
             \(Dom(f):\mathbbm{R}\setminus\displaystyle\left\{\frac{(2k+1)\pi}{2}, k\in\mathbbm{Z}\right\}\)\bigskip
 
@@ -816,7 +1081,7 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
                 \tan(x)-x>\tan(x) \quad \text{si} \ x<0
             \end{align*}
 
-            Con lo anterior y sabien que \(\tan(x)\) no est\'a acotada, tenemos que \(\tan(x)-x\) tampoco lo est\'a, asi: \(Img(f): \mathbbm{R}\)\bigskip
+            Con lo anterior y sabiendo que \(\tan(x)\) no est\'a acotada, tenemos que \(\tan(x)-x\) tampoco lo est\'a, asi: \(Img(f): \mathbbm{R}\)\bigskip
 
         \textbf{Ra\'ices: }\medskip
 
@@ -1153,22 +1418,23 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
     %EJERCICIO B
     \item Mostrar que \(\cos\left(\displaystyle\frac{x}{2}\right)=\sqrt{\frac{1+\cos(x)}{2}}\) y \(\sin\left(\displaystyle\frac{x}{2}\right)=\sqrt{\frac{1-\cos(x)}{2}}\) para \(0 \leq x \leq \displaystyle\frac{\pi}{2}\).\bigskip
         %COS
-        Por el inciso anterior sabemos que: \(\cos^2(x) = \frac{1+\cos(2x)}{2}\)\bigskip
+        Por el inciso anterior sabemos que: \(\cos^2(x) = \displaystyle\frac{1+\cos(2x)}{2}\)\bigskip
 
         Proponemos un cambio de variable tal que \(t=2x\), con lo que tenemos:
         \[\cos^2(x) = \frac{1+\cos(2x)}{2} \Longrightarrow \cos^2\left(\displaystyle\frac{t}{2}\right)=\frac{1+\cos(t)}{2}\]
 
-        Como, por hip\'otesis, \(0 \leq t \leq \displaystyle\frac{\pi}{2}\), \(0\leq\displaystyle\frac{t}{2}<\frac{\pi}{4}\). Por lo que \(1\geq\cos(t)>0\) y \(\frac{1+\cos(2t)}{2}>0\) por lo que podemos sacar ra\'iz cuadrada a ambos lados, asi:
+        Como, por hip\'otesis, \(0 \leq t \leq \displaystyle\frac{\pi}{2}\), \(0\leq\displaystyle\frac{t}{2}<\frac{\pi}{4}\). Por lo que \(1\geq\cos(t)\geq0\) y \(\displaystyle\frac{1+\cos(2t)}{2}>0\) por lo que podemos sacar ra\'iz cuadrada a ambos lados, asi:
         \[\cos\left(\displaystyle\frac{t}{2}\right)=\sqrt{\frac{1+\cos(t)}{2}}\]
 
         NOTA: Aunque la ra\'z denota un $\pm$, como ya especificamos que, dado el intervalo, $\cos(x)$ es mayor a 0, podemos dar por especificado el signo positivo. El caso ser\'a el mismo para $\sin(x)$.\bigskip
+
         %SIN
         Ahora con seno: \(\sin^2(x) = \frac{1-\cos(2x)}{2}\)\bigskip
 
         Proponemos un cambio de variable tal que \(t=2x\), con lo que tenemos:
         \[\sin^2(x) = \frac{1-\cos(2x)}{2} \Longrightarrow \sin^2\left(\displaystyle\frac{t}{2}\right)=\frac{1-\cos(t)}{2}\]
 
-        Como, por hip\'otesis, \(0 \leq t \leq \displaystyle\frac{\pi}{2}\), \(0\leq\displaystyle\frac{t}{2}<\frac{\pi}{4}\). Por lo que \(0\leq\sin(t)<1\) y \(\frac{1-\cos(2t)}{2}>0\) (por que \(1=\cos(0)\leq\cos(2t)\leq\cos(\pi)=-1 \Longrightarrow 1-\cos(2t)>0\) por lo que podemos sacar ra\'iz cuadrada a ambos lados, asi:
+        Como, por hip\'otesis, \(0 \leq t \leq \displaystyle\frac{\pi}{2}\), \(0\leq\displaystyle\frac{t}{2}<\frac{\pi}{4}\). Por lo que \(0\leq\sin(t)\leq1\) y \(\frac{1-\cos(2t)}{2}>0\) (por que \(1=\cos(0)\leq\cos(2t)\leq\cos(\pi)=-1 \Longrightarrow 1-\cos(2t)>0\) por lo que podemos sacar ra\'iz cuadrada a ambos lados, asi:
         \[\sin\left(\displaystyle\frac{t}{2}\right)=\sqrt{\frac{1-\cos(t)}{2}}\]
 
     %EJERCICIO C
@@ -1393,7 +1659,7 @@ Por demostrar que \(\displaystyle\int_0^1\frac{1}{x}dx = \infty\)
 
             Por el punto anteior y por el hecho de que $x$ no tiene ning\'un tipo de restricci\'on: \(Dom(f): \mathbbm{R}\)\medskip
 
-            NOTA: Don puntos \'utiles para graficar la funci\'on son: \(f(0)=e^{1+0}=e\), y \(f(-1)=e^{1-1}=e^0=1\)\medskip
+            NOTA: Dos puntos \'utiles para graficar la funci\'on son: \(f(0)=e^{1+0}=e\), y \(f(-1)=e^{1-1}=e^0=1\)\medskip
 
         \textbf{Imagen: }
             \begin{equation}
